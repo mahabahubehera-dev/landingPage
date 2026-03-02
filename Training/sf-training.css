@@ -289,21 +289,33 @@
 .sf-trust-logo {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 9px 24px;
+    justify-content: center;
+    padding: 12px 28px;
     border: 1px solid var(--border);
-    border-radius: 100px;
+    border-radius: 12px;
     background: var(--bg-card);
-    white-space: nowrap;
-    font-size: .88rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    transition: color .3s, border-color .3s;
+    transition: background .3s, border-color .3s, transform .3s;
+    flex-shrink: 0;
+}
+
+.sf-trust-logo img {
+    height: 28px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    opacity: 0.75;
+    transition: opacity .3s;
+    display: block;
 }
 
 .sf-trust-logo:hover {
-    color: var(--text-primary);
+    background: var(--bg-card-hover);
     border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+.sf-trust-logo:hover img {
+    opacity: 1;
 }
 
 /* ============================
