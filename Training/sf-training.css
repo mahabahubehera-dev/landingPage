@@ -4,12 +4,12 @@
    ============================ */
 
 :root {
-    --sf-blue: #00A1E0;
-    --sf-blue-dark: #0070B0;
-    --sf-blue-glow: rgba(0, 161, 224, 0.22);
+    --sf-blue: #2C66F5;
+    --sf-blue-dark: #1A4ECA;
+    --sf-blue-glow: rgba(44, 102, 245, 0.22);
     --sf-green: #3ED69E;
     --sf-orange: #FFB75E;
-    --sf-grad: linear-gradient(135deg, #00A1E0, #4f7df9, #a78bfa);
+    --sf-grad: linear-gradient(135deg, #2C66F5, #4f7df9, #a78bfa);
 }
 
 /* ============================
@@ -196,7 +196,7 @@
 }
 
 .btn-sf {
-    background: linear-gradient(135deg, #00A1E0, #0070B0);
+    background: linear-gradient(135deg, #2C66F5, #1A4ECA);
     color: white;
     box-shadow: 0 4px 24px var(--sf-blue-glow);
 }
@@ -1067,14 +1067,14 @@
     font-family: var(--font-heading);
     font-size: 1.65rem;
     font-weight: 800;
-    color: var(--text-primary);
+    color: #fff;
     margin-bottom: 8px;
     line-height: 1.2;
 }
 
 .sf-popup-sub {
     font-size: .92rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 26px;
     line-height: 1.6;
 }
@@ -1154,7 +1154,7 @@
 .sf-form-submit {
     width: 100%;
     padding: 16px;
-    background: linear-gradient(135deg, #00A1E0, #0070B0);
+    background: linear-gradient(135deg, #2C66F5, #1A4ECA);
     color: white;
     border: none;
     border-radius: 100px;
@@ -1415,7 +1415,7 @@
 }
 
 .sf-chip.selected {
-    background: linear-gradient(135deg, #00A1E0, #4f7df9);
+    background: linear-gradient(135deg, #2C66F5, #4f7df9);
     border-color: transparent;
     color: #fff;
     box-shadow: 0 4px 14px rgba(0, 161, 224, .35);
