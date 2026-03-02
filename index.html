@@ -4,33 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revaxe.ai — Intelligent Automation, Reimagined</title>
+    <title>REVAPEX AI — Engineer Your Revenue. Automate Your Growth.</title>
     <meta name="description"
-        content="Revaxe.ai delivers AI-powered business transformation — from strategy to execution. Agentic AI, intelligent automation, and enterprise-grade data solutions built for outcomes.">
+        content="REVAPEX AI deploys precision-built Agentic AI workflows inside your Salesforce environment — eliminating pipeline friction, automating complex B2B sales cycles, and delivering predictable SaaS revenue at enterprise scale.">
+    <meta name="keywords"
+        content="Salesforce revenue engineering, agentic AI, B2B SaaS, RevOps, Salesforce automation, Miami FL">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Training/sf-training.css">
 </head>
 
 <body>
 
+    <!-- ========== ANNOUNCEMENT BAR ========== -->
+    <div class="announcement-bar">
+        <span>🇺🇸 Miami, FL</span>
+        <span class="bar-divider">|</span>
+        <span>Serving Enterprise B2B SaaS in the US &amp; UK</span>
+        <span class="bar-divider">|</span>
+        <span class="bar-accent">NDA-First Engagement</span>
+    </div>
+
     <!-- ========== NAVBAR ========== -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <img src="logo.png" alt="Revapex AI" class="logo-img"
-                    style="height:72px;width:auto;display:block;border-radius:6px;">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-rev">REVAPEX</span><span class="logo-ai"> AI</span>
             </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#hero" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Solutions</a></li>
-                <li><a href="#industries" class="nav-link">Industries</a></li>
-                <li><a href="#differentiators" class="nav-link">Why Us</a></li>
-                <li><a href="#partners" class="nav-link">Partners</a></li>
+                <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item-dropdown">
                     <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
                         Training
@@ -44,503 +51,423 @@
                             <span class="dd-icon">☁️</span> Salesforce Training
                         </a>
                         <div class="nav-dropdown-divider"></div>
-                        <a href="#">
-                            <span class="dd-icon">🤖</span> AI / ML Training <small>(Soon)</small>
-                        </a>
-                        <a href="#">
-                            <span class="dd-icon">📊</span> Data Engineering <small>(Soon)</small>
-                        </a>
+                        <a href="#"><span class="dd-icon">🤖</span> AI / ML Training <small>(Soon)</small></a>
+                        <a href="#"><span class="dd-icon">📊</span> Data Engineering <small>(Soon)</small></a>
                     </div>
                 </li>
-                <li><a href="#footer" class="nav-link">About</a></li>
+                <li><a href="#footer" class="nav-link">Contact</a></li>
             </ul>
-            <a href="#cta" class="nav-cta">Get Started</a>
+            <a href="#cta" class="nav-cta">Book a Discovery Call</a>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
     <!-- ========== HERO SECTION ========== -->
     <section class="hero" id="hero">
-        <div class="hero-bg-effects">
-            <div class="hero-orb hero-orb-1"></div>
-            <div class="hero-orb hero-orb-2"></div>
-            <div class="hero-orb hero-orb-3"></div>
-            <div class="hero-grid"></div>
-        </div>
+        <!-- Animated canvas background -->
+        <canvas id="heroCanvas" class="hero-canvas"></canvas>
+        <div class="hero-overlay"></div>
+
         <div class="container hero-content">
-            <div class="hero-badge animate-on-scroll">
-                <span class="badge-dot"></span>
-                AI-First Enterprise Transformation
+            <div class="section-tag animate-fade-up" style="animation-delay:0.1s">
+                Agentic AI · Revenue Engineering · B2B SaaS Exclusive
             </div>
-            <h1 class="hero-title animate-on-scroll">
-                Intelligent Automation<br>
-                <span class="hero-gradient-text">Reimagined.</span>
+            <h1 class="hero-title animate-fade-up" style="animation-delay:0.2s">
+                Engineer Your Salesforce Into an<br>
+                <span class="hero-title-accent">Autonomous Revenue Machine.</span>
             </h1>
-            <p class="hero-subtitle animate-on-scroll">
-                AI-powered business transformation delivered with enterprise-grade data, governance, and measurable
-                outcomes — from strategy to execution.
+            <p class="hero-subtitle animate-fade-up" style="animation-delay:0.35s">
+                REVAPEX AI deploys precision-built Agentic AI workflows inside your Salesforce environment — eliminating
+                pipeline friction, automating complex B2B sales cycles, and delivering predictable SaaS revenue at
+                enterprise scale.
             </p>
-            <div class="hero-actions animate-on-scroll">
-                <a href="#services" class="btn btn-primary">Explore Our Solutions</a>
-                <a href="#outcomes" class="btn btn-outline">See the Results</a>
+            <p class="hero-trust animate-fade-up" style="animation-delay:0.45s">
+                Trusted by B2B SaaS companies across the US &amp; UK. Built by engineers with nearly two decades of
+                enterprise architecture experience.
+            </p>
+            <div class="hero-ctas animate-fade-up" style="animation-delay:0.55s">
+                <a href="#cta" class="btn btn-primary btn-lg">Audit My Revenue Engine</a>
+                <a href="#solutions" class="btn btn-secondary btn-lg">See How It Works →</a>
             </div>
-            <div class="hero-stats animate-on-scroll">
-                <div class="hero-stat">
-                    <span class="hero-stat-number">500+</span>
-                    <span class="hero-stat-label">Enterprise Clients</span>
+            <p class="hero-micro animate-fade-up" style="animation-delay:0.65s">No commitment. 30-minute strategic
+                revenue session.</p>
+        </div>
+
+        <div class="hero-scroll-hint">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ========== TRUST BAR ========== -->
+    <section class="trust-bar" id="trust">
+        <div class="container">
+            <p class="trust-bar-label">Trusted by growth-stage and enterprise SaaS teams scaling from $1M to $50M+ ARR
+            </p>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span>Salesforce Certified Expertise</span>
                 </div>
-                <div class="hero-stat-divider"></div>
-                <div class="hero-stat">
-                    <span class="hero-stat-number">99.9%</span>
-                    <span class="hero-stat-label">Platform Uptime</span>
+                <div class="trust-badge">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span>US-Registered LLC</span>
                 </div>
-                <div class="hero-stat-divider"></div>
-                <div class="hero-stat">
-                    <span class="hero-stat-number">3x</span>
-                    <span class="hero-stat-label">Faster Decisions</span>
+                <div class="trust-badge">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span>GDPR &amp; SOC2-Aware</span>
+                </div>
+                <div class="trust-badge">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span>NDA-First Model</span>
+                </div>
+                <div class="trust-badge">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span>US &amp; UK SaaS Specialists</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== WHO WE ARE ========== -->
-    <section class="who-we-are" id="about">
+    <!-- ========== PROBLEM SECTION (DARK) ========== -->
+    <section class="section section-dark" id="problem">
         <div class="container">
-            <div class="who-grid">
-                <div class="who-left animate-on-scroll">
-                    <span class="section-tag">Who We Are</span>
-                    <h2 class="section-title">Many organizations struggle with <span class="highlight-text">fragmented
-                            data.</span><br>We turn it into actionable intelligence.</h2>
-                </div>
-                <div class="who-right animate-on-scroll">
-                    <p class="who-desc">We help enterprises transform fragmented customer data into decision-ready
-                        intelligence that people and AI agents can act on with confidence. The result: better decisions
-                        leading to higher conversion, lower costs, and superior experiences across every touchpoint.</p>
-                    <a href="#services" class="btn btn-primary">Explore Our Platform →</a>
+            <div class="section-inner animate-on-scroll">
+                <span class="section-tag">THE REVENUE LEAK</span>
+                <h2 class="section-heading section-heading-light">Your Salesforce Is a $100K+ System<br>Acting Like a
+                    Spreadsheet.</h2>
+                <p class="section-body section-body-light">Enterprise SaaS teams invest heavily in Salesforce — yet
+                    <strong>73% of CRM data goes stale within months</strong>. Your revenue team spends 40% of their
+                    time on manual updates, chasing pipeline hygiene, and generating reports that are already outdated.
+                    Your best closers are managing software instead of winning enterprise contracts. Unlike generalist
+                    consultancies who serve every industry, REVAPEX AI works exclusively with B2B SaaS companies.</p>
+                <div class="stat-row">
+                    <div class="stat-item">
+                        <span class="stat-number">73%</span>
+                        <span class="stat-label">of CRM data goes stale within months</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">of revenue team time lost to manual CRM work</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">$100K+</span>
+                        <span class="stat-label">Salesforce investment underperforming its potential</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== DIFFERENTIATORS ========== -->
-    <section class="differentiators" id="differentiators">
+    <!-- ========== SOLUTION SECTION (LIGHT) ========== -->
+    <section class="section section-light" id="method">
         <div class="container">
-            <div class="section-header animate-on-scroll">
-                <span class="section-tag">Built for the Future</span>
-                <h2 class="section-title">Built for Impact.<br><span class="highlight-text">Designed for
-                        Outcomes.</span></h2>
-                <p class="section-subtitle">What makes Revaxe.ai different</p>
-            </div>
-            <div class="diff-grid">
-                <div class="diff-card animate-on-scroll">
-                    <div class="diff-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                        </svg>
+            <div class="section-inner animate-on-scroll">
+                <span class="section-tag">THE REVAPEX AI METHOD</span>
+                <h2 class="section-heading section-heading-dark">We Don't Implement Salesforce.<br>We Re-Engineer It for
+                    Autonomous Revenue Growth.</h2>
+                <p class="section-body section-body-dark">REVAPEX AI embeds specialized, task-driven Agentic AI directly
+                    into the architecture of your Salesforce org. Unlike high-volume implementation firms processing
+                    thousands of generic projects, every REVAPEX AI engagement is custom-architected by senior engineers
+                    — built for your specific SaaS sales motion, your ICP, and your revenue targets.</p>
+                <div class="differentiator-row">
+                    <div class="differentiator-card">
+                        <div class="diff-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                            </svg>
+                        </div>
+                        <h4>Agentic AI-Native</h4>
+                        <p>AI is not an add-on feature. It is the core engineering methodology for every engagement.</p>
                     </div>
-                    <h3 class="diff-title">Speed</h3>
-                    <ul class="diff-list">
-                        <li>Focus on the decisions that move the needle</li>
-                        <li>Decision logic embedded directly into workflows and AI agents</li>
-                        <li>Humans and agents act in real time — not weeks later</li>
-                    </ul>
-                </div>
-                <div class="diff-card animate-on-scroll">
-                    <div class="diff-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="3" />
-                            <path
-                                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-                        </svg>
+                    <div class="differentiator-card">
+                        <div class="diff-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h4>Senior Engineers Only</h4>
+                        <p>Clients work directly with senior architects. No junior handoffs. No account managers.</p>
                     </div>
-                    <h3 class="diff-title">Intelligence</h3>
-                    <ul class="diff-list">
-                        <li>Frameworks that scale from pilot to enterprise</li>
-                        <li>Real-time, AI-ready data that holds up under volume</li>
-                        <li>Operationalized across sales, service, ops, and finance</li>
-                    </ul>
-                </div>
-                <div class="diff-card animate-on-scroll">
-                    <div class="diff-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                        </svg>
+                    <div class="differentiator-card">
+                        <div class="diff-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                            </svg>
+                        </div>
+                        <h4>B2B SaaS Exclusive</h4>
+                        <p>Hyper-specialized for SaaS revenue models. Not a generalist serving every industry.</p>
                     </div>
-                    <h3 class="diff-title">Trust</h3>
-                    <ul class="diff-list">
-                        <li>Governance and controls by design</li>
-                        <li>Explainable decision logic — the "why" is always clear</li>
-                        <li>Full accountability and audit trails for every action</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== OUTCOMES / STATS ========== -->
-    <section class="outcomes" id="outcomes">
+    <!-- ========== CORE CAPABILITIES SECTION (DARK) ========== -->
+    <section class="section section-dark" id="solutions">
         <div class="container">
-            <div class="section-header animate-on-scroll">
-                <span class="section-tag">Proven Results</span>
-                <h2 class="section-title">Sample Outcomes <span class="highlight-text">Delivered</span></h2>
+            <div class="section-header-block animate-on-scroll">
+                <span class="section-tag">WHAT WE BUILD</span>
+                <h2 class="section-heading section-heading-light">The Revenue Engineering Architecture™</h2>
+                <p class="section-subheading section-body-light">Three proprietary pillars. One unified, autonomous
+                    revenue system.</p>
             </div>
-            <div class="outcomes-grid">
-                <div class="outcome-card animate-on-scroll">
-                    <div class="outcome-icon-badge">🤖</div>
-                    <h3 class="outcome-title">Intelligent Inventory Agent</h3>
-                    <div class="outcome-stats-row">
-                        <div class="outcome-stat">
-                            <span class="outcome-number" data-target="90">0</span><span class="outcome-suffix">%</span>
-                            <span class="outcome-direction">↓</span>
-                            <span class="outcome-label">Response Time</span>
-                        </div>
-                        <div class="outcome-stat">
-                            <span class="outcome-number" data-target="30">0</span><span class="outcome-suffix">%</span>
-                            <span class="outcome-direction">↑</span>
-                            <span class="outcome-label">Enquiry → Order</span>
-                        </div>
-                        <div class="outcome-stat">
-                            <span class="outcome-number" data-target="60">0</span><span class="outcome-suffix">%</span>
-                            <span class="outcome-direction">↓</span>
-                            <span class="outcome-label">Handling Cost</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="outcome-card animate-on-scroll">
-                    <div class="outcome-icon-badge">🧠</div>
-                    <h3 class="outcome-title">Complex Case Resolution Agent</h3>
-                    <div class="outcome-stats-row">
-                        <div class="outcome-stat">
-                            <span class="outcome-number" data-target="50">0</span><span class="outcome-suffix">%</span>
-                            <span class="outcome-direction">↓</span>
-                            <span class="outcome-label">Resolution Time</span>
-                        </div>
-                        <div class="outcome-stat">
-                            <span class="outcome-number" data-target="60">0</span><span class="outcome-suffix">%</span>
-                            <span class="outcome-direction">↓</span>
-                            <span class="outcome-label">Escalations</span>
-                        </div>
-                        <div class="outcome-stat">
-                            <span class="outcome-number" data-target="80">0</span><span class="outcome-suffix">%</span>
-                            <span class="outcome-direction">↓</span>
-                            <span class="outcome-label">Manager Context Time</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="outcome-card animate-on-scroll">
-                    <div class="outcome-icon-badge">🏥</div>
-                    <h3 class="outcome-title">Fortune-100 Healthcare Company</h3>
-                    <div class="outcome-stats-row">
-                        <div class="outcome-stat big-stat">
-                            <span class="outcome-number" data-target="92">0</span><span class="outcome-suffix">%</span>
-                            <span class="outcome-direction">↓</span>
-                            <span class="outcome-label">End-to-End Case Handling Time</span>
-                        </div>
-                    </div>
-                    <p class="outcome-note">Dramatically improving customer satisfaction scores</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CORE SERVICES ========== -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header animate-on-scroll">
-                <span class="section-tag">Our Core Service Pillars</span>
-                <h2 class="section-title">Turning data into <span class="highlight-text">trusted, real-time
-                        decisions</span></h2>
-                <p class="section-subtitle">Powered by Agentic AI, built for outcomes</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card animate-on-scroll">
-                    <div class="service-number">01</div>
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" />
-                            <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" />
-                        </svg>
-                    </div>
-                    <h3 class="service-title">AI Strategy Consulting</h3>
-                    <p class="service-desc">We identify and operationalize the decisions that drive revenue, efficiency,
-                        and customer outcomes across your organization.</p>
-                    <a href="#cta" class="service-link">Learn More →</a>
-                </div>
-                <div class="service-card animate-on-scroll">
-                    <div class="service-number">02</div>
-                    <div class="service-icon">
+            <div class="pillars-grid animate-on-scroll">
+                <div class="pillar-card">
+                    <div class="pillar-number">01</div>
+                    <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <rect x="2" y="3" width="20" height="14" rx="2" />
                             <path d="M8 21h8M12 17v4" />
+                            <circle cx="17" cy="8" r="1" fill="currentColor" />
+                            <circle cx="12" cy="8" r="1" fill="currentColor" />
+                            <path d="M7 8h1M17 11l-3-3-4 4-2-2" />
                         </svg>
                     </div>
-                    <h3 class="service-title">Platform Implementation</h3>
-                    <p class="service-desc">We modernize CRM and enterprise platforms so decisions and AI agents execute
-                        in real time across customer and employee journeys.</p>
-                    <a href="#cta" class="service-link">Learn More →</a>
+                    <h3 class="pillar-title">Agentic Pipeline Automation</h3>
+                    <p class="pillar-subtitle">Autonomous. Always-On. Inside Your Salesforce.</p>
+                    <p class="pillar-body">Deploy AI agents that autonomously progress deal stages, generate follow-up
+                        sequences, and surface next-best actions — directly within your Salesforce workflows. Zero
+                        manual CRM hygiene. Maximum seller velocity.</p>
+                    <div class="pillar-tags">
+                        <span>AI Agents</span><span>Workflow Automation</span><span>Deal Progression</span>
+                    </div>
                 </div>
-                <div class="service-card animate-on-scroll">
-                    <div class="service-number">03</div>
-                    <div class="service-icon">
+                <div class="pillar-card pillar-card-featured">
+                    <div class="pillar-badge">Most Impactful</div>
+                    <div class="pillar-number">02</div>
+                    <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z" />
-                            <circle cx="12" cy="9" r="2.5" />
+                            <path d="M3 3v18h18" />
+                            <path d="M18 9l-5 5-2-2-4 4" />
+                            <circle cx="18" cy="9" r="1" fill="currentColor" />
                         </svg>
                     </div>
-                    <h3 class="service-title">Agentic AI Solutions</h3>
-                    <p class="service-desc">We redesign business processes around AI agents that assist, decide, and act
-                        — safely and at scale across your operations.</p>
-                    <a href="#cta" class="service-link">Learn More →</a>
+                    <h3 class="pillar-title">Predictive RevOps Intelligence</h3>
+                    <p class="pillar-subtitle">From Reactive Guessing to Real-Time Revenue Clarity.</p>
+                    <p class="pillar-body">AI-powered Salesforce dashboards and forecasting models that predict churn
+                        risk, identify expansion opportunities, and project net new ARR with the precision your CFO and
+                        board demand.</p>
+                    <div class="pillar-tags">
+                        <span>Revenue Forecasting</span><span>Churn Prediction</span><span>ARR Intelligence</span>
+                    </div>
                 </div>
-                <div class="service-card animate-on-scroll">
-                    <div class="service-number">04</div>
-                    <div class="service-icon">
+                <div class="pillar-card">
+                    <div class="pillar-number">03</div>
+                    <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="5" r="3" />
+                            <circle cx="5" cy="19" r="3" />
+                            <circle cx="19" cy="19" r="3" />
+                            <path d="M12 8v3M8.5 17.5l3-5M15.5 17.5l-3-5" />
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">GTM Systems Alignment</h3>
+                    <p class="pillar-subtitle">Marketing. Sales. Customer Success. One Unified Engine.</p>
+                    <p class="pillar-body">We unify your entire revenue tech stack — Salesforce, marketing automation,
+                        CS platforms — so data flows frictionlessly. The result: shorter sales cycles, higher NRR, and a
+                        buyer journey that converts.</p>
+                    <div class="pillar-tags">
+                        <span>Tech Stack Integration</span><span>NRR Optimization</span><span>GTM Alignment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== AUTHORITY SECTION (LIGHT) ========== -->
+    <section class="section section-light" id="about">
+        <div class="container">
+            <div class="authority-grid animate-on-scroll">
+                <div class="authority-content">
+                    <span class="section-tag">WHY REVAPEX AI</span>
+                    <h2 class="section-heading section-heading-dark">~18 Years of Enterprise Architecture.<br>Now
+                        Deployed for the AI Era.</h2>
+                    <p class="section-body section-body-dark">Building a flawless autonomous revenue engine is not a
+                        prompt engineering exercise. It demands deep architectural understanding of enterprise systems,
+                        data models, security frameworks, and automation logic — refined over nearly two decades of
+                        enterprise IT and automation engagements.</p>
+                    <p class="section-body section-body-dark" style="margin-top:1rem;">While our competitors serve
+                        hundreds of clients across every industry, REVAPEX AI takes a fundamentally different approach:
+                        <strong>fewer engagements, deeper impact, exclusively for B2B SaaS.</strong> Every Salesforce
+                        environment we build is secure, scalable, and battle-hardened for high-volume SaaS operations.
+                    </p>
+                    <a href="#cta" class="btn btn-primary" style="margin-top:2rem; display:inline-flex;">Audit My
+                        Revenue Engine →</a>
+                </div>
+                <div class="authority-trust-icons">
+                    <div class="trust-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                        <span>Salesforce Certified Expertise</span>
+                    </div>
+                    <div class="trust-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path
-                                d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
-                            <path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" />
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
                         </svg>
+                        <span>B2B SaaS Exclusive Focus</span>
                     </div>
-                    <h3 class="service-title">Data Engineering</h3>
-                    <p class="service-desc">We build governed, real-time data foundations that power decisions,
-                        experiences, and AI with confidence and scalability.</p>
-                    <a href="#cta" class="service-link">Learn More →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== INDUSTRIES ========== -->
-    <section class="industries" id="industries">
-        <div class="container">
-            <div class="section-header animate-on-scroll">
-                <span class="section-tag">Industry Expertise</span>
-                <h2 class="section-title">Creating business value at the <span
-                        class="highlight-text">intersection</span> of industry transformation</h2>
-                <p class="section-subtitle">Deep domain expertise across the sectors that matter most</p>
-            </div>
-            <div class="industries-grid">
-                <div class="industry-card animate-on-scroll">
-                    <div class="industry-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                    <div class="trust-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
                         </svg>
+                        <span>US-Registered LLC · Miami, FL</span>
                     </div>
-                    <h3>FinTech</h3>
-                    <p>Deliver financial decision services enabled by streamlined operations and intelligent automation.
-                    </p>
-                </div>
-                <div class="industry-card animate-on-scroll">
-                    <div class="industry-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    <div class="trust-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                         </svg>
+                        <span>GDPR &amp; SOC2-Aware Architecture</span>
                     </div>
-                    <h3>Healthcare</h3>
-                    <p>Impacting lives with connected patient care experiences and intelligent clinical decision
-                        support.</p>
-                </div>
-                <div class="industry-card animate-on-scroll">
-                    <div class="industry-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="9" cy="21" r="1" />
-                            <circle cx="20" cy="21" r="1" />
-                            <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6" />
+                    <div class="trust-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                         </svg>
+                        <span>Serving US &amp; UK Enterprise SaaS</span>
                     </div>
-                    <h3>E-Commerce</h3>
-                    <p>Maximize customer lifetime value with hyper-personalized journeys and AI-driven recommendations.
-                    </p>
-                </div>
-                <div class="industry-card animate-on-scroll">
-                    <div class="industry-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M2 20h20M5 20V8l5-4 5 4v12M15 20V4l4 2v14" />
-                        </svg>
-                    </div>
-                    <h3>Manufacturing</h3>
-                    <p>Modernize sales, service, and operations with decision-centric automation for speed and accuracy.
-                    </p>
-                </div>
-                <div class="industry-card animate-on-scroll">
-                    <div class="industry-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                    <div class="trust-icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                             <circle cx="9" cy="7" r="4" />
-                            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                            <line x1="23" y1="11" x2="17" y2="11" />
                         </svg>
+                        <span>NDA-First · Senior Engineers Only</span>
                     </div>
-                    <h3>SaaS</h3>
-                    <p>Scale product-led growth with AI-powered customer success, churn prediction, and intelligent
-                        onboarding.</p>
-                </div>
-                <div class="industry-card animate-on-scroll">
-                    <div class="industry-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="1" y="3" width="15" height="13" />
-                            <polygon points="16 8 23 3 23 16 16 11 16 8" />
-                        </svg>
-                    </div>
-                    <h3>Logistics</h3>
-                    <p>Optimize supply chains with real-time visibility, predictive analytics, and autonomous
-                        operations.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== PARTNERS ========== -->
-    <section class="partners" id="partners">
+    <!-- ========== HOW IT WORKS SECTION (DARK) ========== -->
+    <section class="section section-dark" id="how-it-works">
         <div class="container">
-            <div class="section-header animate-on-scroll">
-                <span class="section-tag">Technology Partners</span>
-                <h2 class="section-title">Powering Growth with <span class="highlight-text">Best-in-Class</span>
-                    Platforms</h2>
+            <div class="section-header-block animate-on-scroll">
+                <span class="section-tag">HOW WE WORK</span>
+                <h2 class="section-heading section-heading-light">From Discovery to Autonomous Revenue —<br>In 4
+                    Structured Phases.</h2>
             </div>
-            <div class="partners-track animate-on-scroll">
-                <div class="partner-logo">
-                    <span class="partner-name">Salesforce</span>
+            <div class="steps-grid animate-on-scroll">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-connector"></div>
+                    <h3 class="step-title">Revenue Architecture Audit</h3>
+                    <p class="step-body">Deep-dive into your Salesforce org, GTM motion, and pipeline data to identify
+                        friction points and agentic automation opportunities.</p>
                 </div>
-                <div class="partner-logo">
-                    <span class="partner-name">AWS</span>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-connector"></div>
+                    <h3 class="step-title">Blueprint &amp; Agent Design</h3>
+                    <p class="step-body">Custom Agentic AI workflow map — detailing every automation, integration, and
+                        intelligence layer specific to your SaaS revenue model.</p>
                 </div>
-                <div class="partner-logo">
-                    <span class="partner-name">Google Cloud</span>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-connector"></div>
+                    <h3 class="step-title">Build &amp; Deploy</h3>
+                    <p class="step-body">Senior engineers build, test, and deploy your Revenue Engineering Architecture™
+                        inside your live Salesforce environment with zero disruption.</p>
                 </div>
-                <div class="partner-logo">
-                    <span class="partner-name">Snowflake</span>
-                </div>
-                <div class="partner-logo">
-                    <span class="partner-name">Databricks</span>
-                </div>
-                <div class="partner-logo">
-                    <span class="partner-name">Azure</span>
-                </div>
-            </div>
-            <div class="awards-bar animate-on-scroll">
-                <div class="award-item">
-                    <div class="award-icon">🏆</div>
-                    <span>Salesforce Innovation Award 2025</span>
-                </div>
-                <div class="award-item">
-                    <div class="award-icon">⭐</div>
-                    <span>Gartner Cool Vendor — AI</span>
-                </div>
-                <div class="award-item">
-                    <div class="award-icon">🎖️</div>
-                    <span>Top AI Consulting Firm</span>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Monitor, Optimize &amp; Scale</h3>
+                    <p class="step-body">Continuous agent performance monitoring, model refinement, and capability
+                        scaling as your SaaS growth demands.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== CTA BANNER ========== -->
-    <section class="cta-section" id="cta">
-        <div class="cta-bg-effects">
-            <div class="cta-orb cta-orb-1"></div>
-            <div class="cta-orb cta-orb-2"></div>
-        </div>
-        <div class="container">
-            <div class="cta-content animate-on-scroll">
-                <h2>Ready to Transform<br><span class="highlight-text">Your Business?</span></h2>
-                <p>Let's discuss how Revaxe.ai can help you turn data into decisions and drive measurable outcomes.</p>
-                <div class="cta-actions">
-                    <a href="#" class="btn btn-primary btn-lg">Schedule a Consultation</a>
-                    <a href="#" class="btn btn-outline btn-lg">Download Our Playbook</a>
-                </div>
-            </div>
+    <!-- ========== FINAL CTA SECTION ========== -->
+    <section class="cta-band" id="cta">
+        <div class="container cta-band-inner">
+            <div class="cta-glow"></div>
+            <h2 class="cta-heading">Stop Managing Your Pipeline.<br>Start Engineering Your Revenue.</h2>
+            <p class="cta-body">REVAPEX AI builds autonomous, Agentforce-powered Salesforce ecosystems that scale your
+                B2B SaaS growth — predictably, securely, and at enterprise velocity.</p>
+            <a href="mailto:hello@revapex.ai?subject=Discovery Call Request" class="btn btn-cta-white">Book a Free
+                Discovery Call</a>
+            <p class="cta-micro">30 minutes. No sales pitch. Just a strategic revenue audit.</p>
         </div>
     </section>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer" id="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="nav-logo">
-                        <img src="logo.png" alt="Revapex AI" class="logo-img"
-                            style="height:64px;width:auto;display:block;border-radius:6px;">
-                    </a>
-                    <p class="footer-tagline">AI-powered business transformation — from strategy to execution.</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M20.47 2H3.53A1.45 1.45 0 002 3.47v17.06A1.45 1.45 0 003.47 22h17.06A1.45 1.45 0 0022 20.53V3.47A1.45 1.45 0 0020.47 2zM8.09 18.74h-3v-9h3v9zM6.59 8.48a1.56 1.56 0 110-3.12 1.56 1.56 0 010 3.12zM18.91 18.74h-3v-4.26c0-1.08-.02-2.47-1.5-2.47-1.51 0-1.74 1.18-1.74 2.39v4.34h-3v-9h2.89v1.3h.04a3.16 3.16 0 012.85-1.56c3.05 0 3.61 2.01 3.61 4.61v4.65z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="YouTube">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                            </svg>
-                        </a>
-                    </div>
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <span class="logo-rev">REVAPEX</span><span class="logo-ai"> AI</span>
                 </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">Our Journey</a></li>
-                        <li><a href="#">Leadership Team</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Solutions</h4>
-                    <ul>
-                        <li><a href="#">AI Strategy Consulting</a></li>
-                        <li><a href="#">Platform Implementation</a></li>
-                        <li><a href="#">Agentic AI</a></li>
-                        <li><a href="#">Data Engineering</a></li>
-                        <li><a href="#">Success Stories</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Podcasts</a></li>
-                        <li><a href="#">Whitepapers</a></li>
-                        <li><a href="#">Annual Report</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
+                <p class="footer-address">
+                    REVAPEX AI LLC<br>
+                    25 SE 2nd Ave, Suite 550-743<br>
+                    Miami, FL 33131, United States
+                </p>
+                <p class="footer-contact">
+                    📞 <a href="tel:+17372029931">+1 (737) 202-9931</a><br>
+                    🌐 <a href="https://revapex.ai">revapex.ai</a>
+                </p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Revaxe.ai — All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Cookies</a>
-                </div>
+            <div class="footer-col">
+                <h4 class="footer-col-heading">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="Training/salesforce-training.html">Training</a></li>
+                    <li><a href="#cta">Contact</a></li>
+                </ul>
             </div>
+            <div class="footer-col">
+                <h4 class="footer-col-heading">Legal &amp; Trust</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+                <p class="footer-legal">© 2026 REVAPEX AI LLC. All Rights Reserved.</p>
+                <p class="footer-disclaimer">Salesforce is a registered trademark of Salesforce, Inc. REVAPEX AI LLC is
+                    an independent consultancy and is not affiliated with Salesforce, Inc.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>🇺🇸 Proudly US-Based | Miami, FL | Serving B2B SaaS Teams Globally</span>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Training dropdown: mobile touch support
-        document.querySelectorAll('.nav-item-dropdown').forEach(item => {
-            const toggle = item.querySelector('.nav-dropdown-toggle');
-            if (toggle) {
-                toggle.addEventListener('click', () => {
-                    if (window.innerWidth <= 900) item.classList.toggle('open');
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>
