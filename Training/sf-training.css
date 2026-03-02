@@ -663,12 +663,13 @@
     overflow: hidden;
 }
 
-.sf-placement .section-title {
-    color: #fff;
+.sf-placement .section-title,
+.sf-placement .highlight-text {
+    color: #fff !important;
 }
 
 .sf-placement .section-subtitle {
-    color: rgba(255, 255, 255, 0.8);
+    color: #ffffffcc !important;
 }
 
 .sf-placement::before {
@@ -729,7 +730,7 @@
 
 .sf-placement-label {
     font-size: .88rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: #ffffffd9 !important;
     margin-top: 8px;
     line-height: 1.4;
 }
@@ -1119,7 +1120,7 @@
     border-radius: var(--radius-sm);
     border: 1px solid var(--border);
     background: rgba(255, 255, 255, .04);
-    color: var(--text-primary);
+    color: #ffffff;
     font-size: .95rem;
     font-family: var(--font-body);
     transition: border-color .25s, box-shadow .25s, background .25s;
@@ -1138,6 +1139,7 @@
 
 .sf-field select option {
     background: #0d1630;
+    color: #ffffff;
 }
 
 .sf-field input:focus,
