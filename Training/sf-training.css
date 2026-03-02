@@ -302,9 +302,8 @@
 }
 
 .sf-logo-img {
-    height: 36px;
-    width: auto;
-    max-width: 130px;
+    width: 120px;
+    height: 44px;
     object-fit: contain;
     opacity: 0.9;
     transition: opacity .3s;
