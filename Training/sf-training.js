@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             // POST to webhook
-            fetch('https://api.trustsolar.in/webhook-test/salesforce-training', {
+            fetch('https://api.trustsolar.in/webhook/salesforce-training', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
