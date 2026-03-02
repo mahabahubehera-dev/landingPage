@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Training/sf-training.css">
 </head>
 
 <body>
@@ -30,6 +31,27 @@
                 <li><a href="#industries" class="nav-link">Industries</a></li>
                 <li><a href="#differentiators" class="nav-link">Why Us</a></li>
                 <li><a href="#partners" class="nav-link">Partners</a></li>
+                <li class="nav-item-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Training
+                        <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round">
+                            <path d="M1 1l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="Training/salesforce-training.html">
+                            <span class="dd-icon">☁️</span> Salesforce Training
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="#">
+                            <span class="dd-icon">🤖</span> AI / ML Training <small>(Soon)</small>
+                        </a>
+                        <a href="#">
+                            <span class="dd-icon">📊</span> Data Engineering <small>(Soon)</small>
+                        </a>
+                    </div>
+                </li>
                 <li><a href="#footer" class="nav-link">About</a></li>
             </ul>
             <a href="#cta" class="nav-cta">Get Started</a>
@@ -508,6 +530,17 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Training dropdown: mobile touch support
+        document.querySelectorAll('.nav-item-dropdown').forEach(item => {
+            const toggle = item.querySelector('.nav-dropdown-toggle');
+            if (toggle) {
+                toggle.addEventListener('click', () => {
+                    if (window.innerWidth <= 900) item.classList.toggle('open');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

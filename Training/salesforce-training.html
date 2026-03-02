@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Training with Placement | RevApex</title>
+    <meta name="description"
+        content="Master Salesforce with RevApex — hands-on training, real projects, expert mentors, and 100% placement assistance. Enroll in the #1 Salesforce training program today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="sf-training.css">
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../logo.png" alt="RevApex" class="logo-img"
+                    style="height:72px;width:auto;display:block;border-radius:6px;">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+                <li><a href="../index.html#services" class="nav-link">Solutions</a></li>
+                <li><a href="../index.html#industries" class="nav-link">Industries</a></li>
+                <li><a href="../index.html#differentiators" class="nav-link">Why Us</a></li>
+                <li><a href="../index.html#partners" class="nav-link">Partners</a></li>
+                <li class="nav-item-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Training
+                        <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round">
+                            <path d="M1 1l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="salesforce-training.html">
+                            <span class="dd-icon">☁️</span> Salesforce Training
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="#">
+                            <span class="dd-icon">🤖</span> AI / ML Training <small>(Soon)</small>
+                        </a>
+                        <a href="#">
+                            <span class="dd-icon">📊</span> Data Engineering <small>(Soon)</small>
+                        </a>
+                    </div>
+                </li>
+                <li><a href="../index.html#footer" class="nav-link">About</a></li>
+            </ul>
+            <a href="#" class="nav-cta cta-trigger">Enroll Now</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="sf-hero" id="hero">
+        <div class="sf-hero-orbs">
+            <div class="sf-orb sf-orb-1"></div>
+            <div class="sf-orb sf-orb-2"></div>
+            <div class="sf-orb sf-orb-3"></div>
+        </div>
+        <div class="sf-hero-grid"></div>
+        <div class="container sf-hero-content">
+            <div class="sf-hero-badge animate-on-scroll">
+                <span class="sf-badge-dot"></span>
+                #1 Salesforce Training Program — Batch Enrolling Now
+            </div>
+            <h1 class="sf-hero-title animate-on-scroll">
+                Launch Your Career in<br>
+                <span class="sf-grad-text">Salesforce</span> — with<br>
+                Real Projects &amp; Placement
+            </h1>
+            <p class="sf-hero-sub animate-on-scroll">
+                Industry-led training, live projects on enterprise orgs, mock interviews, and guaranteed
+                placement support. Transform from beginner to certified Salesforce professional in just 3 months.
+            </p>
+            <div class="sf-hero-tags animate-on-scroll">
+                <span class="sf-tag">🎓 Salesforce Admin</span>
+                <span class="sf-tag">⚡ Apex &amp; LWC Dev</span>
+                <span class="sf-tag">🔗 Integration</span>
+                <span class="sf-tag">🤖 Einstein AI</span>
+                <span class="sf-tag">📜 Certification Prep</span>
+            </div>
+            <div class="sf-hero-actions animate-on-scroll">
+                <a href="#" class="btn btn-sf cta-trigger">🚀 Enroll Now — Free Demo</a>
+                <a href="#curriculum" class="btn btn-outline">View Curriculum →</a>
+            </div>
+            <div class="sf-hero-stats animate-on-scroll">
+                <div class="sf-stat">
+                    <span class="sf-stat-number" data-count="12000">0</span>
+                    <span class="sf-stat-label">Students Trained</span>
+                </div>
+                <div class="sf-stat-divider"></div>
+                <div class="sf-stat">
+                    <span class="sf-stat-number" data-count="96">0</span><span
+                        style="background:var(--sf-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-family:var(--font-heading);font-weight:800;font-size:2.2rem">%</span>
+                    <span class="sf-stat-label">Placement Rate</span>
+                </div>
+                <div class="sf-stat-divider"></div>
+                <div class="sf-stat">
+                    <span class="sf-stat-number" data-count="8.5">0</span><span
+                        style="background:var(--sf-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-family:var(--font-heading);font-weight:800;font-size:2.2rem">L</span>
+                    <span class="sf-stat-label">Avg Starting Salary</span>
+                </div>
+                <div class="sf-stat-divider"></div>
+                <div class="sf-stat">
+                    <span class="sf-stat-number" data-count="200">0</span><span
+                        style="background:var(--sf-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-family:var(--font-heading);font-weight:800;font-size:2.2rem">+</span>
+                    <span class="sf-stat-label">Hiring Partners</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TRUST BAR ========== -->
+    <section class="sf-trust">
+        <p class="sf-trust-label">Our students work at</p>
+        <div class="sf-trust-track">
+            <span class="sf-trust-logo">🏢 Salesforce</span>
+            <span class="sf-trust-logo">☁️ Accenture</span>
+            <span class="sf-trust-logo">🔷 Deloitte</span>
+            <span class="sf-trust-logo">🌐 Wipro</span>
+            <span class="sf-trust-logo">⚙️ Infosys</span>
+            <span class="sf-trust-logo">🏦 TCS</span>
+            <span class="sf-trust-logo">🚀 Capgemini</span>
+            <span class="sf-trust-logo">🌟 Cognizant</span>
+            <!-- duplicate for seamless loop -->
+            <span class="sf-trust-logo">🏢 Salesforce</span>
+            <span class="sf-trust-logo">☁️ Accenture</span>
+            <span class="sf-trust-logo">🔷 Deloitte</span>
+            <span class="sf-trust-logo">🌐 Wipro</span>
+            <span class="sf-trust-logo">⚙️ Infosys</span>
+            <span class="sf-trust-logo">🏦 TCS</span>
+            <span class="sf-trust-logo">🚀 Capgemini</span>
+            <span class="sf-trust-logo">🌟 Cognizant</span>
+        </div>
+    </section>
+
+    <!-- ========== COURSE HIGHLIGHTS (TABS) ========== -->
+    <section class="sf-highlights" id="highlights">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">What You'll Learn</span>
+                <h2 class="section-title">Everything You Need to <span class="highlight-text">Dominate Salesforce</span>
+                </h2>
+                <p class="section-subtitle">A comprehensive, job-ready curriculum built with feedback from 200+ hiring
+                    partners</p>
+            </div>
+            <div class="sf-tabs">
+                <button class="sf-tab active" data-tab="admin">Admin</button>
+                <button class="sf-tab" data-tab="dev">Developer</button>
+                <button class="sf-tab" data-tab="integration">Integration</button>
+                <button class="sf-tab" data-tab="ai">Einstein AI</button>
+            </div>
+
+            <!-- Admin Tab -->
+            <div class="sf-tab-panel active" id="tab-admin">
+                <div class="sf-highlights-grid">
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">🏗️</div>
+                        <h3 class="sf-highlight-title">Org Setup &amp; Security</h3>
+                        <p class="sf-highlight-desc">Master profiles, permission sets, roles, sharing rules, and
+                            field-level security. Build secure enterprise orgs from scratch.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">⚡</div>
+                        <h3 class="sf-highlight-title">Automation Tools</h3>
+                        <p class="sf-highlight-desc">Deep-dive into Flow Builder, Process Builder, approval workflows,
+                            and declarative automation — no code needed.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">📊</div>
+                        <h3 class="sf-highlight-title">Reports &amp; Dashboards</h3>
+                        <p class="sf-highlight-desc">Build executive dashboards, complex cross-object reports, and
+                            schedule automated insights for leadership teams.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">🛠️</div>
+                        <h3 class="sf-highlight-title">Data Management</h3>
+                        <p class="sf-highlight-desc">Import Wizard, Data Loader, deduplication strategies, and data
+                            quality governance at scale.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">📦</div>
+                        <h3 class="sf-highlight-title">AppExchange &amp; Apps</h3>
+                        <p class="sf-highlight-desc">Discover, install, and manage AppExchange apps — and configure
+                            industry-specific Salesforce Clouds.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">📜</div>
+                        <h3 class="sf-highlight-title">Certification Ready</h3>
+                        <p class="sf-highlight-desc">500+ practice questions, timed mock exams, and exam-day strategy
+                            sessions to crack ADM-201 on first attempt.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Developer Tab -->
+            <div class="sf-tab-panel" id="tab-dev">
+                <div class="sf-highlights-grid">
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">⚙️</div>
+                        <h3 class="sf-highlight-title">Apex Programming</h3>
+                        <p class="sf-highlight-desc">Write triggers, classes, batch jobs, queueable, and schedulable
+                            Apex — with governor limit mastery and SOQL/SOSL.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">🌐</div>
+                        <h3 class="sf-highlight-title">Lightning Web Components</h3>
+                        <p class="sf-highlight-desc">Build modern, reactive UI using LWC, JavaScript, and the Salesforce
+                            Lightning Design System (SLDS).</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">🧪</div>
+                        <h3 class="sf-highlight-title">Test Classes &amp; DX</h3>
+                        <p class="sf-highlight-desc">Write bullet-proof Apex test classes, achieve 85%+ coverage, and
+                            deploy confidently with Salesforce DX and scratch orgs.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">🎨</div>
+                        <h3 class="sf-highlight-title">Visualforce &amp; Aura</h3>
+                        <p class="sf-highlight-desc">Maintain legacy pages and migrate to modern LWC — a critical skill
+                            at Fortune 500 Salesforce shops.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">🚀</div>
+                        <h3 class="sf-highlight-title">DevOps &amp; CI/CD</h3>
+                        <p class="sf-highlight-desc">Source-driven development, version control with Git, and automated
+                            deployments using GitHub Actions &amp; Copado.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">📜</div>
+                        <h3 class="sf-highlight-title">PD1 &amp; PD2 Prep</h3>
+                        <p class="sf-highlight-desc">Structured preparation for Platform Developer I &amp; II
+                            certifications with scenario-based practice exams.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integration Tab -->
+            <div class="sf-tab-panel" id="tab-integration">
+                <div class="sf-highlights-grid">
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">🔗</div>
+                        <h3 class="sf-highlight-title">REST &amp; SOAP APIs</h3>
+                        <p class="sf-highlight-desc">Consume and expose Salesforce APIs — build integrations with ERP,
+                            marketing, and third-party platforms.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">🔄</div>
+                        <h3 class="sf-highlight-title">MuleSoft Essentials</h3>
+                        <p class="sf-highlight-desc">Understand MuleSoft's Anypoint Platform, API-led connectivity, and
+                            common Salesforce ↔ SAP patterns.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">📡</div>
+                        <h3 class="sf-highlight-title">Platform Events &amp; CDC</h3>
+                        <p class="sf-highlight-desc">Real-time event streaming with Platform Events, Change Data
+                            Capture, and Pub/Sub API for event-driven architectures.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">🔐</div>
+                        <h3 class="sf-highlight-title">OAuth &amp; Security</h3>
+                        <p class="sf-highlight-desc">Implement OAuth 2.0 flows, Connected Apps, named credentials, and
+                            secure callout patterns in production environments.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">🏭</div>
+                        <h3 class="sf-highlight-title">ETL Tools</h3>
+                        <p class="sf-highlight-desc">Hands-on with Informatica, Talend, and Salesforce Data Cloud for
+                            high-volume data sync and migration projects.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">📋</div>
+                        <h3 class="sf-highlight-title">Live Integration Project</h3>
+                        <p class="sf-highlight-desc">Build an end-to-end integration between a mock ERP and Salesforce —
+                            your capstone for job interviews.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Tab -->
+            <div class="sf-tab-panel" id="tab-ai">
+                <div class="sf-highlights-grid">
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">🤖</div>
+                        <h3 class="sf-highlight-title">Einstein Prediction Builder</h3>
+                        <p class="sf-highlight-desc">Build and deploy custom AI models — churn prediction, lead scoring,
+                            and opportunity forecasting without writing ML code.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">💬</div>
+                        <h3 class="sf-highlight-title">Agentforce &amp; Copilot</h3>
+                        <p class="sf-highlight-desc">Configure Einstein Copilot, build Agentforce agents, and deploy
+                            AI-first CX experiences across Service &amp; Sales.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">📝</div>
+                        <h3 class="sf-highlight-title">Einstein GPT</h3>
+                        <p class="sf-highlight-desc">Use generative AI prompts, prompt templates, and the Einstein Trust
+                            Layer for safe, responsible AI deployment.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">📈</div>
+                        <h3 class="sf-highlight-title">Data Cloud + AI</h3>
+                        <p class="sf-highlight-desc">Unify customer data in Data Cloud and power Einstein models with a
+                            real-time, governed customer graph.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">🎯</div>
+                        <h3 class="sf-highlight-title">Next Best Action</h3>
+                        <p class="sf-highlight-desc">Design AI-powered recommendation strategies and embed intelligent
+                            guidance into any Salesforce screen or flow.</p>
+                    </div>
+                    <div class="sf-highlight-card animate-on-scroll">
+                        <div class="sf-highlight-icon">🏅</div>
+                        <h3 class="sf-highlight-title">AI Associate Cert</h3>
+                        <p class="sf-highlight-desc">Structured prep for the Salesforce AI Associate &amp; AI Specialist
+                            certifications — the hottest credentials in 2025.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CURRICULUM ACCORDION ========== -->
+    <section class="sf-curriculum" id="curriculum">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Curriculum</span>
+                <h2 class="section-title">A Structured Path to <span class="highlight-text">Salesforce Mastery</span>
+                </h2>
+                <p class="section-subtitle">12 deep-dive modules spanning 3 months of live, instructor-led sessions</p>
+            </div>
+            <div class="sf-accordion">
+                <div class="sf-acc-item animate-on-scroll">
+                    <div class="sf-acc-header">
+                        <div class="sf-acc-left">
+                            <span class="sf-acc-num">Module 01</span>
+                            <div class="sf-acc-meta">
+                                <span class="sf-acc-title">Salesforce Fundamentals &amp; Platform Overview</span>
+                                <span class="sf-acc-duration">⏱ 2 Weeks · 10 Hours</span>
+                            </div>
+                        </div>
+                        <div class="sf-acc-icon">+</div>
+                    </div>
+                    <div class="sf-acc-body">
+                        <div class="sf-acc-body-inner">
+                            <div class="sf-acc-topics">
+                                <span class="sf-acc-topic">CRM concepts and Salesforce ecosystem</span>
+                                <span class="sf-acc-topic">Salesforce editions and licensing</span>
+                                <span class="sf-acc-topic">Navigating Setup and App Launcher</span>
+                                <span class="sf-acc-topic">Standard vs custom objects</span>
+                                <span class="sf-acc-topic">Fields, formulas, validation rules</span>
+                                <span class="sf-acc-topic">Page layouts and compact layouts</span>
+                                <span class="sf-acc-topic">Record types and business processes</span>
+                                <span class="sf-acc-topic">Trailhead certification trailmix</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sf-acc-item animate-on-scroll">
+                    <div class="sf-acc-header">
+                        <div class="sf-acc-left">
+                            <span class="sf-acc-num">Module 02</span>
+                            <div class="sf-acc-meta">
+                                <span class="sf-acc-title">Security Model &amp; Data Access</span>
+                                <span class="sf-acc-duration">⏱ 1.5 Weeks · 8 Hours</span>
+                            </div>
+                        </div>
+                        <div class="sf-acc-icon">+</div>
+                    </div>
+                    <div class="sf-acc-body">
+                        <div class="sf-acc-body-inner">
+                            <div class="sf-acc-topics">
+                                <span class="sf-acc-topic">Org-wide defaults and sharing rules</span>
+                                <span class="sf-acc-topic">Role hierarchy and manual sharing</span>
+                                <span class="sf-acc-topic">Profiles vs permission sets</span>
+                                <span class="sf-acc-topic">Field-level security</span>
+                                <span class="sf-acc-topic">Login policies and IP whitelisting</span>
+                                <span class="sf-acc-topic">Audit trail &amp; field history tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sf-acc-item animate-on-scroll">
+                    <div class="sf-acc-header">
+                        <div class="sf-acc-left">
+                            <span class="sf-acc-num">Module 03</span>
+                            <div class="sf-acc-meta">
+                                <span class="sf-acc-title">Automation — Flows, Workflows &amp; Approval Processes</span>
+                                <span class="sf-acc-duration">⏱ 2 Weeks · 12 Hours</span>
+                            </div>
+                        </div>
+                        <div class="sf-acc-icon">+</div>
+                    </div>
+                    <div class="sf-acc-body">
+                        <div class="sf-acc-body-inner">
+                            <div class="sf-acc-topics">
+                                <span class="sf-acc-topic">Record-triggered &amp; scheduled flows</span>
+                                <span class="sf-acc-topic">Screen flows for user interactions</span>
+                                <span class="sf-acc-topic">Flow debugging and error handling</span>
+                                <span class="sf-acc-topic">Multi-step approval processes</span>
+                                <span class="sf-acc-topic">Email alerts &amp; field updates</span>
+                                <span class="sf-acc-topic">Migrating process builder to Flow</span>
+                                <span class="sf-acc-topic">Governor limits for automation</span>
+                                <span class="sf-acc-topic">Live project: Lead routing automation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sf-acc-item animate-on-scroll">
+                    <div class="sf-acc-header">
+                        <div class="sf-acc-left">
+                            <span class="sf-acc-num">Module 04 – 06</span>
+                            <div class="sf-acc-meta">
+                                <span class="sf-acc-title">Apex, LWC &amp; Platform Developer Track</span>
+                                <span class="sf-acc-duration">⏱ 4 Weeks · 24 Hours</span>
+                            </div>
+                        </div>
+                        <div class="sf-acc-icon">+</div>
+                    </div>
+                    <div class="sf-acc-body">
+                        <div class="sf-acc-body-inner">
+                            <div class="sf-acc-topics">
+                                <span class="sf-acc-topic">Apex syntax, classes &amp; collections</span>
+                                <span class="sf-acc-topic">SOQL, SOSL, DML operations</span>
+                                <span class="sf-acc-topic">Triggers: before, after, bulk-safe</span>
+                                <span class="sf-acc-topic">Async Apex: Batch, Queueable, Future</span>
+                                <span class="sf-acc-topic">Apex test classes (85%+ coverage)</span>
+                                <span class="sf-acc-topic">LWC: components, JS controllers</span>
+                                <span class="sf-acc-topic">Wire service &amp; Apex wire adapters</span>
+                                <span class="sf-acc-topic">Salesforce DX, Git, CI/CD pipeline</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sf-acc-item animate-on-scroll">
+                    <div class="sf-acc-header">
+                        <div class="sf-acc-left">
+                            <span class="sf-acc-num">Module 07 – 09</span>
+                            <div class="sf-acc-meta">
+                                <span class="sf-acc-title">Integration Architecture &amp; APIs</span>
+                                <span class="sf-acc-duration">⏱ 3 Weeks · 18 Hours</span>
+                            </div>
+                        </div>
+                        <div class="sf-acc-icon">+</div>
+                    </div>
+                    <div class="sf-acc-body">
+                        <div class="sf-acc-body-inner">
+                            <div class="sf-acc-topics">
+                                <span class="sf-acc-topic">REST &amp; SOAP API deep dive</span>
+                                <span class="sf-acc-topic">Bulk API 2.0 for large datasets</span>
+                                <span class="sf-acc-topic">Connected Apps &amp; OAuth 2.0</span>
+                                <span class="sf-acc-topic">Named credentials &amp; callouts</span>
+                                <span class="sf-acc-topic">Platform Events &amp; Change Data Capture</span>
+                                <span class="sf-acc-topic">MuleSoft fundamentals</span>
+                                <span class="sf-acc-topic">Postman API testing for Salesforce</span>
+                                <span class="sf-acc-topic">ERP ↔ Salesforce live project</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sf-acc-item animate-on-scroll">
+                    <div class="sf-acc-header">
+                        <div class="sf-acc-left">
+                            <span class="sf-acc-num">Module 10 – 12</span>
+                            <div class="sf-acc-meta">
+                                <span class="sf-acc-title">Einstein AI, Agentforce &amp; Capstone Project</span>
+                                <span class="sf-acc-duration">⏱ 3 Weeks · 18 Hours</span>
+                            </div>
+                        </div>
+                        <div class="sf-acc-icon">+</div>
+                    </div>
+                    <div class="sf-acc-body">
+                        <div class="sf-acc-body-inner">
+                            <div class="sf-acc-topics">
+                                <span class="sf-acc-topic">Einstein Prediction Builder</span>
+                                <span class="sf-acc-topic">Agentforce agent configuration</span>
+                                <span class="sf-acc-topic">Prompt templates &amp; Einstein GPT</span>
+                                <span class="sf-acc-topic">Data Cloud basics</span>
+                                <span class="sf-acc-topic">Next Best Action &amp; Decision Matrix</span>
+                                <span class="sf-acc-topic">Full-stack capstone project build</span>
+                                <span class="sf-acc-topic">Mock interviews with hiring managers</span>
+                                <span class="sf-acc-topic">Resume &amp; LinkedIn profile review</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:48px;">
+                <a href="#" class="btn btn-sf cta-trigger" style="font-size:1rem;">📥 Download Full Syllabus</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY REVAPEX ========== -->
+    <section class="sf-why" id="why">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Why RevApex</span>
+                <h2 class="section-title">Built for <span class="highlight-text">Career Outcomes</span>,<br>Not Just
+                    Certifications</h2>
+                <p class="section-subtitle">We don't just teach. We hire-enable.</p>
+            </div>
+            <div class="sf-why-grid">
+                <div class="sf-why-card animate-on-scroll">
+                    <span class="sf-why-icon">👨‍💼</span>
+                    <h3 class="sf-why-title">Industry Expert Trainers</h3>
+                    <p class="sf-why-desc">Learn from Salesforce MVPs, certified architects, and engineers who work at
+                        Fortune 500 companies — not just educators.</p>
+                </div>
+                <div class="sf-why-card animate-on-scroll">
+                    <span class="sf-why-icon">🏗️</span>
+                    <h3 class="sf-why-title">Real Enterprise Projects</h3>
+                    <p class="sf-why-desc">Work on 4+ live projects using actual enterprise orgs — build a portfolio
+                        that impresses even the toughest interviewers.</p>
+                </div>
+                <div class="sf-why-card animate-on-scroll">
+                    <span class="sf-why-icon">🎯</span>
+                    <h3 class="sf-why-title">Placement Guarantee</h3>
+                    <p class="sf-why-desc">200+ hiring partners, dedicated placement coordinators, mock interviews, and
+                        personalized job referrals — until you're placed.</p>
+                </div>
+                <div class="sf-why-card animate-on-scroll">
+                    <span class="sf-why-icon">⏰</span>
+                    <h3 class="sf-why-title">Flexible Learning</h3>
+                    <p class="sf-why-desc">Weekday, weekend, and fast-track batches. All sessions recorded. Learn on
+                        your schedule without missing a single concept.</p>
+                </div>
+                <div class="sf-why-card animate-on-scroll">
+                    <span class="sf-why-icon">📜</span>
+                    <h3 class="sf-why-title">Certification Support</h3>
+                    <p class="sf-why-desc">500+ practice questions, exam voucher discounts, and a certified trainer to
+                        guide you through ADM-201, PD1, and AI exams.</p>
+                </div>
+                <div class="sf-why-card animate-on-scroll">
+                    <span class="sf-why-icon">🌐</span>
+                    <h3 class="sf-why-title">Alumni Community</h3>
+                    <p class="sf-why-desc">Join 12,000+ RevApex alumni for referrals, mentoring, and a private Slack
+                        community where deals and jobs get shared first.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PLACEMENT NUMBERS ========== -->
+    <section class="sf-placement" id="placement">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Placement Record</span>
+                <h2 class="section-title">Numbers That <span class="highlight-text">Speak for Themselves</span></h2>
+                <p class="section-subtitle">Consistent results, batch after batch</p>
+            </div>
+            <div class="sf-placement-grid">
+                <div class="sf-placement-card animate-on-scroll">
+                    <div><span class="sf-placement-num" data-count="96">0</span><span
+                            class="sf-placement-suffix">%</span></div>
+                    <p class="sf-placement-label">Placement Rate<br>across all batches</p>
+                </div>
+                <div class="sf-placement-card animate-on-scroll">
+                    <div><span class="sf-placement-num" data-count="200">0</span><span
+                            class="sf-placement-suffix">+</span></div>
+                    <p class="sf-placement-label">Hiring Partner<br>Companies</p>
+                </div>
+                <div class="sf-placement-card animate-on-scroll">
+                    <div style="display:inline-flex;align-items:baseline;gap:2px;"><span
+                            style="font-size:1.5rem;font-weight:700;color:var(--text-secondary);">₹</span><span
+                            class="sf-placement-num" data-count="8">0</span><span class="sf-placement-suffix">L</span>
+                    </div>
+                    <p class="sf-placement-label">Average CTC<br>(Fresher) per annum</p>
+                </div>
+                <div class="sf-placement-card animate-on-scroll">
+                    <div><span class="sf-placement-num" data-count="45">0</span><span
+                            class="sf-placement-suffix">+</span></div>
+                    <p class="sf-placement-label">Days Average<br>Time-to-Placement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="sf-testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Student Success Stories</span>
+                <h2 class="section-title">Lives <span class="highlight-text">Changed</span> by RevApex</h2>
+                <p class="section-subtitle">Real students, real companies, real salaries</p>
+            </div>
+            <div class="sf-testi-grid">
+                <div class="sf-testi-card animate-on-scroll">
+                    <div class="sf-testi-stars">★★★★★</div>
+                    <p class="sf-testi-quote">RevApex didn't just teach me Salesforce — they gave me a career. The live
+                        projects and mock interviews were invaluable. I cracked ADM-201 on my first attempt and got
+                        placed at Accenture within 38 days.</p>
+                    <div class="sf-testi-footer">
+                        <img src="student_priya.png" alt="Priya Sharma" class="sf-testi-avatar"
+                            style="object-fit:cover;">
+                        <div>
+                            <div class="sf-testi-name">Priya Sharma</div>
+                            <div class="sf-testi-role">Salesforce Admin · Accenture</div>
+                        </div>
+                        <span class="sf-testi-badge">₹9.2L CTC</span>
+                    </div>
+                </div>
+                <div class="sf-testi-card animate-on-scroll">
+                    <div class="sf-testi-stars">★★★★★</div>
+                    <p class="sf-testi-quote">The LWC and Apex modules are unlike anything else I found online. The
+                        trainer had hands-on project experience and answered every question in detail. I'm now a
+                        Salesforce Developer at Deloitte.</p>
+                    <div class="sf-testi-footer">
+                        <img src="student_rahul.png" alt="Rahul Mehta" class="sf-testi-avatar"
+                            style="object-fit:cover;">
+                        <div>
+                            <div class="sf-testi-name">Rahul Mehta</div>
+                            <div class="sf-testi-role">Salesforce Developer · Deloitte</div>
+                        </div>
+                        <span class="sf-testi-badge">₹11.5L CTC</span>
+                    </div>
+                </div>
+                <div class="sf-testi-card animate-on-scroll">
+                    <div class="sf-testi-stars">★★★★★</div>
+                    <p class="sf-testi-quote">I was a BA with no tech background. The RevApex team helped me transition
+                        into Salesforce Admin seamlessly. Their faculty, materials, and placement support are truly
+                        world-class.</p>
+                    <div class="sf-testi-footer">
+                        <img src="student_ananya.png" alt="Ananya Krishnan" class="sf-testi-avatar"
+                            style="object-fit:cover;">
+                        <div>
+                            <div class="sf-testi-name">Ananya Krishnan</div>
+                            <div class="sf-testi-role">Salesforce Admin · Wipro</div>
+                        </div>
+                        <span class="sf-testi-badge">₹7.8L CTC</span>
+                    </div>
+                </div>
+                <div class="sf-testi-card animate-on-scroll">
+                    <div class="sf-testi-stars">★★★★★</div>
+                    <p class="sf-testi-quote">The integration module was a game changer — understanding REST APIs and
+                        Platform Events made me stand out in every interview. Landed a 100% remote role in my second
+                        week of job hunting.</p>
+                    <div class="sf-testi-footer">
+                        <img src="student_karan.png" alt="Karan Patel" class="sf-testi-avatar"
+                            style="object-fit:cover;">
+                        <div>
+                            <div class="sf-testi-name">Karan Patel</div>
+                            <div class="sf-testi-role">Salesforce Integration Dev · Infosys</div>
+                        </div>
+                        <span class="sf-testi-badge">₹10L CTC</span>
+                    </div>
+                </div>
+                <div class="sf-testi-card animate-on-scroll">
+                    <div class="sf-testi-stars">★★★★★</div>
+                    <p class="sf-testi-quote">Coming from Java development, I was skeptical about switching to
+                        Salesforce. RevApex made the transition so smooth — Apex felt natural after their masterclass.
+                        Got PD1 certified in month two!</p>
+                    <div class="sf-testi-footer">
+                        <img src="student_sneha.png" alt="Sneha Joshi" class="sf-testi-avatar"
+                            style="object-fit:cover;">
+                        <div>
+                            <div class="sf-testi-name">Sneha Joshi</div>
+                            <div class="sf-testi-role">Salesforce PD1 · Cognizant</div>
+                        </div>
+                        <span class="sf-testi-badge">₹12L CTC</span>
+                    </div>
+                </div>
+                <div class="sf-testi-card animate-on-scroll">
+                    <div class="sf-testi-stars">★★★★★</div>
+                    <p class="sf-testi-quote">I got trained in Einstein AI and Agentforce — areas that most training
+                        institutes don't even cover. This made me rare in the job market. Placed at TCS Digital in 3
+                        weeks after course completion.</p>
+                    <div class="sf-testi-footer">
+                        <img src="student_vikram.png" alt="Vikram Nair" class="sf-testi-avatar"
+                            style="object-fit:cover;">
+                        <div>
+                            <div class="sf-testi-name">Vikram Nair</div>
+                            <div class="sf-testi-role">Salesforce AI Specialist · TCS Digital</div>
+                        </div>
+                        <span class="sf-testi-badge">₹13.5L CTC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="sf-faq" id="faq">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Everything You <span class="highlight-text">Need to Know</span></h2>
+            </div>
+            <div class="sf-faq-wrap">
+                <div class="sf-faq-item animate-on-scroll">
+                    <div class="sf-faq-q">
+                        Who is this training designed for?
+                        <span class="sf-faq-chevron">▾</span>
+                    </div>
+                    <div class="sf-faq-a">
+                        <div class="sf-faq-a-inner">This program is ideal for freshers (any graduation), career
+                            switchers from IT/non-IT backgrounds, and working professionals looking to upskill into
+                            Salesforce Admin, Developer, or Architect roles. No prior Salesforce experience is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="sf-faq-item animate-on-scroll">
+                    <div class="sf-faq-q">
+                        Is this training online or offline?
+                        <span class="sf-faq-chevron">▾</span>
+                    </div>
+                    <div class="sf-faq-a">
+                        <div class="sf-faq-a-inner">We offer both live online and in-person classroom training at our
+                            centers in Hyderabad and Bengaluru. All live sessions are recorded and available for 6
+                            months so you never miss a class.</div>
+                    </div>
+                </div>
+                <div class="sf-faq-item animate-on-scroll">
+                    <div class="sf-faq-q">
+                        How long does the course take and what are the batch timings?
+                        <span class="sf-faq-chevron">▾</span>
+                    </div>
+                    <div class="sf-faq-a">
+                        <div class="sf-faq-a-inner">The standard batch runs for 3 months (weekday or weekend). A
+                            fast-track batch is available in 6 weeks for experienced IT professionals. Weekday batches
+                            run Mon–Fri (7–9am or 7–9pm IST), and weekend batches run Sat–Sun (10am–1pm or 2–5pm IST).
+                        </div>
+                    </div>
+                </div>
+                <div class="sf-faq-item animate-on-scroll">
+                    <div class="sf-faq-q">
+                        What is your placement guarantee?
+                        <span class="sf-faq-chevron">▾</span>
+                    </div>
+                    <div class="sf-faq-a">
+                        <div class="sf-faq-a-inner">We offer placement support — not just assistance. This includes
+                            résumé building, mock technical and HR interviews, direct referrals to our 200+ hiring
+                            partner companies, and continued job support until you're placed. 96% of our students get
+                            placed within 60 days of course completion.</div>
+                    </div>
+                </div>
+                <div class="sf-faq-item animate-on-scroll">
+                    <div class="sf-faq-q">
+                        Do I get a Salesforce Developer Org to practice on?
+                        <span class="sf-faq-chevcon">▾</span>
+                    </div>
+                    <div class="sf-faq-a">
+                        <div class="sf-faq-a-inner">Yes! Every student gets a dedicated Salesforce Developer Org from
+                            Day 1, configured for all projects. We also provide access to tools like Workbench, VS Code
+                            with Salesforce extensions, and a pre-built CI/CD pipeline for the developer track.</div>
+                    </div>
+                </div>
+                <div class="sf-faq-item animate-on-scroll">
+                    <div class="sf-faq-q">
+                        Are the certification exam fees included?
+                        <span class="sf-faq-chevron">▾</span>
+                    </div>
+                    <div class="sf-faq-a">
+                        <div class="sf-faq-a-inner">The course fee does not include Salesforce certification exam
+                            vouchers (each exam is ~$200 USD), but we have a partnership that gives our students a 40%
+                            discount on exam vouchers. We also provide an exam prep bundle — practice tests, study
+                            guides, and a pre-exam coaching session.</div>
+                    </div>
+                </div>
+                <div class="sf-faq-item animate-on-scroll">
+                    <div class="sf-faq-q">
+                        What is the course fee and are there EMI options?
+                        <span class="sf-faq-chevron">▾</span>
+                    </div>
+                    <div class="sf-faq-a">
+                        <div class="sf-faq-a-inner">We offer transparent, competitive pricing with 0% EMI options via
+                            our banking partners. Book a free demo class first — our counsellors will walk you through a
+                            personalised fee structure based on your track and batch preference. No hidden fees, ever.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FINAL CTA ========== -->
+    <section class="sf-final-cta" id="enroll">
+        <div class="container">
+            <div class="sf-final-cta-inner animate-on-scroll">
+                <span class="section-tag">Limited Seats Available</span>
+                <h2>Ready to Begin Your<br><span class="sf-grad-text">Salesforce Journey?</span></h2>
+                <p>Join 12,000+ professionals who transformed their careers with RevApex. The next batch starts soon —
+                    don't miss your spot.</p>
+                <div class="sf-final-cta-actions">
+                    <a href="#" class="btn btn-sf btn-lg cta-trigger">🚀 Book Free Demo Class</a>
+                    <a href="tel:+919876543210" class="btn btn-outline btn-lg">📞 Talk to a Counsellor</a>
+                </div>
+                <p style="margin-top:24px;font-size:.82rem;color:var(--text-muted);">✓ Free demo &nbsp;·&nbsp; ✓ No
+                    upfront payment &nbsp;·&nbsp; ✓ 100% placement support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="nav-logo">
+                        <img src="../logo.png" alt="RevApex" class="logo-img"
+                            style="height:64px;width:auto;display:block;border-radius:6px;">
+                    </a>
+                    <p class="footer-tagline">AI-powered business transformation — from strategy to execution.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.47 2H3.53A1.45 1.45 0 002 3.47v17.06A1.45 1.45 0 003.47 22h17.06A1.45 1.45 0 0022 20.53V3.47A1.45 1.45 0 0020.47 2zM8.09 18.74h-3v-9h3v9zM6.59 8.48a1.56 1.56 0 110-3.12 1.56 1.56 0 010 3.12zM18.91 18.74h-3v-4.26c0-1.08-.02-2.47-1.5-2.47-1.51 0-1.74 1.18-1.74 2.39v4.34h-3v-9h2.89v1.3h.04a3.16 3.16 0 012.85-1.56c3.05 0 3.61 2.01 3.61 4.61v4.65z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Training</h4>
+                    <ul>
+                        <li><a href="salesforce-training.html">Salesforce Admin</a></li>
+                        <li><a href="salesforce-training.html">Salesforce Developer</a></li>
+                        <li><a href="salesforce-training.html">Integration Track</a></li>
+                        <li><a href="salesforce-training.html">Einstein AI Track</a></li>
+                        <li><a href="#">AI / ML (Soon)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../index.html#about">Who We Are</a></li>
+                        <li><a href="../index.html#services">Solutions</a></li>
+                        <li><a href="../index.html#partners">Partners</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Free Salesforce Guide</a></li>
+                        <li><a href="#">Trailhead Tips</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RevApex · All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== STICKY ENROLL BAR (mobile) ========== -->
+    <div class="sf-sticky-bar" id="sfStickyBar">
+        <p><strong>Next Batch starts March 15</strong> — Limited seats left</p>
+        <a href="#" class="btn btn-sf cta-trigger"
+            style="min-width:140px;justify-content:center;padding:12px 24px;">Enroll Now</a>
+    </div>
+
+    <!-- ========== LEAD CAPTURE POPUP ========== -->
+    <div class="sf-popup-backdrop" id="sfPopupBackdrop">
+        <div class="sf-popup" id="sfPopup" role="dialog" aria-modal="true" aria-labelledby="sfPopupTitle">
+            <button class="sf-popup-close" id="popupClose" aria-label="Close">✕</button>
+            <div class="sf-popup-accent-bar"></div>
+            <div class="sf-popup-icon">☁️</div>
+            <h2 class="sf-popup-title" id="sfPopupTitle">Start Your Free<br>Demo Class Today</h2>
+            <p class="sf-popup-sub">Fill in your details and a RevApex counsellor will reach out within 24 hours to
+                schedule your free session.</p>
+            <form class="sf-form" id="sfLeadForm" novalidate>
+                <div class="sf-form-row">
+                    <div class="sf-field">
+                        <label for="sfName">Full Name</label>
+                        <input type="text" id="sfName" placeholder="e.g. Priya Sharma" autocomplete="name">
+                        <span class="sf-field-error" id="sfNameErr"></span>
+                    </div>
+                    <div class="sf-field">
+                        <label for="sfPhone">Phone Number</label>
+                        <input type="tel" id="sfPhone" placeholder="+91 98765 43210" autocomplete="tel">
+                        <span class="sf-field-error" id="sfPhoneErr"></span>
+                    </div>
+                </div>
+                <div class="sf-field">
+                    <label for="sfEmail">Email Address</label>
+                    <input type="email" id="sfEmail" placeholder="you@example.com" autocomplete="email">
+                    <span class="sf-field-error" id="sfEmailErr"></span>
+                </div>
+                <div class="sf-form-row">
+                    <div class="sf-field">
+                        <label for="sfExperience">Experience Level</label>
+                        <select id="sfExperience">
+                            <option value="">Select level…</option>
+                            <option value="Fresher">No experience (Fresher)</option>
+                            <option value="1-2 years IT">1–2 years IT</option>
+                            <option value="3-5 years IT">3–5 years IT</option>
+                            <option value="5+ years IT">5+ years IT</option>
+                            <option value="Career Switcher">Career switcher (Non-IT)</option>
+                        </select>
+                        <span class="sf-field-error" id="sfExperienceErr"></span>
+                    </div>
+                    <div class="sf-field">
+                        <label for="sfTrack">Track of Interest</label>
+                        <select id="sfTrack">
+                            <option value="">Select track…</option>
+                            <option value="Salesforce Admin">Salesforce Admin</option>
+                            <option value="Salesforce Developer">Salesforce Developer</option>
+                            <option value="Integration Track">Integration Track</option>
+                            <option value="Einstein AI Track">Einstein AI Track</option>
+                            <option value="Not sure yet">Not sure yet</option>
+                        </select>
+                        <span class="sf-field-error" id="sfTrackErr"></span>
+                    </div>
+                </div>
+                <button type="submit" class="sf-form-submit">🚀 Book My Free Demo Class</button>
+                <p class="sf-form-privacy">By submitting, you agree to our <a href="#">Privacy Policy</a>. No spam,
+                    ever.</p>
+            </form>
+            <!-- Success state -->
+            <div class="sf-popup-success" id="sfSuccess">
+                <div class="sf-success-icon">🎉</div>
+                <h3>You're All Set!</h3>
+                <p>Thanks! Our counsellor will call you within 24 hours to schedule your <strong>free demo
+                        class</strong>. Check your email for confirmation.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="sf-training.js"></script>
+</body>
+
+</html>
