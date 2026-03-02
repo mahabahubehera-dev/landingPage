@@ -663,6 +663,14 @@
     overflow: hidden;
 }
 
+.sf-placement .section-title {
+    color: #fff;
+}
+
+.sf-placement .section-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 .sf-placement::before {
     content: '';
     position: absolute;
@@ -721,7 +729,7 @@
 
 .sf-placement-label {
     font-size: .88rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.85);
     margin-top: 8px;
     line-height: 1.4;
 }
