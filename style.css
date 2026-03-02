@@ -124,24 +124,21 @@ strong {
 }
 
 .nav-logo {
-    font-size: 1.2rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
     flex-shrink: 0;
 }
 
-.logo-rev {
-    color: #ffffff;
-}
-
-.logo-ai {
-    color: var(--blue);
+.nav-logo-img {
+    height: 38px;
+    width: auto;
+    display: block;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 28px;
     flex: 1;
 }
 
@@ -1020,10 +1017,15 @@ strong {
 }
 
 .footer-logo {
-    font-size: 1.25rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
 }
 
 .footer-address {
