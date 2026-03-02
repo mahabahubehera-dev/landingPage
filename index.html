@@ -75,8 +75,8 @@
                 Agentic AI · Revenue Engineering · B2B SaaS Exclusive
             </div>
             <h1 class="hero-title animate-fade-up" style="animation-delay:0.2s">
-                Engineer Your Salesforce Into an<br>
-                <span class="hero-title-accent">Autonomous Revenue Machine.</span>
+                Engineer Your Salesforce Into<br>
+                <span class="hero-title-accent">an Autonomous Revenue Machine.</span>
             </h1>
             <p class="hero-subtitle animate-fade-up" style="animation-delay:0.35s">
                 REVAPEX AI deploys precision-built Agentic AI workflows inside your Salesforce environment — eliminating
@@ -88,7 +88,8 @@
                 enterprise architecture experience.
             </p>
             <div class="hero-ctas animate-fade-up" style="animation-delay:0.55s">
-                <a href="#cta" class="btn btn-primary btn-lg">Audit My Revenue Engine</a>
+                <button class="btn btn-primary btn-lg discovery-trigger" id="heroCtaAudit">Audit My Revenue
+                    Engine</button>
                 <a href="#solutions" class="btn btn-secondary btn-lg">See How It Works →</a>
             </div>
             <p class="hero-micro animate-fade-up" style="animation-delay:0.65s">No commitment. 30-minute strategic
@@ -161,7 +162,8 @@
                     <strong>73% of CRM data goes stale within months</strong>. Your revenue team spends 40% of their
                     time on manual updates, chasing pipeline hygiene, and generating reports that are already outdated.
                     Your best closers are managing software instead of winning enterprise contracts. Unlike generalist
-                    consultancies who serve every industry, REVAPEX AI works exclusively with B2B SaaS companies.</p>
+                    consultancies who serve every industry, REVAPEX AI works exclusively with B2B SaaS companies.
+                </p>
                 <div class="stat-row">
                     <div class="stat-item">
                         <span class="stat-number">73%</span>
@@ -418,8 +420,7 @@
             <h2 class="cta-heading">Stop Managing Your Pipeline.<br>Start Engineering Your Revenue.</h2>
             <p class="cta-body">REVAPEX AI builds autonomous, Agentforce-powered Salesforce ecosystems that scale your
                 B2B SaaS growth — predictably, securely, and at enterprise velocity.</p>
-            <a href="mailto:hello@revapex.ai?subject=Discovery Call Request" class="btn btn-cta-white">Book a Free
-                Discovery Call</a>
+            <button class="btn btn-cta-white discovery-trigger">Book a Free Discovery Call</button>
             <p class="cta-micro">30 minutes. No sales pitch. Just a strategic revenue audit.</p>
         </div>
     </section>
@@ -468,6 +469,212 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- ========== DISCOVERY CALL POPUP ========== -->
+    <div class="dc-backdrop" id="dcBackdrop" role="dialog" aria-modal="true" aria-labelledby="dcTitle">
+        <div class="dc-modal" id="dcModal">
+            <button class="dc-close" id="dcClose" aria-label="Close dialog">✕</button>
+            <div class="dc-modal-header">
+                <div class="dc-modal-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                </div>
+                <h2 class="dc-title" id="dcTitle">Book a Free Discovery Call</h2>
+                <p class="dc-subtitle">30 minutes. No sales pitch. A senior engineer will review your Salesforce
+                    environment and identify your #1 revenue leak — free.</p>
+            </div>
+            <form class="dc-form" id="dcForm" novalidate>
+                <div class="dc-form-row">
+                    <div class="dc-field">
+                        <label for="dcFirstName">First Name <span class="dc-req">*</span></label>
+                        <input type="text" id="dcFirstName" placeholder="e.g. Sarah" autocomplete="given-name">
+                        <span class="dc-err" id="dcFirstNameErr"></span>
+                    </div>
+                    <div class="dc-field">
+                        <label for="dcLastName">Last Name <span class="dc-req">*</span></label>
+                        <input type="text" id="dcLastName" placeholder="e.g. Johnson" autocomplete="family-name">
+                        <span class="dc-err" id="dcLastNameErr"></span>
+                    </div>
+                </div>
+                <div class="dc-form-row">
+                    <div class="dc-field">
+                        <label for="dcCompany">Company <span class="dc-req">*</span></label>
+                        <input type="text" id="dcCompany" placeholder="Your SaaS company" autocomplete="organization">
+                        <span class="dc-err" id="dcCompanyErr"></span>
+                    </div>
+                    <div class="dc-field">
+                        <label for="dcJobTitle">Job Title <span class="dc-req">*</span></label>
+                        <input type="text" id="dcJobTitle" placeholder="e.g. VP of Sales"
+                            autocomplete="organization-title">
+                        <span class="dc-err" id="dcJobTitleErr"></span>
+                    </div>
+                </div>
+                <div class="dc-form-row">
+                    <div class="dc-field">
+                        <label for="dcEmail">Email <span class="dc-req">*</span></label>
+                        <input type="email" id="dcEmail" placeholder="you@company.com" autocomplete="email">
+                        <span class="dc-err" id="dcEmailErr"></span>
+                    </div>
+                    <div class="dc-field">
+                        <label for="dcPhone">Phone <span class="dc-req">*</span></label>
+                        <input type="tel" id="dcPhone" placeholder="+1 (555) 000-0000" autocomplete="tel">
+                        <span class="dc-err" id="dcPhoneErr"></span>
+                    </div>
+                </div>
+                <div class="dc-form-row">
+                    <div class="dc-field">
+                        <label for="dcHeardAbout">How did you hear about us? <span class="dc-req">*</span></label>
+                        <select id="dcHeardAbout">
+                            <option value="">Select…</option>
+                            <option value="Google Search">Google Search</option>
+                            <option value="LinkedIn">LinkedIn</option>
+                            <option value="Referral">Referral / Word of Mouth</option>
+                            <option value="Podcast">Podcast</option>
+                            <option value="Twitter/X">Twitter / X</option>
+                            <option value="YouTube">YouTube</option>
+                            <option value="Conference/Event">Conference / Event</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span class="dc-err" id="dcHeardAboutErr"></span>
+                    </div>
+                    <div class="dc-field">
+                        <label for="dcRole">What is your role? <span class="dc-req">*</span></label>
+                        <select id="dcRole">
+                            <option value="">Select…</option>
+                            <option value="Founder / CEO">Founder / CEO</option>
+                            <option value="VP of Sales">VP of Sales / CRO</option>
+                            <option value="VP of Marketing">VP of Marketing / CMO</option>
+                            <option value="RevOps / Sales Ops">RevOps / Sales Ops</option>
+                            <option value="IT / Technology">IT / Technology Leader</option>
+                            <option value="Customer Success">Customer Success Leader</option>
+                            <option value="Salesforce Admin/Dev">Salesforce Admin / Developer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span class="dc-err" id="dcRoleErr"></span>
+                    </div>
+                </div>
+                <div class="dc-field">
+                    <label for="dcHelp">How can we help your organization? <span class="dc-req">*</span></label>
+                    <textarea id="dcHelp" rows="4"
+                        placeholder="Briefly describe your Salesforce challenges or revenue goals…"></textarea>
+                    <span class="dc-err" id="dcHelpErr"></span>
+                </div>
+                <p class="dc-privacy">By submitting, I understand REVAPEX AI will process my information per its <a
+                        href="#">Privacy Policy</a>. No spam, ever.</p>
+                <button type="submit" class="dc-submit" id="dcSubmit">Book My Discovery Call →</button>
+            </form>
+            <div class="dc-success" id="dcSuccess">
+                <div class="dc-success-icon">🎉</div>
+                <h3>You're all set!</h3>
+                <p>A senior REVAPEX AI engineer will reach out within 1 business day to schedule your 30-minute revenue
+                    audit call.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ─── DISCOVERY CALL POPUP ───
+        (function () {
+            const backdrop = document.getElementById('dcBackdrop');
+            const closeBtn = document.getElementById('dcClose');
+            const form = document.getElementById('dcForm');
+            const success = document.getElementById('dcSuccess');
+            const submitBtn = document.getElementById('dcSubmit');
+            const WEBHOOK = 'https://api.trustsolar.in/webhook/revapex';
+
+            function openDC() {
+                backdrop.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                form.style.display = '';
+                success.style.display = 'none';
+            }
+
+            function closeDC() {
+                backdrop.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // All triggers
+            document.querySelectorAll('.discovery-trigger').forEach(btn => {
+                btn.addEventListener('click', e => { e.preventDefault(); openDC(); });
+            });
+
+            // Nav CTA (Book a Discovery Call)
+            const navCta = document.querySelector('.nav-cta');
+            if (navCta) navCta.addEventListener('click', e => { e.preventDefault(); openDC(); });
+
+            closeBtn.addEventListener('click', closeDC);
+            backdrop.addEventListener('click', e => { if (e.target === backdrop) closeDC(); });
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDC(); });
+
+            // Validation + submit
+            form.addEventListener('submit', async e => {
+                e.preventDefault();
+                let valid = true;
+
+                const fields = [
+                    { id: 'dcFirstName', label: 'First name' },
+                    { id: 'dcLastName', label: 'Last name' },
+                    { id: 'dcCompany', label: 'Company' },
+                    { id: 'dcJobTitle', label: 'Job title' },
+                    { id: 'dcEmail', label: 'Email', pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, msg: 'Please enter a valid email.' },
+                    { id: 'dcPhone', label: 'Phone', pattern: /^[0-9+\-\s().]{7,20}$/, msg: 'Please enter a valid phone number.' },
+                    { id: 'dcHeardAbout', label: 'How you heard about us' },
+                    { id: 'dcRole', label: 'Your role' },
+                    { id: 'dcHelp', label: 'How we can help' },
+                ];
+
+                fields.forEach(f => {
+                    const el = document.getElementById(f.id);
+                    const err = document.getElementById(f.id + 'Err');
+                    const val = el.value.trim();
+                    let ok = val !== '';
+                    if (ok && f.pattern) ok = f.pattern.test(val);
+                    if (!ok) {
+                        el.classList.add('dc-input-error');
+                        if (err) err.textContent = f.msg || `${f.label} is required.`;
+                        valid = false;
+                    } else {
+                        el.classList.remove('dc-input-error');
+                        if (err) err.textContent = '';
+                    }
+                });
+
+                if (!valid) return;
+
+                submitBtn.textContent = 'Submitting…';
+                submitBtn.disabled = true;
+
+                const payload = {
+                    first_name: document.getElementById('dcFirstName').value.trim(),
+                    last_name: document.getElementById('dcLastName').value.trim(),
+                    company: document.getElementById('dcCompany').value.trim(),
+                    job_title: document.getElementById('dcJobTitle').value.trim(),
+                    email: document.getElementById('dcEmail').value.trim(),
+                    phone: document.getElementById('dcPhone').value.trim(),
+                    heard_about: document.getElementById('dcHeardAbout').value,
+                    role: document.getElementById('dcRole').value,
+                    how_we_can_help: document.getElementById('dcHelp').value.trim(),
+                    source: 'revapex-homepage',
+                    submitted_at: new Date().toISOString()
+                };
+
+                try {
+                    await fetch(WEBHOOK, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                } catch (err) {
+                    console.warn('Webhook error:', err);
+                }
+
+                form.style.display = 'none';
+                success.style.display = 'flex';
+            });
+        })();
+    </script>
 </body>
 
 </html>

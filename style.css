@@ -892,11 +892,20 @@ strong {
 .steps-grid::before {
     content: '';
     position: absolute;
-    top: 28px;
-    left: calc(12.5% + 20px);
-    right: calc(12.5% + 20px);
+    top: 27px;
+    /* vertically center on the 56px number circle */
+    left: calc(25% * 0 + 28px);
+    /* start at center of first circle */
+    right: calc(25% * 0 + 28px);
+    /* end at center of last circle */
+    left: 28px;
+    right: 28px;
     height: 1px;
-    background: linear-gradient(90deg, var(--blue), rgba(44, 102, 245, 0.2));
+    background: linear-gradient(90deg,
+            var(--blue) 0%,
+            rgba(44, 102, 245, 0.6) 33%,
+            rgba(44, 102, 245, 0.6) 66%,
+            rgba(44, 102, 245, 0.2) 100%);
 }
 
 .step-card {
@@ -1223,5 +1232,294 @@ strong {
 
     .cta-heading {
         font-size: 1.7rem;
+    }
+}
+
+/* ─── DISCOVERY CALL POPUP MODAL ─── */
+.dc-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 20, 40, 0.82);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.dc-backdrop.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.dc-modal {
+    background: #fff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 680px;
+    max-height: 92vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    transform: translateY(20px) scale(0.98);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+    opacity: 0;
+}
+
+.dc-backdrop.active .dc-modal {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+/* Top blue accent strip */
+.dc-modal::before {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, var(--blue), #6b9fff);
+    border-radius: 16px 16px 0 0;
+}
+
+.dc-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: var(--border-light);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition), color var(--transition);
+    z-index: 10;
+}
+
+.dc-close:hover {
+    background: var(--blue);
+    color: #fff;
+}
+
+.dc-modal-header {
+    padding: 28px 36px 0;
+    text-align: center;
+}
+
+.dc-modal-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(44, 102, 245, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    color: var(--blue);
+}
+
+.dc-modal-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.dc-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+}
+
+.dc-subtitle {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Form */
+.dc-form {
+    padding: 24px 36px 32px;
+}
+
+.dc-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 0;
+}
+
+.dc-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.dc-field label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6px;
+    letter-spacing: 0.01em;
+}
+
+.dc-req {
+    color: var(--blue);
+}
+
+.dc-field input,
+.dc-field select,
+.dc-field textarea {
+    font-family: var(--font);
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    background: var(--bg-light);
+    border: 1.5px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    transition: border-color var(--transition), box-shadow var(--transition);
+    outline: none;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.dc-field select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 12px;
+    padding-right: 36px;
+    cursor: pointer;
+}
+
+.dc-field input:focus,
+.dc-field select:focus,
+.dc-field textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(44, 102, 245, 0.12);
+    background: #fff;
+}
+
+.dc-field input.dc-input-error,
+.dc-field select.dc-input-error,
+.dc-field textarea.dc-input-error {
+    border-color: #e53e3e;
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+.dc-field textarea {
+    resize: vertical;
+    min-height: 96px;
+}
+
+.dc-err {
+    font-size: 0.76rem;
+    color: #e53e3e;
+    margin-top: 4px;
+    min-height: 16px;
+    font-weight: 500;
+}
+
+.dc-privacy {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.dc-privacy a {
+    color: var(--blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.dc-submit {
+    width: 100%;
+    background: var(--blue);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 15px 24px;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    letter-spacing: 0.01em;
+}
+
+.dc-submit:hover:not(:disabled) {
+    background: #1a50d9;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(44, 102, 245, 0.35);
+}
+
+.dc-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Success state */
+.dc-success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 36px 48px;
+    gap: 12px;
+}
+
+.dc-success-icon {
+    font-size: 3rem;
+    margin-bottom: 8px;
+}
+
+.dc-success h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+}
+
+.dc-success p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 380px;
+}
+
+/* Responsive popup */
+@media (max-width: 600px) {
+    .dc-modal {
+        max-height: 96vh;
+        border-radius: 12px;
+    }
+
+    .dc-modal-header {
+        padding: 24px 20px 0;
+    }
+
+    .dc-form {
+        padding: 20px 20px 28px;
+    }
+
+    .dc-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .dc-title {
+        font-size: 1.2rem;
     }
 }
