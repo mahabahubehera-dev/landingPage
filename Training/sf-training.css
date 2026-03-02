@@ -10,6 +10,22 @@
     --sf-green: #3ED69E;
     --sf-orange: #FFB75E;
     --sf-grad: linear-gradient(135deg, #2C66F5, #4f7df9, #a78bfa);
+
+    /* Dark Theme Core Variables Override */
+    --bg-primary: #0a1428;
+    --bg-secondary: #0F1E3A;
+    --bg-card: rgba(255, 255, 255, 0.03);
+    --bg-card-hover: rgba(44, 102, 245, 0.08);
+    --text-primary: #ffffff;
+    --text-secondary: #E5EAF2;
+    --text-muted: #8b9bb4;
+    --border: rgba(44, 102, 245, 0.2);
+    --border-hover: rgba(44, 102, 245, 0.4);
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 }
 
 /* ============================
@@ -407,6 +423,9 @@
     transition: all .35s;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .sf-highlight-card::after {
@@ -479,6 +498,8 @@
     border-radius: var(--radius-sm);
     overflow: hidden;
     transition: border-color .3s;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 .sf-acc-item.open {
@@ -609,6 +630,9 @@
     transition: all .4s;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .sf-why-card::before {
@@ -697,6 +721,9 @@
     border: 1px solid rgba(0, 161, 224, .15);
     border-radius: var(--radius);
     transition: all .4s;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .sf-placement-card:hover {
@@ -758,6 +785,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .sf-testi-card:hover {
@@ -845,6 +875,8 @@
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     overflow: hidden;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 .sf-faq-item.open {
