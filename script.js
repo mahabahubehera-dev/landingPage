@@ -238,33 +238,37 @@
 
 // ─── METHOD INTERACTIVE LAYOUT ───
 (function initMethodInteractive() {
-    const featureItems = document.querySelectorAll('.method-feature-item');
-    const mainImg = document.getElementById('method-main-img');
-    const glowBg = document.querySelector('.method-interactive-img-card .img-glow-bg');
+    const interactiveLayouts = document.querySelectorAll('.method-interactive-layout');
 
-    if (!featureItems.length || !mainImg) return;
+    interactiveLayouts.forEach(layout => {
+        const featureItems = layout.querySelectorAll('.method-feature-item');
+        const mainImg = layout.querySelector('.interactive-main-img');
+        const glowBg = layout.querySelector('.img-glow-bg');
 
-    featureItems.forEach(item => {
-        item.addEventListener('click', () => {
-            // Remove active from all
-            featureItems.forEach(f => f.classList.remove('active'));
-            // Add active to clicked
-            item.classList.add('active');
+        if (!featureItems.length || !mainImg) return;
 
-            // Get new image src
-            const newImgSrc = item.getAttribute('data-img');
+        featureItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active from all
+                featureItems.forEach(f => f.classList.remove('active'));
+                // Add active to clicked
+                item.classList.add('active');
 
-            // Fade out current image
-            mainImg.classList.add('fade-out');
-            if (glowBg) glowBg.classList.remove('active');
+                // Get new image src
+                const newImgSrc = item.getAttribute('data-img');
 
-            setTimeout(() => {
-                mainImg.src = newImgSrc;
-                mainImg.onload = () => {
-                    mainImg.classList.remove('fade-out');
-                    if (glowBg) glowBg.classList.add('active');
-                };
-            }, 300); // match transition time
+                // Fade out current image
+                mainImg.classList.add('fade-out');
+                if (glowBg) glowBg.classList.remove('active');
+
+                setTimeout(() => {
+                    mainImg.src = newImgSrc;
+                    mainImg.onload = () => {
+                        mainImg.classList.remove('fade-out');
+                        if (glowBg) glowBg.classList.add('active');
+                    };
+                }, 300); // match transition time
+            });
         });
     });
 })();
