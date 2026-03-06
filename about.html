@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | REVAPEX AI — Predictable Revenue Growth</title>
+    <meta name="description"
+        content="Learn about REVAPEX AI's mission to drive predictable revenue growth through Salesforce architecture, AI automation, and expert training.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://revapex.ai/about.html">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero {
+            position: relative;
+            padding: 160px 0 100px;
+            background: var(--navy-deep);
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 40px 40px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(44, 102, 245, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .about-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.04em;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .about-title span {
+            color: var(--blue);
+            text-shadow: 0 0 30px rgba(44, 102, 245, 0.4);
+        }
+
+        .about-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            color: var(--text-muted-dark);
+            max-width: 760px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .about-section {
+            padding: 100px 0;
+            background: var(--bg-dark);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            transition: var(--transition);
+            /* Interactions mapping from SKILL.md */
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--blue);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .about-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(44, 102, 245, 0.3);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .about-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .about-card-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(44, 102, 245, 0.1);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--blue);
+        }
+
+        .about-card-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .about-card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .about-card-text {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .stats-banner {
+            background: var(--navy);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 80px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        .stat-box h3 span {
+            color: var(--blue);
+        }
+
+        .stat-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        @media (max-width: 992px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 48px 24px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── TOP TRUST BAR ── -->
+    <div class="top-trust-bar">
+        <span>🇺🇸 Miami, FL</span>
+        <span class="bar-divider">|</span>
+        <span>Serving Enterprise B2B SaaS in the <span class="bar-accent">US &amp; UK</span></span>
+        <span class="bar-divider">|</span>
+        <span class="bar-accent">NDA-First Engagement</span>
+    </div>
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="REVAPEX AI" class="nav-logo-img" loading="eager" width="140" height="60">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+                <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="about.html" class="nav-link">Why Us</a></li>
+                <li class="nav-item-dropdown" id="trainingDropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Training
+                        <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" aria-hidden="true">
+                            <path d="M1 1l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="Training/salesforce-training.html">
+                            <span class="dd-icon">☁️</span> Salesforce Training
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="ai-ml-training.html"><span class="dd-icon">🤖</span> AI / ML Training
+                            <small>(Soon)</small></a>
+                        <a href="data-engineering.html"><span class="dd-icon">📊</span> Data Engineering
+                            <small>(Soon)</small></a>
+                    </div>
+                </li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">Book a Discovery Call</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section class="about-hero">
+        <div class="container relative z-10">
+            <span class="section-tag">Our Story</span>
+            <h1 class="about-title">Engineered for<br><span>Revenue Velocity.</span></h1>
+            <p class="about-subtitle">
+                REVAPEX AI bridges the gap between disconnected systems and predictable growth. We build, scale, and
+                automate Salesforce environments and AI ops for ambitious B2B SaaS teams.
+            </p>
+        </div>
+    </section>
+
+    <!-- ── STATS BANNER ── -->
+    <section class="stats-banner">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>$2.4<span>B+</span></h3>
+                    <p>Pipeline Managed</p>
+                </div>
+                <div class="stat-box">
+                    <h3>45<span>+</span></h3>
+                    <p>Enterprise Implementations</p>
+                </div>
+                <div class="stat-box">
+                    <h3>12<span>k+</span></h3>
+                    <p>Professionals Trained</p>
+                </div>
+                <div class="stat-box">
+                    <h3>0<span>%</span></h3>
+                    <p>Acceptable Downtime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── VALUES ── -->
+    <section class="about-section">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 class="section-title">Why the Best Choose Us</h2>
+                <p class="section-subtitle" style="margin-top: 20px;">
+                    We operate as an extension of your RevOps team—bringing deep technical expertise without the agency
+                    bloat.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="about-card-title">Architected for Speed</h3>
+                    <p class="about-card-text">
+                        We deploy lean, scalable architectures that eliminate technical debt. Every solution we build is
+                        geared to shorten your sales cycles and accelerate time-to-value.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="about-card-title">NDA-First Security</h3>
+                    <p class="about-card-text">
+                        Your data is your competitive advantage. We engage with strict zero-trust confidentiality,
+                        ensuring your strategic playbooks remain exclusively yours.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                    </div>
+                    <h3 class="about-card-title">AI-Native Approach</h3>
+                    <p class="about-card-text">
+                        We don't just 'integrate AI' as a buzzword. We build autonomous agentic workflows that handle
+                        the heavy lifting, empowering your team to focus on closing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer" id="footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="REVAPEX AI" class="footer-logo-img" loading="lazy" width="120" height="50">
+                </div>
+                <p class="footer-address">
+                    REVAPEX AI LLC<br>
+                    25 SE 2nd Ave, Suite 550-743<br>
+                    Miami, FL 33131, United States
+                </p>
+                <p class="footer-contact">
+                    📞 <a href="tel:+17372029931">+1 (737) 202-9931</a><br>
+                    🌐 <a href="https://revapex.ai">revapex.ai</a>
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-heading">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#solutions">Solutions</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Training/salesforce-training.html">Training</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-heading">Legal &amp; Trust</h4>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+                <p class="footer-legal">© 2026 REVAPEX AI LLC. All Rights Reserved.</p>
+                <p class="footer-disclaimer">Salesforce is a registered trademark of Salesforce, Inc. REVAPEX AI LLC is
+                    an independent consultancy and is not affiliated with Salesforce, Inc.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>🇺🇸 Proudly US-Based | Miami, FL | Serving B2B SaaS Teams Globally</span>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            const isExpanded = hamburger.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+            navMenu.classList.toggle('open');
+        });
+
+        // Dropdown
+        const dropdown = document.getElementById('trainingDropdown');
+        if (dropdown) {
+            const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = dropdown.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', isOpen);
+            });
+            document.addEventListener('click', () => {
+                dropdown.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        }
+    </script>
+</body>
+
+</html>

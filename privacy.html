@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | REVAPEX AI</title>
+    <meta name="description"
+        content="REVAPEX AI LLC Privacy Policy — how we collect, use, and protect your personal information.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://revapex.ai/privacy.html">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Legal Page Styles ── */
+        .legal-hero {
+            background: var(--navy);
+            padding: 100px 0 60px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(44, 102, 245, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .legal-hero-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .legal-breadcrumb {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .legal-breadcrumb a {
+            color: var(--blue);
+            transition: opacity 0.2s;
+        }
+
+        .legal-breadcrumb a:hover {
+            opacity: 0.8;
+        }
+
+        .legal-breadcrumb span {
+            margin: 0 8px;
+            opacity: 0.4;
+        }
+
+        .legal-hero-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
+
+        .legal-hero-sub {
+            font-size: 1rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .legal-hero-sub span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legal-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--blue);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* ── Legal Body ── */
+        .legal-layout {
+            padding: 72px 0 100px;
+            display: grid;
+            grid-template-columns: 1fr 260px;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .legal-body h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 48px 0 16px;
+            letter-spacing: -0.02em;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .legal-body h2:first-child {
+            margin-top: 0;
+            border-top: none;
+        }
+
+        .legal-body p {
+            font-size: 0.96rem;
+            color: var(--text-muted-dark);
+            line-height: 1.85;
+            margin-bottom: 16px;
+        }
+
+        .legal-body ul {
+            list-style: none;
+            margin: 0 0 16px;
+            padding: 0;
+        }
+
+        .legal-body ul li {
+            font-size: 0.96rem;
+            color: var(--text-muted-dark);
+            line-height: 1.85;
+            padding: 6px 0 6px 20px;
+            position: relative;
+        }
+
+        .legal-body ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 6px;
+            height: 6px;
+            background: var(--blue);
+            border-radius: 50%;
+        }
+
+        .legal-body a {
+            color: var(--blue);
+        }
+
+        .legal-body a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Sidebar ── */
+        .legal-sidebar {
+            position: sticky;
+            top: 120px;
+        }
+
+        .legal-toc {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .legal-toc h4 {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .legal-toc ul {
+            list-style: none;
+        }
+
+        .legal-toc ul li {
+            margin-bottom: 10px;
+        }
+
+        .legal-toc ul li a {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            transition: color 0.2s;
+        }
+
+        .legal-toc ul li a:hover {
+            color: var(--blue);
+        }
+
+        .legal-contact-card {
+            margin-top: 20px;
+            background: rgba(44, 102, 245, 0.07);
+            border: 1px solid rgba(44, 102, 245, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .legal-contact-card p {
+            font-size: 0.84rem;
+            color: var(--text-muted-dark);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .legal-contact-card a {
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: var(--blue);
+        }
+
+        .legal-contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+            .legal-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .legal-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── TOP TRUST BAR ── -->
+    <div class="top-trust-bar">
+        <span>🇺🇸 Miami, FL</span>
+        <span class="bar-divider">|</span>
+        <span>Serving Enterprise B2B SaaS in the <span class="bar-accent">US &amp; UK</span></span>
+        <span class="bar-divider">|</span>
+        <span class="bar-accent">NDA-First Engagement</span>
+    </div>
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="REVAPEX AI" class="nav-logo-img" loading="eager" width="140" height="60">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+                <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="about.html" class="nav-link">Why Us</a></li>
+                <li class="nav-item-dropdown" id="trainingDropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Training
+                        <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round">
+                            <path d="M1 1l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="Training/salesforce-training.html">
+                            <span class="dd-icon">☁️</span> Salesforce Training
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="ai-ml-training.html"><span class="dd-icon">🤖</span> AI / ML Training
+                            <small>(Soon)</small></a>
+                        <a href="data-engineering.html"><span class="dd-icon">📊</span> Data Engineering
+                            <small>(Soon)</small></a>
+                    </div>
+                </li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">Book a Discovery Call</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <div class="legal-hero">
+        <div class="container legal-hero-inner">
+            <div class="legal-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                Privacy Policy
+            </div>
+            <h1 class="legal-hero-title">Privacy Policy</h1>
+            <div class="legal-hero-sub">
+                <span><span class="legal-dot"></span> Last Updated: March 1, 2026</span>
+                <span><span class="legal-dot"></span> REVAPEX AI LLC</span>
+                <span><span class="legal-dot"></span> Miami, FL, United States</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main>
+        <div class="container">
+            <div class="legal-layout">
+                <!-- Body -->
+                <div class="legal-body">
+
+                    <h2 id="overview">1. Overview</h2>
+                    <p>REVAPEX AI LLC ("REVAPEX AI," "we," "us," or "our") is committed to protecting your privacy. This
+                        Privacy Policy explains how we collect, use, disclose, and safeguard your information when you
+                        visit <a href="https://revapex.ai">revapex.ai</a> or engage with our services.</p>
+                    <p>By accessing our website, you agree to the terms of this Privacy Policy. If you do not agree,
+                        please discontinue use of our site.</p>
+
+                    <h2 id="information-we-collect">2. Information We Collect</h2>
+                    <p>We collect information in the following ways:</p>
+                    <ul>
+                        <li><strong>Contact Form Submissions:</strong> When you book a discovery call or contact us, we
+                            collect your name, email address, phone number, company name, job title, and any details you
+                            provide about your needs.</li>
+                        <li><strong>Usage Data:</strong> We may automatically receive standard web server logs including
+                            your IP address, browser type, referring URLs, and pages visited.</li>
+                        <li><strong>Cookies:</strong> We use essential cookies to ensure proper website functionality.
+                            No tracking or advertising cookies are used without your explicit consent.</li>
+                    </ul>
+
+                    <h2 id="how-we-use">3. How We Use Your Information</h2>
+                    <p>We use the information we collect exclusively to:</p>
+                    <ul>
+                        <li>Schedule and conduct discovery calls and revenue audit sessions</li>
+                        <li>Communicate about our services, proposals, and engagement terms</li>
+                        <li>Respond to your inquiries and provide customer support</li>
+                        <li>Improve the functionality and content of our website</li>
+                        <li>Comply with applicable legal obligations</li>
+                    </ul>
+                    <p>We <strong>do not</strong> use your information for unsolicited marketing campaigns or sell it to
+                        any third party.</p>
+
+                    <h2 id="data-sharing">4. Data Sharing &amp; Disclosure</h2>
+                    <p>REVAPEX AI does not sell, trade, or rent your personal information to third parties. We may share
+                        data only in these limited circumstances:</p>
+                    <ul>
+                        <li><strong>Service Providers:</strong> Trusted vendors who assist in operating our website or
+                            conducting business (e.g., email delivery, CRM tools) — bound by confidentiality
+                            obligations.</li>
+                        <li><strong>Legal Requirements:</strong> When required by law, regulation, or a valid legal
+                            process (e.g., court order or government request).</li>
+                        <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of
+                            assets, your data may be transferred — you will be notified in advance.</li>
+                    </ul>
+
+                    <h2 id="data-retention">5. Data Retention</h2>
+                    <p>We retain personal data only as long as necessary to fulfill the purposes outlined in this
+                        policy, or as required by law. Contact form submissions are retained for up to 2 years unless
+                        you request deletion earlier.</p>
+
+                    <h2 id="security">6. Data Security</h2>
+                    <p>We implement industry-standard technical and organizational measures to protect your information
+                        against unauthorized access, alteration, disclosure, or destruction. All data transmission to or
+                        from our site uses SSL/TLS encryption.</p>
+                    <p>However, no method of transmission over the internet is 100% secure. While we strive to protect
+                        your data, we cannot guarantee absolute security.</p>
+
+                    <h2 id="your-rights">7. Your Rights</h2>
+                    <p>Depending on your jurisdiction, you may have the following rights:</p>
+                    <ul>
+                        <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
+                        <li><strong>Correction:</strong> Request correction of inaccurate or incomplete data.</li>
+                        <li><strong>Deletion:</strong> Request deletion of your personal data ("right to be forgotten").
+                        </li>
+                        <li><strong>Portability:</strong> Request your data in a structured, machine-readable format.
+                        </li>
+                        <li><strong>Objection:</strong> Object to the processing of your data for certain purposes.</li>
+                        <li><strong>Withdraw Consent:</strong> Where processing is based on consent, withdraw it at any
+                            time.</li>
+                    </ul>
+                    <p>To exercise any of these rights, contact us at <a
+                            href="mailto:hello@revapex.ai">hello@revapex.ai</a>. We will respond within 30 days.</p>
+
+                    <h2 id="gdpr">8. GDPR &amp; UK Data Protection</h2>
+                    <p>For users in the European Union or United Kingdom, REVAPEX AI processes your data lawfully under
+                        the legal bases of <strong>legitimate interests</strong> (providing requested services) and
+                        <strong>consent</strong> (for any optional communications). You have the right to lodge a
+                        complaint with your local data protection authority.
+                    </p>
+
+                    <h2 id="children">9. Children's Privacy</h2>
+                    <p>Our services are directed exclusively at business professionals. We do not knowingly collect
+                        personal information from individuals under the age of 18. If you become aware that a minor has
+                        provided us with personal data, please contact us immediately.</p>
+
+                    <h2 id="third-party">10. Third-Party Links</h2>
+                    <p>Our website may contain links to third-party websites. We are not responsible for the privacy
+                        practices of those sites. We encourage you to review the privacy policies of any external sites
+                        you visit.</p>
+
+                    <h2 id="changes">11. Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. Material changes will be indicated by
+                        updating the "Last Updated" date above. Continued use of our website after changes constitutes
+                        acceptance of the revised policy.</p>
+
+                    <h2 id="contact">12. Contact Us</h2>
+                    <p>For questions, concerns, or data requests, please contact:</p>
+                    <ul>
+                        <li><strong>REVAPEX AI LLC</strong></li>
+                        <li>25 SE 2nd Ave, Suite 550-743, Miami, FL 33131, United States</li>
+                        <li>Email: <a href="mailto:hello@revapex.ai">hello@revapex.ai</a></li>
+                        <li>Phone: <a href="tel:+17372029931">+1 (737) 202-9931</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="legal-sidebar">
+                    <div class="legal-toc">
+                        <h4>On This Page</h4>
+                        <ul>
+                            <li><a href="#overview">1. Overview</a></li>
+                            <li><a href="#information-we-collect">2. Information We Collect</a></li>
+                            <li><a href="#how-we-use">3. How We Use Your Info</a></li>
+                            <li><a href="#data-sharing">4. Data Sharing</a></li>
+                            <li><a href="#data-retention">5. Data Retention</a></li>
+                            <li><a href="#security">6. Data Security</a></li>
+                            <li><a href="#your-rights">7. Your Rights</a></li>
+                            <li><a href="#gdpr">8. GDPR &amp; UK</a></li>
+                            <li><a href="#children">9. Children's Privacy</a></li>
+                            <li><a href="#third-party">10. Third-Party Links</a></li>
+                            <li><a href="#changes">11. Changes</a></li>
+                            <li><a href="#contact">12. Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="legal-contact-card">
+                        <p>Questions about your data or this policy?</p>
+                        <a href="mailto:hello@revapex.ai">hello@revapex.ai →</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer" id="footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="REVAPEX AI" class="footer-logo-img" loading="lazy" width="120" height="50">
+                </div>
+                <p class="footer-address">
+                    REVAPEX AI LLC<br>
+                    25 SE 2nd Ave, Suite 550-743<br>
+                    Miami, FL 33131, United States
+                </p>
+                <p class="footer-contact">
+                    📞 <a href="tel:+17372029931">+1 (737) 202-9931</a><br>
+                    🌐 <a href="https://revapex.ai">revapex.ai</a>
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-heading">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#solutions">Solutions</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Training/salesforce-training.html">Training</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-heading">Legal &amp; Trust</h4>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+                <p class="footer-legal">© 2026 REVAPEX AI LLC. All Rights Reserved.</p>
+                <p class="footer-disclaimer">Salesforce is a registered trademark of Salesforce, Inc. REVAPEX AI LLC is
+                    an independent consultancy and is not affiliated with Salesforce, Inc.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>🇺🇸 Proudly US-Based | Miami, FL | Serving B2B SaaS Teams Globally</span>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navMenu.classList.toggle('open');
+        });
+
+        // Dropdown
+        const dropdown = document.getElementById('trainingDropdown');
+        if (dropdown) {
+            const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+            });
+            document.addEventListener('click', () => dropdown.classList.remove('open'));
+        }
+    </script>
+</body>
+
+</html>

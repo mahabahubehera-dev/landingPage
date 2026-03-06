@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | REVAPEX AI</title>
+    <meta name="description"
+        content="REVAPEX AI LLC Terms of Service — the terms and conditions governing use of our website and services.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://revapex.ai/terms.html">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Legal Page Styles ── */
+        .legal-hero {
+            background: var(--navy);
+            padding: 100px 0 60px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 70% 50%, rgba(44, 102, 245, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .legal-hero-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .legal-breadcrumb {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .legal-breadcrumb a {
+            color: var(--blue);
+            transition: opacity 0.2s;
+        }
+
+        .legal-breadcrumb a:hover {
+            opacity: 0.8;
+        }
+
+        .legal-breadcrumb span {
+            margin: 0 8px;
+            opacity: 0.4;
+        }
+
+        .legal-hero-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
+
+        .legal-hero-sub {
+            font-size: 1rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .legal-hero-sub span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legal-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--blue);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* ── Legal Body ── */
+        .legal-layout {
+            padding: 72px 0 100px;
+            display: grid;
+            grid-template-columns: 1fr 260px;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .legal-body h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 48px 0 16px;
+            letter-spacing: -0.02em;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .legal-body h2:first-child {
+            margin-top: 0;
+            border-top: none;
+        }
+
+        .legal-body p {
+            font-size: 0.96rem;
+            color: var(--text-muted-dark);
+            line-height: 1.85;
+            margin-bottom: 16px;
+        }
+
+        .legal-body ul {
+            list-style: none;
+            margin: 0 0 16px;
+            padding: 0;
+        }
+
+        .legal-body ul li {
+            font-size: 0.96rem;
+            color: var(--text-muted-dark);
+            line-height: 1.85;
+            padding: 6px 0 6px 20px;
+            position: relative;
+        }
+
+        .legal-body ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 6px;
+            height: 6px;
+            background: var(--blue);
+            border-radius: 50%;
+        }
+
+        .legal-body a {
+            color: var(--blue);
+        }
+
+        .legal-body a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Sidebar ── */
+        .legal-sidebar {
+            position: sticky;
+            top: 120px;
+        }
+
+        .legal-toc {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .legal-toc h4 {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .legal-toc ul {
+            list-style: none;
+        }
+
+        .legal-toc ul li {
+            margin-bottom: 10px;
+        }
+
+        .legal-toc ul li a {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            transition: color 0.2s;
+        }
+
+        .legal-toc ul li a:hover {
+            color: var(--blue);
+        }
+
+        .legal-contact-card {
+            margin-top: 20px;
+            background: rgba(44, 102, 245, 0.07);
+            border: 1px solid rgba(44, 102, 245, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .legal-contact-card p {
+            font-size: 0.84rem;
+            color: var(--text-muted-dark);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .legal-contact-card a {
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: var(--blue);
+        }
+
+        .legal-contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+            .legal-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .legal-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── TOP TRUST BAR ── -->
+    <div class="top-trust-bar">
+        <span>🇺🇸 Miami, FL</span>
+        <span class="bar-divider">|</span>
+        <span>Serving Enterprise B2B SaaS in the <span class="bar-accent">US &amp; UK</span></span>
+        <span class="bar-divider">|</span>
+        <span class="bar-accent">NDA-First Engagement</span>
+    </div>
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="REVAPEX AI" class="nav-logo-img" loading="eager" width="140" height="60">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+                <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="about.html" class="nav-link">Why Us</a></li>
+                <li class="nav-item-dropdown" id="trainingDropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Training
+                        <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round">
+                            <path d="M1 1l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="Training/salesforce-training.html">
+                            <span class="dd-icon">☁️</span> Salesforce Training
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="ai-ml-training.html"><span class="dd-icon">🤖</span> AI / ML Training
+                            <small>(Soon)</small></a>
+                        <a href="data-engineering.html"><span class="dd-icon">📊</span> Data Engineering
+                            <small>(Soon)</small></a>
+                    </div>
+                </li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">Book a Discovery Call</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <div class="legal-hero">
+        <div class="container legal-hero-inner">
+            <div class="legal-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                Terms of Service
+            </div>
+            <h1 class="legal-hero-title">Terms of Service</h1>
+            <div class="legal-hero-sub">
+                <span><span class="legal-dot"></span> Last Updated: March 1, 2026</span>
+                <span><span class="legal-dot"></span> REVAPEX AI LLC</span>
+                <span><span class="legal-dot"></span> Miami, FL, United States</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main>
+        <div class="container">
+            <div class="legal-layout">
+                <!-- Body -->
+                <div class="legal-body">
+
+                    <h2 id="acceptance">1. Acceptance of Terms</h2>
+                    <p>By accessing or using the website located at <a href="https://revapex.ai">revapex.ai</a> ("Site")
+                        or engaging the services of REVAPEX AI LLC ("REVAPEX AI," "we," "us," or "our"), you agree to be
+                        bound by these Terms of Service ("Terms"). If you do not agree to these Terms, you may not
+                        access or use our Site or services.</p>
+                    <p>These Terms apply to all visitors, prospects, clients, and anyone else who accesses our Site or
+                        services.</p>
+
+                    <h2 id="services">2. Description of Services</h2>
+                    <p>REVAPEX AI LLC is a Salesforce Revenue Engineering firm that deploys Agentic AI workflows for
+                        enterprise B2B SaaS companies. Our services include, but are not limited to:</p>
+                    <ul>
+                        <li>Salesforce implementation, customization, and optimization</li>
+                        <li>Agentic AI workflow design and deployment</li>
+                        <li>Revenue Operations (RevOps) consulting and strategy</li>
+                        <li>GTM systems integration and alignment</li>
+                        <li>Salesforce and AI/ML professional training programs</li>
+                        <li>Predictive analytics and revenue intelligence dashboards</li>
+                    </ul>
+                    <p>Specific service terms, scope, deliverables, and payment conditions for client engagements are
+                        governed by separate signed Statements of Work (SOWs) and Master Service Agreements (MSAs).</p>
+
+                    <h2 id="intellectual-property">3. Intellectual Property</h2>
+                    <p>All content on this Site — including but not limited to text, graphics, logos, methodology
+                        frameworks (including the "Revenue Engineering Architecture™"), design elements, and code — is
+                        the exclusive property of REVAPEX AI LLC and is protected by applicable copyright, trademark,
+                        and intellectual property laws.</p>
+                    <p>You may not reproduce, distribute, modify, create derivative works, or exploit any content from
+                        this Site without our prior written consent.</p>
+
+                    <h2 id="use-of-site">4. Acceptable Use</h2>
+                    <p>You agree to use this Site only for lawful purposes and in accordance with these Terms. You agree
+                        NOT to:</p>
+                    <ul>
+                        <li>Use the Site in any way that violates applicable local, state, national, or international
+                            law or regulation</li>
+                        <li>Transmit any unsolicited or unauthorized advertising or promotional material (spam)</li>
+                        <li>Attempt to gain unauthorized access to any portion of the Site or its related systems</li>
+                        <li>Interfere with or disrupt the integrity or performance of the Site</li>
+                        <li>Scrape, crawl, or harvest data from the Site without express written permission</li>
+                        <li>Impersonate or misrepresent your affiliation with REVAPEX AI or any other entity</li>
+                    </ul>
+
+                    <h2 id="disclaimers">5. Disclaimers</h2>
+                    <p>The Site and its content are provided on an "AS IS" and "AS AVAILABLE" basis without warranties
+                        of any kind, either express or implied, including but not limited to warranties of
+                        merchantability, fitness for a particular purpose, or non-infringement.</p>
+                    <p>REVAPEX AI does not warrant that the Site will be uninterrupted, error-free, or free of viruses
+                        or other harmful components. Any reliance on information provided on the Site is at your own
+                        risk.</p>
+                    <p><strong>Results Disclaimer:</strong> Case studies, statistics, and performance claims referenced
+                        on our Site represent past results for specific clients and are not guarantees of future
+                        outcomes. Results vary based on client context, implementation quality, and market conditions.
+                    </p>
+
+                    <h2 id="limitation">6. Limitation of Liability</h2>
+                    <p>To the maximum extent permitted by applicable law, REVAPEX AI LLC, its officers, directors,
+                        employees, agents, and contractors shall not be liable for any indirect, incidental, special,
+                        consequential, or punitive damages — including loss of profits, data, goodwill, or business
+                        opportunities — arising from your use of (or inability to use) the Site or our services, even if
+                        advised of the possibility of such damages.</p>
+                    <p>Our total liability to you for any claim arising out of these Terms shall not exceed the greater
+                        of (a) the amounts paid to us in the 90 days prior to the event giving rise to the claim, or (b)
+                        USD $500.</p>
+
+                    <h2 id="third-party">7. Third-Party Links</h2>
+                    <p>Our Site may contain links to third-party websites for informational purposes. These links do not
+                        constitute endorsement of those sites. We have no control over the content, privacy practices,
+                        or availability of third-party sites and accept no responsibility for them.</p>
+
+                    <h2 id="confidentiality">8. Confidentiality (NDA-First)</h2>
+                    <p>All discovery calls and client engagements are conducted under a strict Non-Disclosure Agreement
+                        (NDA) framework. Any information shared during scoping and discovery sessions is treated as
+                        confidential and will not be disclosed to third parties without your written consent.</p>
+
+                    <h2 id="salesforce-trademark">9. Salesforce Trademark Notice</h2>
+                    <p>Salesforce® and related trademarks are registered trademarks of Salesforce, Inc. REVAPEX AI LLC
+                        is an independent consultancy and is not affiliated with, endorsed by, or sponsored by
+                        Salesforce, Inc.</p>
+
+                    <h2 id="governing-law">10. Governing Law &amp; Jurisdiction</h2>
+                    <p>These Terms shall be governed by and construed in accordance with the laws of the State of
+                        Florida, United States, without regard to its conflict of law provisions. Any disputes arising
+                        from these Terms shall be subject to the exclusive jurisdiction of the courts located in
+                        Miami-Dade County, Florida.</p>
+
+                    <h2 id="changes">11. Changes to These Terms</h2>
+                    <p>We reserve the right to modify these Terms at any time. Material changes will be indicated by
+                        updating the "Last Updated" date. Your continued use of the Site after any modifications
+                        constitutes acceptance of the updated Terms.</p>
+
+                    <h2 id="contact">12. Contact Us</h2>
+                    <p>For questions or concerns regarding these Terms, please contact:</p>
+                    <ul>
+                        <li><strong>REVAPEX AI LLC</strong></li>
+                        <li>25 SE 2nd Ave, Suite 550-743, Miami, FL 33131, United States</li>
+                        <li>Email: <a href="mailto:hello@revapex.ai">hello@revapex.ai</a></li>
+                        <li>Phone: <a href="tel:+17372029931">+1 (737) 202-9931</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="legal-sidebar">
+                    <div class="legal-toc">
+                        <h4>On This Page</h4>
+                        <ul>
+                            <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+                            <li><a href="#services">2. Services</a></li>
+                            <li><a href="#intellectual-property">3. Intellectual Property</a></li>
+                            <li><a href="#use-of-site">4. Acceptable Use</a></li>
+                            <li><a href="#disclaimers">5. Disclaimers</a></li>
+                            <li><a href="#limitation">6. Limitation of Liability</a></li>
+                            <li><a href="#third-party">7. Third-Party Links</a></li>
+                            <li><a href="#confidentiality">8. Confidentiality</a></li>
+                            <li><a href="#salesforce-trademark">9. Salesforce Trademark</a></li>
+                            <li><a href="#governing-law">10. Governing Law</a></li>
+                            <li><a href="#changes">11. Changes</a></li>
+                            <li><a href="#contact">12. Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="legal-contact-card">
+                        <p>Questions about these terms or our services?</p>
+                        <a href="mailto:hello@revapex.ai">hello@revapex.ai →</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer" id="footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="REVAPEX AI" class="footer-logo-img" loading="lazy" width="120" height="50">
+                </div>
+                <p class="footer-address">
+                    REVAPEX AI LLC<br>
+                    25 SE 2nd Ave, Suite 550-743<br>
+                    Miami, FL 33131, United States
+                </p>
+                <p class="footer-contact">
+                    📞 <a href="tel:+17372029931">+1 (737) 202-9931</a><br>
+                    🌐 <a href="https://revapex.ai">revapex.ai</a>
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-heading">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#solutions">Solutions</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Training/salesforce-training.html">Training</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-heading">Legal &amp; Trust</h4>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+                <p class="footer-legal">© 2026 REVAPEX AI LLC. All Rights Reserved.</p>
+                <p class="footer-disclaimer">Salesforce is a registered trademark of Salesforce, Inc. REVAPEX AI LLC is
+                    an independent consultancy and is not affiliated with Salesforce, Inc.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>🇺🇸 Proudly US-Based | Miami, FL | Serving B2B SaaS Teams Globally</span>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navMenu.classList.toggle('open');
+        });
+
+        // Dropdown
+        const dropdown = document.getElementById('trainingDropdown');
+        if (dropdown) {
+            const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+            });
+            document.addEventListener('click', () => dropdown.classList.remove('open'));
+        }
+    </script>
+</body>
+
+</html>

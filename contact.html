@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | REVAPEX AI — Book a Discovery Call</title>
+    <meta name="description"
+        content="Get in touch with REVAPEX AI. Book a discovery call to discuss Salesforce architecture, AI automation, and how to scale your B2B SaaS revenue.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://revapex.ai/contact.html">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-hero {
+            position: relative;
+            padding: 120px 0 60px;
+            background: var(--navy-deep);
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(135deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 30px 30px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 80% 0%, rgba(44, 102, 245, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .contact-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.04em;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .contact-title span {
+            color: var(--blue);
+            text-shadow: 0 0 30px rgba(44, 102, 245, 0.4);
+        }
+
+        .contact-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            color: var(--text-muted-dark);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .contact-layout {
+            padding: 80px 0 120px;
+            background: var(--bg-dark);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: flex-start;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Info Section */
+        .contact-info {
+            padding-right: 20px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(44, 102, 245, 0.1);
+            color: var(--blue);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .info-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .info-content h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .info-content p,
+        .info-content a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .info-content a:hover {
+            color: var(--blue);
+        }
+
+        /* Form Section */
+        .contact-form-wrapper {
+            background: rgba(15, 30, 58, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-muted-dark);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            color: #fff;
+            font-family: var(--font);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--blue);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 4px rgba(44, 102, 245, 0.15);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--blue);
+            color: #fff;
+            font-family: var(--font);
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 16px;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .submit-btn:hover {
+            background: #1a50d9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(44, 102, 245, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .success-msg {
+            display: none;
+            background: rgba(0, 255, 136, 0.1);
+            color: #00ff88;
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-info {
+                padding-right: 0;
+            }
+
+            .contact-form-wrapper {
+                padding: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── TOP TRUST BAR ── -->
+    <div class="top-trust-bar">
+        <span>🇺🇸 Miami, FL</span>
+        <span class="bar-divider">|</span>
+        <span>Serving Enterprise B2B SaaS in the <span class="bar-accent">US &amp; UK</span></span>
+        <span class="bar-divider">|</span>
+        <span class="bar-accent">NDA-First Engagement</span>
+    </div>
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="REVAPEX AI" class="nav-logo-img" loading="eager" width="140" height="60">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+                <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="about.html" class="nav-link">Why Us</a></li>
+                <li class="nav-item-dropdown" id="trainingDropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Training
+                        <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" aria-hidden="true">
+                            <path d="M1 1l5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="Training/salesforce-training.html">
+                            <span class="dd-icon">☁️</span> Salesforce Training
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="ai-ml-training.html"><span class="dd-icon">🤖</span> AI / ML Training
+                            <small>(Soon)</small></a>
+                        <a href="data-engineering.html"><span class="dd-icon">📊</span> Data Engineering
+                            <small>(Soon)</small></a>
+                    </div>
+                </li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta active">Book a Discovery Call</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section class="contact-hero">
+        <div class="container relative z-10">
+            <h1 class="contact-title">Ready to <span>Scale?</span></h1>
+            <p class="contact-subtitle">
+                Whether you need a full Salesforce architectural overhaul, custom AI agents, or specialized training, we
+                are here to map out your predictable revenue growth engine.
+            </p>
+        </div>
+    </section>
+
+    <!-- ── LAYOUT ── -->
+    <section class="contact-layout">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Left: Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Headquarters</h4>
+                                <p>REVAPEX AI LLC<br>25 SE 2nd Ave, Suite 550-743<br>Miami, FL 33131, United States</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email Us</h4>
+                                <a href="mailto:hello@revapex.ai">hello@revapex.ai</a>
+                                <p style="font-size: 0.85rem; margin-top: 4px;">We aim to reply within 24 hours.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Call Us</h4>
+                                <a href="tel:+17372029931">+1 (737) 202-9931</a>
+                                <p style="font-size: 0.85rem; margin-top: 4px;">Mon - Fri, 9am - 6pm EST</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 style="font-size: 1.2rem; margin-bottom: 16px; color: #fff;">Why Book a Call?</h3>
+                    <ul style="color: var(--text-muted); line-height: 1.8; margin-left: 20px; list-style-type: disc;">
+                        <li>Free initial architecture audit.</li>
+                        <li>Identify immediate revenue leaks in your Salesforce org.</li>
+                        <li>Under NDA from minute one.</li>
+                    </ul>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="contact-form-wrapper">
+                    <div id="successMessage" class="success-msg">
+                        Thank you! Your message has been received. We'll be in touch shortly.
+                    </div>
+
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" id="name" class="form-input" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Work Email *</label>
+                            <input type="email" id="email" class="form-input" placeholder="john@company.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company" class="form-label">Company Name</label>
+                            <input type="text" id="company" class="form-input" placeholder="Acme Corp">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">How can we help? *</label>
+                            <textarea id="message" class="form-textarea"
+                                placeholder="Tell us about your current challenges..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="submit-btn">
+                            Send Message
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                style="width: 20px; height: 20px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer" id="footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="REVAPEX AI" class="footer-logo-img" loading="lazy" width="120" height="50">
+                </div>
+                <p class="footer-address">
+                    REVAPEX AI LLC<br>
+                    25 SE 2nd Ave, Suite 550-743<br>
+                    Miami, FL 33131, United States
+                </p>
+                <p class="footer-contact">
+                    📞 <a href="tel:+17372029931">+1 (737) 202-9931</a><br>
+                    🌐 <a href="https://revapex.ai">revapex.ai</a>
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-heading">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#solutions">Solutions</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Training/salesforce-training.html">Training</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-heading">Legal &amp; Trust</h4>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+                <p class="footer-legal">© 2026 REVAPEX AI LLC. All Rights Reserved.</p>
+                <p class="footer-disclaimer">Salesforce is a registered trademark of Salesforce, Inc. REVAPEX AI LLC is
+                    an independent consultancy and is not affiliated with Salesforce, Inc.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>🇺🇸 Proudly US-Based | Miami, FL | Serving B2B SaaS Teams Globally</span>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            const isExpanded = hamburger.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+            navMenu.classList.toggle('open');
+        });
+
+        // Dropdown
+        const dropdown = document.getElementById('trainingDropdown');
+        if (dropdown) {
+            const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = dropdown.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', isOpen);
+            });
+            document.addEventListener('click', () => {
+                dropdown.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        }
+
+        // Form Submission Simulation
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerHTML;
+            const successMsg = document.getElementById('successMessage');
+            const form = document.getElementById('contactForm');
+
+            btn.disabled = true;
+            btn.innerHTML = 'Sending...';
+
+            // Simulate API call
+            setTimeout(() => {
+                form.reset();
+                form.style.display = 'none';
+                successMsg.style.display = 'block';
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>
