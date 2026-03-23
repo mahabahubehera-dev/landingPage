@@ -75,7 +75,7 @@ function handleFormSubmit(event) {
     
     if (isValid) {
         // Show loading state
-        const submitBtn = form.querySelector('.btn-submit');
+        const submitBtn = form.querySelector('.btn-premium-submit');
         const btnText = submitBtn.querySelector('.btn-text');
         const spinner = submitBtn.querySelector('.spinner');
         
