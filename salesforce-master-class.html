@@ -141,32 +141,139 @@
     </section>
 
     <!-- Who Should Attend Section -->
-    <section class="who-should-attend border-top-glow reveal">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Who Should Attend This <span class="text-gradient">Masterclass?</span></h2>
-                <p>If any of these sound like you, this interactive workshop will be career-changing.</p>
+    <section class="who-should-attend border-top-glow reveal" style="position: relative; overflow: hidden;">
+        <!-- Background Glow -->
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 80%; background: radial-gradient(circle, rgba(13,108,181,0.15) 0%, transparent 70%); z-index: 0; pointer-events: none;"></div>
+        
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-header text-center" style="margin-bottom: 30px;">
+                <h2 style="font-size: 2.5rem; letter-spacing: -0.02em;">This for you... If You Are...</h2>
+                <p style="color: #00A1E0; font-weight: 600; font-size: 1.2rem; margin-top: 5px;">(tick whichever is appropriate)</p>
             </div>
-            <div class="grid grid-2">
-                <div class="attendee-card glass-card">
-                    <i class="uil uil-suitcase-alt"></i>
-                    <h4>Non-IT Professionals</h4>
-                    <p>Working in BPO, Sales, Support, Operations or Banking and trying to switch to a high-paying IT role without relying on heavy coding.</p>
+            
+            <div class="target-audience-box glass-card">
+                <div class="grid grid-2" style="gap: 40px;">
+                    <ul class="audience-list">
+                        <li>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Looking to <strong>switch to IT Industry</strong> but don't know where to start.</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Wanting a high-paying IT job <strong>without prior coding skills</strong>.</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Trying to <strong>restart your career</strong> after a break but struggling to get interview calls.</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Feeling <strong>stuck</strong> in a low-paying or stagnant job with no career growth.</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text"><strong>A fresher or recent graduate</strong> but can't crack IT job interviews.</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <ul class="audience-list">
+                        <li>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">A working professional from Testing, BPO, Business Analyst or Non-IT roles but want to <strong>transition to IT.</strong></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">An experienced professional but confused about how Salesforce can <strong>boost your career.</strong></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Wanting career stability and growth in a <strong>recession-proof IT industry.</strong></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Feeling <strong>lost with outdated skills</strong> and need an in-demand skill to future-proof your career.</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Looking for <strong>expert mentorship</strong> to fast-track your IT career without trial and error.</span>
+                            </label>
+                        </li>
+                    </ul>
                 </div>
-                <div class="attendee-card glass-card">
-                    <i class="uil uil-graduation-cap"></i>
-                    <h4>Freshers & Graduates</h4>
-                    <p>Recently graduated but confused about how to crack your first IT job or struggling to clear interviews due to lack of standard "tech skills".</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Salesforce Answer Section -->
+    <section class="salesforce-answer-section reveal" style="padding: 80px 0; background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(13, 27, 54, 0.4) 100%); position: relative; overflow: hidden;">
+        <!-- Side glow effects -->
+        <div style="position: absolute; left: -10%; top: 30%; width: 40%; height: 60%; background: radial-gradient(circle, rgba(13, 108, 181, 0.15) 0%, transparent 70%); filter: blur(40px); z-index: 0; pointer-events: none;"></div>
+        <div style="position: absolute; right: -10%; top: 30%; width: 40%; height: 60%; background: radial-gradient(circle, rgba(13, 108, 181, 0.15) 0%, transparent 70%); filter: blur(40px); z-index: 0; pointer-events: none;"></div>
+
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-header text-center" style="margin-bottom: 60px;">
+                <p style="color: #00A1E0; font-weight: 700; font-size: 1.1rem; margin-bottom: 8px;">🎯 Then You're at the Right Place!</p>
+                <h2 style="font-size: 2.8rem; letter-spacing: -0.02em;">Salesforce Is Your Answer. Period.</h2>
+            </div>
+            
+            <div class="sf-answer-grid">
+                <!-- Left Side: Badges -->
+                <div class="sf-badges-container">
+                    <div class="sf-badge">
+                        <div class="sf-logo-pill">salesforce</div>
+                        <p class="cert-label">CERTIFIED</p>
+                        <h3 class="role-title">Admin</h3>
+                        <p class="crypto-salary">SALARY RANGE<br><span>(6LPA-8LPA)</span></p>
+                    </div>
+                    <div class="sf-badge">
+                        <div class="sf-logo-pill">salesforce</div>
+                        <p class="cert-label">CERTIFIED</p>
+                        <h3 class="role-title">Developer</h3>
+                        <p class="crypto-salary">SALARY RANGE<br><span>(8LPA-12LPA)</span></p>
+                    </div>
                 </div>
-                <div class="attendee-card glass-card">
-                    <i class="uil uil-user-arrows"></i>
-                    <h4>Career Re-starters</h4>
-                    <p>Looking to rejoin the workforce after a gap (maternity or personal reasons) but intimidated by the rapidly changing technology landscape.</p>
-                </div>
-                <div class="attendee-card glass-card">
-                    <i class="uil uil-chart-growth"></i>
-                    <h4>Stuck IT Professionals</h4>
-                    <p>Currently in testing, bench, or low-paying tech roles, and you want to scale up to ₹8-16 LPA packages in a niche, future-proof domain.</p>
+                
+                <!-- Right Side: Copy Text -->
+                <div class="sf-answer-copy">
+                    <h4 class="sf-copy-heading">💡 Salesforce Is Like a Hidden Oasis in a Desert</h4>
+                    <p>Most people don't even realize the power of Salesforce in securing high-paying, future-proof IT jobs.</p>
+                    
+                    <p style="margin-top: 24px;">💰 But those who do never look back.</p>
+                    
+                    <p style="margin-top: 24px;">🎯 This could be <strong>YOUR</strong> career's <em style="font-style: italic;">turning point</em>.</p>
+                    
+                    <h4 class="sf-copy-heading" style="margin-top: 40px;">The best part?</h4>
+                    <p>You don't need a technical background to start.</p>
+                    
+                    <p style="margin-top: 24px;">🔑 I want to help YOU take the right steps so you <br><em style="text-decoration: underline; font-style: italic; color: #fff;">don't waste years trying</em> to figure it all out alone.</p>
                 </div>
             </div>
         </div>
@@ -288,55 +395,64 @@
     <!-- Registration Form Section -->
     <section class="register-section reveal" id="register-section">
         <div class="container register-container">
-            <div class="form-wrapper glass-card form-glow">
+            <div class="premium-form-card">
                 <div class="form-header text-center">
-                    <h2>Claim Your <span class="text-gradient">Free Spot</span> Today</h2>
-                    <p>Only a few spots remaining. Take the first step now.</p>
+                    <h2>Claim Your <span style="color: #00A1E0;">Free Spot</span></h2>
+                    <p class="session-starts">Session starts in:</p>
                 </div>
-                <!-- Action will be defined later, UI structure for now -->
+                
+                <div class="countdown-grid" id="timer">
+                    <div class="cd-box"><div class="cd-num" id="days">36</div><div class="cd-label">DAYS</div></div>
+                    <div class="cd-box"><div class="cd-num" id="hours">17</div><div class="cd-label">HOURS</div></div>
+                    <div class="cd-box"><div class="cd-num" id="minutes">40</div><div class="cd-label">MINS</div></div>
+                    <div class="cd-box"><div class="cd-num" id="seconds">02</div><div class="cd-label">SECS</div></div>
+                </div>
+
                 <form id="leadForm" class="lead-form" novalidate onsubmit="return handleFormSubmit(event)">
-                    <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <div class="input-icon-wrapper">
-                            <i class="uil uil-user"></i>
-                            <input type="text" id="fullName" name="fullName" placeholder="Rahul Sharma" required>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="fullName">FULL NAME</label>
+                            <div class="input-icon-wrapper">
+                                <i class="uil uil-user"></i>
+                                <input type="text" id="fullName" name="fullName" placeholder="Rahul Sharma" required>
+                            </div>
+                            <div class="error-msg">Please enter your full name</div>
                         </div>
-                        <div class="error-msg">Please enter your full name</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <div class="input-icon-wrapper">
-                            <i class="uil uil-envelope"></i>
-                            <input type="email" id="email" name="email" placeholder="rahul@example.com" required>
+                        
+                        <div class="form-group">
+                            <label for="email">EMAIL ADDRESS</label>
+                            <div class="input-icon-wrapper">
+                                <i class="uil uil-envelope"></i>
+                                <input type="email" id="email" name="email" placeholder="rahul@email.com" required>
+                            </div>
+                            <div class="error-msg">Please enter a valid email address</div>
                         </div>
-                        <div class="error-msg">Please enter a valid email address</div>
+
+                        <div class="form-group">
+                            <label for="phone">WHATSAPP NUMBER</label>
+                            <div class="input-icon-wrapper">
+                                <i class="uil uil-mobile-android"></i>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                            </div>
+                            <div class="error-msg">Please enter your WhatsApp number</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">CITY</label>
+                            <div class="input-icon-wrapper">
+                                <i class="uil uil-building"></i>
+                                <input type="text" id="city" name="city" placeholder="Bhubaneswar" required>
+                            </div>
+                            <div class="error-msg">Please enter your city</div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="phone">WhatsApp Number</label>
+                    <div class="form-group form-group-full">
+                        <label for="experience">YOUR CURRENT BACKGROUND</label>
                         <div class="input-icon-wrapper">
-                            <i class="uil uil-phone"></i>
-                            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
-                        </div>
-                        <div class="error-msg">Please enter your WhatsApp number</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="city">City</label>
-                        <div class="input-icon-wrapper">
-                            <i class="uil uil-location-point"></i>
-                            <input type="text" id="city" name="city" placeholder="Mumbai, Pune, etc." required>
-                        </div>
-                        <div class="error-msg">Please enter your city</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="experience">Current Experience Level</label>
-                        <div class="input-icon-wrapper">
-                            <i class="uil uil-briefcase"></i>
+                            <i class="uil uil-bolt"></i>
                             <select id="experience" name="experience" required>
-                                <option value="" disabled selected>Select an option...</option>
+                                <option value="" disabled selected>Select your background...</option>
                                 <option value="Student/Fresher">Student / Fresher</option>
                                 <option value="Non-IT Professional">Non-IT Professional</option>
                                 <option value="IT Professional (1-3 yrs)">IT Professional (1-3 yrs)</option>
@@ -345,11 +461,11 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-block btn-lg btn-submit">
-                        <span class="btn-text">Register Me Now For Free</span>
+                    <button type="submit" class="btn-premium-submit">
+                        <span class="btn-text">🎯 Register Me for Free</span>
                         <div class="spinner"></div>
                     </button>
-                    <p class="privacy-note"><i class="uil uil-lock"></i> Your information is secure.</p>
+                    <p class="privacy-note"><i class="uil uil-padlock"></i> We never share your data. Unsubscribe anytime.</p>
                 </form>
                 
                 <div class="success-message" id="successMessage" style="display: none;">

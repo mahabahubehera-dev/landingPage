@@ -118,3 +118,42 @@ document.querySelectorAll('input, select').forEach(input => {
         input.closest('.form-group').classList.remove('has-error');
     });
 });
+
+// --- Countdown Timer Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Set timer to March 29, 2026 11:00:00
+    const targetDate = new Date("March 29, 2026 11:00:00").getTime();
+    
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minsEl = document.getElementById('minutes');
+    const secsEl = document.getElementById('seconds');
+    
+    if (!daysEl) return; // Exit if timer not on page
+
+    function updateTimer() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+            daysEl.innerText = "00";
+            hoursEl.innerText = "00";
+            minsEl.innerText = "00";
+            secsEl.innerText = "00";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        daysEl.innerText = days.toString().padStart(2, '0');
+        hoursEl.innerText = hours.toString().padStart(2, '0');
+        minsEl.innerText = minutes.toString().padStart(2, '0');
+        secsEl.innerText = seconds.toString().padStart(2, '0');
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+});
