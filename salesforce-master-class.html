@@ -430,12 +430,21 @@
                 <form id="leadForm" class="lead-form" novalidate onsubmit="return handleFormSubmit(event)">
                     <div class="form-grid-2">
                         <div class="form-group">
-                            <label for="fullName">FULL NAME</label>
+                            <label for="firstName">FIRST NAME</label>
                             <div class="input-icon-wrapper">
                                 <i class="uil uil-user"></i>
-                                <input type="text" id="fullName" name="fullName" placeholder="Rahul Sharma" required>
+                                <input type="text" id="firstName" name="firstName" placeholder="Rahul" required>
                             </div>
-                            <div class="error-msg">Please enter your full name</div>
+                            <div class="error-msg">Please enter your first name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName">LAST NAME</label>
+                            <div class="input-icon-wrapper">
+                                <i class="uil uil-user"></i>
+                                <input type="text" id="lastName" name="lastName" placeholder="Sharma" required>
+                            </div>
+                            <div class="error-msg">Please enter your last name</div>
                         </div>
                         
                         <div class="form-group">
@@ -464,19 +473,20 @@
                             </div>
                             <div class="error-msg">Please enter your city</div>
                         </div>
-                    </div>
 
-                    <div class="form-group form-group-full">
-                        <label for="experience">YOUR CURRENT BACKGROUND</label>
-                        <div class="input-icon-wrapper">
-                            <i class="uil uil-bolt"></i>
-                            <select id="experience" name="experience" required>
-                                <option value="" disabled selected>Select your background...</option>
-                                <option value="Student/Fresher">Student / Fresher</option>
-                                <option value="Non-IT Professional">Non-IT Professional</option>
-                                <option value="IT Professional (1-3 yrs)">IT Professional (1-3 yrs)</option>
-                                <option value="IT Professional (3+ yrs)">IT Professional (3+ yrs)</option>
-                            </select>
+                        <div class="form-group">
+                            <label for="experience">YOUR CURRENT BACKGROUND</label>
+                            <div class="input-icon-wrapper">
+                                <i class="uil uil-bolt"></i>
+                                <select id="experience" name="experience" required>
+                                    <option value="" disabled selected>Select your background...</option>
+                                    <option value="Student/Fresher">Student / Fresher</option>
+                                    <option value="Non-IT Professional">Non-IT Professional</option>
+                                    <option value="IT Professional (1-3 yrs)">IT Professional (1-3 yrs)</option>
+                                    <option value="IT Professional (3+ yrs)">IT Professional (3+ yrs)</option>
+                                </select>
+                            </div>
+                            <div class="error-msg">Please select your background</div>
                         </div>
                     </div>
 
