@@ -97,7 +97,7 @@ function handleFormSubmit(event) {
         .then(response => {
             // Even if the response isn't strictly OK, we should prevent crashing
             // Sometimes n8n webhooks return 200 without ok flag correctly depending on config
-            window.location.href = 'thank-you.html';
+            window.location.href = 'https://revapex.ai/workshop/thank-you.html';
         })
         .catch(error => {
             console.error('Error submitting form:', error);
