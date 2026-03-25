@@ -1178,6 +1178,9 @@ select {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
     .form-grid-2 {
         grid-template-columns: 1fr;
     }
@@ -1186,5 +1189,17 @@ select {
     }
     .target-audience-box {
         padding: 24px 16px;
+    }
+    .premium-form-card {
+        padding: 30px 20px;
+    }
+    .countdown-grid {
+        gap: 8px;
+    }
+    .cd-box {
+        padding: 10px 5px;
+    }
+    .cd-num {
+        font-size: 1.5rem;
     }
 }
