@@ -1181,4 +1181,10 @@ select {
     .form-grid-2 {
         grid-template-columns: 1fr;
     }
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .target-audience-box {
+        padding: 24px 16px;
+    }
 }
