@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're Registered! — SFDC Masterclass | REVAPEX AI</title>
+<meta name="description" content="You're confirmed for the free Salesforce Masterclass on 29th April. Here's everything you need to prepare.">
+<!-- Prevent re-indexing of thank you page -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+/* ── REVAPEX.AI BRAND TOKENS ── */
+:root {
+  /* Core palette lifted from revapex.ai */
+  --rx-navy:       #060D1E;   /* deepest bg */
+  --rx-deep:       #0A1628;   /* card bg */
+  --rx-mid:        #0F2040;   /* elevated surface */
+  --rx-panel:      #142850;   /* highlighted panel */
+  --rx-blue:       #00A1E0;   /* Salesforce blue — primary brand */
+  --rx-blue-dim:   #0080B8;
+  --rx-electric:   #00C8FF;   /* bright accent */
+  --rx-cyan-glow:  rgba(0,161,224,0.15);
+  --rx-green:      #00D67F;   /* success */
+  --rx-amber:      #FFB547;   /* warning / warmth */
+  --rx-orange:     #FF6B35;   /* CTA punch */
+  --rx-white:      #F0F8FF;
+  --rx-muted:      #8BA4BF;
+  --rx-subtle:     #4A6580;
+  --rx-border:     rgba(0,161,224,0.16);
+  --rx-border-hi:  rgba(0,161,224,0.38);
+
+  /* Typography */
+  --font-display: 'Sora', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* Spacing */
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+  --r-2xl: 32px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--rx-navy);
+  color: var(--rx-white);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.65;
+}
+
+/* ── ANIMATED BACKGROUND ── */
+.bg-canvas {
+  position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
+}
+.bg-orb {
+  position: absolute; border-radius: 50%;
+  filter: blur(80px); opacity: 0; animation: orb-fade 1.2s var(--ease) forwards;
+}
+.orb-1 { width: 700px; height: 700px; top: -200px; left: -150px; background: radial-gradient(circle, rgba(0,161,224,0.18) 0%, transparent 70%); animation-delay: 0.1s; }
+.orb-2 { width: 500px; height: 500px; top: 30%; right: -100px; background: radial-gradient(circle, rgba(0,200,255,0.1) 0%, transparent 70%); animation-delay: 0.3s; }
+.orb-3 { width: 400px; height: 400px; bottom: 0; left: 30%; background: radial-gradient(circle, rgba(0,214,127,0.08) 0%, transparent 70%); animation-delay: 0.5s; }
+/* Grid dots */
+.bg-grid {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(0,161,224,0.08) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+}
+@keyframes orb-fade { to { opacity: 1; } }
+
+/* ── LAYOUT ── */
+.page-wrap { position: relative; z-index: 1; }
+.container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+.container-sm { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+
+/* ── NAVBAR ── */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(6,13,30,0.88);
+  border-bottom: 1px solid var(--rx-border);
+  padding: 0;
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 60px;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+}
+.logo-mark {
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg, var(--rx-blue), var(--rx-electric));
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 900; font-size: 0.85rem; color: #fff;
+  letter-spacing: -0.05em;
+}
+.logo-name {
+  font-family: var(--font-display); font-weight: 800; font-size: 1rem;
+  color: var(--rx-white); letter-spacing: -0.02em;
+}
+.logo-name span { color: var(--rx-blue); }
+.nav-badge {
+  display: flex; align-items: center; gap: 7px;
+  background: rgba(0,214,127,0.1); border: 1px solid rgba(0,214,127,0.25);
+  border-radius: 50px; padding: 5px 14px;
+  font-family: var(--font-display); font-size: 0.73rem; font-weight: 700;
+  color: var(--rx-green); letter-spacing: 0.02em;
+}
+.pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--rx-green); animation: pulse 1.8s ease infinite; }
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,214,127,0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(0,214,127,0); }
+}
+
+/* ── HERO CONFIRMATION ── */
+.hero-confirm {
+  padding: 72px 0 56px;
+  text-align: center;
+}
+/* Animated success ring */
+.success-ring-wrap {
+  display: flex; justify-content: center; margin-bottom: 32px;
+  opacity: 0; transform: scale(0.6);
+  animation: ring-pop 0.6s var(--ease) 0.2s forwards;
+}
+@keyframes ring-pop { to { opacity: 1; transform: scale(1); } }
+.success-ring {
+  width: 88px; height: 88px; border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0,214,127,0.15), rgba(0,214,127,0.05));
+  border: 2px solid var(--rx-green);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.success-ring::before {
+  content: '';
+  position: absolute; inset: -8px; border-radius: 50%;
+  border: 1.5px solid rgba(0,214,127,0.2);
+  animation: ring-expand 2s ease infinite;
+}
+.success-ring::after {
+  content: '';
+  position: absolute; inset: -16px; border-radius: 50%;
+  border: 1px solid rgba(0,214,127,0.1);
+  animation: ring-expand 2s ease 0.4s infinite;
+}
+@keyframes ring-expand {
+  0% { transform: scale(0.9); opacity: 1; }
+  100% { transform: scale(1.15); opacity: 0; }
+}
+.check-svg { width: 36px; height: 36px; color: var(--rx-green); }
+
+.confirm-tag {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(0,214,127,0.1); border: 1px solid rgba(0,214,127,0.25);
+  border-radius: 50px; padding: 6px 16px; margin-bottom: 20px;
+  font-family: var(--font-display); font-size: 0.75rem; font-weight: 700;
+  color: var(--rx-green); text-transform: uppercase; letter-spacing: 0.1em;
+  opacity: 0; animation: fade-up 0.5s var(--ease) 0.4s forwards;
+}
+.confirm-headline {
+  font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900; letter-spacing: -0.04em; line-height: 1.1;
+  margin-bottom: 20px;
+  opacity: 0; animation: fade-up 0.5s var(--ease) 0.5s forwards;
+}
+.gradient-text {
+  background: linear-gradient(135deg, var(--rx-blue) 0%, var(--rx-electric) 50%, #A78BFA 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.confirm-sub {
+  font-size: 1.05rem; color: var(--rx-muted); max-width: 500px; margin: 0 auto 36px;
+  opacity: 0; animation: fade-up 0.5s var(--ease) 0.6s forwards;
+}
+
+/* ── EVENT DETAILS STRIP ── */
+.event-strip {
+  display: inline-flex; align-items: center; gap: 0;
+  background: var(--rx-deep); border: 1.5px solid var(--rx-border);
+  border-radius: var(--r-xl); overflow: hidden; margin-bottom: 48px;
+  opacity: 0; animation: fade-up 0.5s var(--ease) 0.7s forwards;
+}
+.event-detail {
+  display: flex; align-items: center; gap: 9px;
+  padding: 14px 24px; font-family: var(--font-display);
+  font-size: 0.85rem; font-weight: 700; color: var(--rx-white);
+}
+.event-detail .ei { font-size: 1rem; }
+.event-sep { width: 1px; background: var(--rx-border); align-self: stretch; }
+.event-detail:first-child { background: rgba(0,161,224,0.06); }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── QUICK ACTION CARDS ── */
+.actions-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  margin-bottom: 56px;
+  opacity: 0; animation: fade-up 0.6s var(--ease) 0.8s forwards;
+}
+.action-card {
+  background: var(--rx-deep); border: 1.5px solid var(--rx-border);
+  border-radius: var(--r-xl); padding: 28px 24px; text-align: center;
+  transition: all 0.25s ease; cursor: pointer; text-decoration: none;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  position: relative; overflow: hidden;
+}
+.action-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(0,161,224,0.08) 0%, transparent 60%);
+  opacity: 0; transition: opacity 0.3s;
+}
+.action-card:hover::before { opacity: 1; }
+.action-card:hover {
+  border-color: var(--rx-border-hi);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,161,224,0.12);
+}
+.action-card.primary-action {
+  border-color: rgba(0,214,127,0.3);
+  background: linear-gradient(135deg, rgba(0,214,127,0.06), rgba(0,161,224,0.04));
+}
+.action-card.primary-action::before {
+  background: radial-gradient(circle at 50% 0%, rgba(0,214,127,0.1) 0%, transparent 60%);
+}
+.action-card.primary-action:hover { border-color: rgba(0,214,127,0.55); }
+.action-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+}
+.icon-wa   { background: rgba(37,211,102,0.12); border: 1.5px solid rgba(37,211,102,0.25); }
+.icon-cal  { background: rgba(0,161,224,0.12);  border: 1.5px solid rgba(0,161,224,0.25); }
+.icon-share{ background: rgba(167,139,250,0.12); border: 1.5px solid rgba(167,139,250,0.25); }
+.action-title {
+  font-family: var(--font-display); font-size: 0.95rem; font-weight: 700;
+  color: var(--rx-white);
+}
+.action-desc { font-size: 0.8rem; color: var(--rx-muted); line-height: 1.5; }
+.action-cta-text {
+  font-family: var(--font-display); font-size: 0.78rem; font-weight: 700;
+  color: var(--rx-blue); margin-top: 4px; letter-spacing: 0.02em;
+}
+
+/* ── MAIN CTA BUTTON ── */
+.main-cta-wrap {
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  margin-bottom: 64px;
+  opacity: 0; animation: fade-up 0.5s var(--ease) 0.9s forwards;
+}
+.btn-wa {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: #25D366; color: #fff; padding: 16px 36px;
+  border-radius: 50px; text-decoration: none;
+  font-family: var(--font-display); font-weight: 800; font-size: 1rem;
+  letter-spacing: -0.01em; transition: all 0.25s ease;
+  box-shadow: 0 4px 24px rgba(37,211,102,0.3);
+}
+.btn-wa:hover {
+  background: #20BA5A; transform: translateY(-2px);
+  box-shadow: 0 8px 36px rgba(37,211,102,0.45);
+}
+.btn-wa-icon { font-size: 1.25rem; }
+.cta-note { font-size: 0.78rem; color: var(--rx-subtle); }
+
+/* ── WHAT'S NEXT TIMELINE ── */
+.timeline-section {
+  padding: 56px 0 72px;
+  border-top: 1px solid var(--rx-border);
+}
+.section-eyebrow {
+  font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--rx-blue); margin-bottom: 10px;
+}
+.section-title {
+  font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800; letter-spacing: -0.03em; margin-bottom: 40px;
+}
+
+.timeline {
+  display: flex; flex-direction: column; gap: 0;
+  position: relative;
+}
+.timeline::before {
+  content: '';
+  position: absolute; left: 27px; top: 28px; bottom: 28px; width: 1.5px;
+  background: linear-gradient(to bottom, var(--rx-border-hi), var(--rx-border), transparent);
+}
+.tl-item {
+  display: flex; gap: 24px; align-items: flex-start;
+  padding: 24px 0; position: relative;
+  opacity: 0; transform: translateX(-12px);
+  transition: all 0.5s var(--ease);
+}
+.tl-item.visible { opacity: 1; transform: translateX(0); }
+.tl-dot {
+  width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.25rem; position: relative; z-index: 1;
+}
+.dot-done  { background: rgba(0,214,127,0.12); border: 2px solid rgba(0,214,127,0.4); }
+.dot-now   { background: rgba(0,161,224,0.15); border: 2px solid var(--rx-blue); box-shadow: 0 0 20px rgba(0,161,224,0.2); }
+.dot-later { background: rgba(255,255,255,0.04); border: 2px solid var(--rx-border); }
+.dot-later .tl-dot-inner { color: var(--rx-subtle); }
+.tl-content { flex: 1; padding-top: 8px; }
+.tl-label {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-display); font-size: 0.68rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;
+  padding: 3px 10px; border-radius: 50px;
+}
+.label-done  { background: rgba(0,214,127,0.1); color: var(--rx-green); }
+.label-now   { background: rgba(0,161,224,0.12); color: var(--rx-blue); }
+.label-later { background: rgba(255,255,255,0.05); color: var(--rx-subtle); }
+.tl-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+.tl-desc  { font-size: 0.88rem; color: var(--rx-muted); line-height: 1.6; }
+
+/* ── PREPARATION CHECKLIST ── */
+.prep-section { padding: 0 0 72px; }
+.prep-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.prep-card {
+  background: var(--rx-deep); border: 1.5px solid var(--rx-border);
+  border-radius: var(--r-xl); padding: 24px;
+  display: flex; gap: 16px; align-items: flex-start;
+  opacity: 0; transform: translateY(16px);
+  transition: all 0.5s var(--ease);
+}
+.prep-card.visible { opacity: 1; transform: translateY(0); }
+.prep-card:hover { border-color: var(--rx-border-hi); }
+.prep-num {
+  width: 36px; height: 36px; border-radius: 9px; flex-shrink: 0;
+  background: rgba(0,161,224,0.1); border: 1.5px solid rgba(0,161,224,0.22);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 0.8rem; font-weight: 800; color: var(--rx-blue);
+}
+.prep-card h4 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; margin-bottom: 5px; }
+.prep-card p  { font-size: 0.84rem; color: var(--rx-muted); line-height: 1.6; }
+
+/* ── SHARE SECTION ── */
+.share-section {
+  padding: 0 0 72px; text-align: center;
+}
+.share-section p { font-size: 0.95rem; color: var(--rx-muted); margin-bottom: 20px; }
+.share-buttons { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.share-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 22px; border-radius: 50px; font-family: var(--font-display);
+  font-size: 0.83rem; font-weight: 700; text-decoration: none; cursor: pointer;
+  border: 1.5px solid; transition: all 0.22s ease;
+}
+.share-wa   { background: rgba(37,211,102,0.08); border-color: rgba(37,211,102,0.3); color: #25D366; }
+.share-wa:hover   { background: rgba(37,211,102,0.15); transform: translateY(-2px); }
+.share-li   { background: rgba(0,119,181,0.08); border-color: rgba(0,119,181,0.3); color: #0A66C2; }
+.share-li:hover   { background: rgba(0,119,181,0.15); transform: translateY(-2px); }
+.share-tw   { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.15); color: var(--rx-white); }
+.share-tw:hover   { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+.share-copy { background: rgba(0,161,224,0.08); border-color: rgba(0,161,224,0.3); color: var(--rx-blue); }
+.share-copy:hover { background: rgba(0,161,224,0.15); transform: translateY(-2px); }
+.share-copy.copied { border-color: var(--rx-green); color: var(--rx-green); background: rgba(0,214,127,0.08); }
+
+/* ── INSTRUCTOR BANNER ── */
+.instructor-banner {
+  background: linear-gradient(135deg, rgba(0,161,224,0.07) 0%, rgba(10,22,40,0.9) 100%);
+  border: 1.5px solid var(--rx-border);
+  border-radius: var(--r-2xl); padding: 36px 40px;
+  display: flex; gap: 28px; align-items: center;
+  margin-bottom: 72px;
+}
+.instructor-avatar {
+  width: 72px; height: 72px; border-radius: 50%; flex-shrink: 0;
+  border: 2.5px solid var(--rx-border-hi); overflow: hidden;
+  background: linear-gradient(135deg, var(--rx-blue), var(--rx-electric));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem;
+}
+.instructor-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.instructor-text h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; margin-bottom: 4px; }
+.instructor-text p  { font-size: 0.88rem; color: var(--rx-muted); line-height: 1.6; }
+.instructor-certs {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;
+}
+.cert-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(0,161,224,0.08); border: 1px solid rgba(0,161,224,0.2);
+  border-radius: 50px; padding: 3px 10px;
+  font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; color: var(--rx-blue);
+}
+
+/* ── FAQ MINI ── */
+.faq-mini { padding: 0 0 72px; }
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.faq-item {
+  background: var(--rx-deep); border: 1.5px solid var(--rx-border);
+  border-radius: var(--r-lg); overflow: hidden;
+}
+.faq-item:hover { border-color: var(--rx-border-hi); }
+.faq-q {
+  width: 100%; padding: 16px 20px; background: transparent; border: none;
+  color: var(--rx-white); font-family: var(--font-display);
+  font-size: 0.9rem; font-weight: 700; text-align: left;
+  display: flex; justify-content: space-between; align-items: center;
+  cursor: pointer; gap: 16px;
+}
+.faq-icon {
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 1.5px solid var(--rx-border); color: var(--rx-blue);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; flex-shrink: 0; transition: transform 0.3s ease;
+}
+.faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.3s ease;
+  padding: 0 20px;
+}
+.faq-a p { font-size: 0.85rem; color: var(--rx-muted); line-height: 1.75; padding-bottom: 16px; }
+.faq-item.open .faq-a { max-height: 200px; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+/* ── FOOTER ── */
+.footer {
+  border-top: 1px solid var(--rx-border);
+  padding: 32px 0;
+  background: rgba(6,13,30,0.6); backdrop-filter: blur(10px);
+}
+.footer-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.footer-copy { font-size: 0.78rem; color: var(--rx-subtle); }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 0.78rem; color: var(--rx-subtle); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--rx-muted); }
+
+/* ── CONFETTI CANVAS ── */
+#confetti-canvas {
+  position: fixed; inset: 0; z-index: 999; pointer-events: none;
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .actions-grid { grid-template-columns: 1fr; }
+  .prep-grid { grid-template-columns: 1fr; }
+  .event-strip { flex-direction: column; border-radius: var(--r-lg); }
+  .event-sep { width: 100%; height: 1px; }
+  .instructor-banner { flex-direction: column; text-align: center; }
+  .instructor-certs { justify-content: center; }
+  .share-buttons { flex-direction: column; align-items: stretch; }
+  .share-btn { justify-content: center; }
+  .timeline::before { left: 27px; }
+  .nav-badge { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── ANIMATED BACKGROUND ── -->
+<div class="bg-canvas">
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+</div>
+
+<!-- ── CONFETTI CANVAS ── -->
+<canvas id="confetti-canvas"></canvas>
+
+<!-- ── NAVBAR ── -->
+<header class="navbar">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="https://revapex.ai" class="nav-logo">
+        <img src="logo.png" alt="REVAPEX.AI" style="height: 60px; width: auto; display: block;">
+      </a>
+      <div class="nav-badge">
+        <span class="pulse"></span>
+        Registration Confirmed
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ── HERO CONFIRMATION ── -->
+<div class="page-wrap">
+<section class="hero-confirm">
+  <div class="container-sm">
+
+    <!-- Animated check ring -->
+    <div class="success-ring-wrap">
+      <div class="success-ring">
+        <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+    </div>
+
+    <div class="confirm-tag">✅ You're Officially Registered</div>
+    <h1 class="confirm-headline">
+      Your Spot Is<br>
+      <span class="gradient-text">Locked In!</span>
+    </h1>
+    <p class="confirm-sub">
+      A confirmation has been sent to your email and WhatsApp. 
+      Here's everything you need to make the most of 29th April.
+    </p>
+
+    <!-- Event details pill -->
+    <div class="event-strip">
+      <div class="event-detail"><span class="ei">📅</span> 29th April 2026</div>
+      <div class="event-sep"></div>
+      <div class="event-detail"><span class="ei">🕐</span> 11:00 AM – 1:00 PM IST</div>
+      <div class="event-sep"></div>
+      <div class="event-detail"><span class="ei">💻</span> Live Online</div>
+    </div>
+
+    <!-- 3 Quick Action Cards -->
+    <div class="actions-grid">
+      <!-- WhatsApp Community -->
+      <a href="https://wa.me/919999999999?text=Hi%2C%20I%20just%20registered%20for%20the%20Salesforce%20Masterclass!" class="action-card primary-action" target="_blank" rel="noopener">
+        <div class="action-icon icon-wa">💬</div>
+        <div class="action-title">Join WhatsApp Group</div>
+        <div class="action-desc">Get session reminders, pre-reads, and connect with fellow students before the masterclass.</div>
+        <div class="action-cta-text">Join Now →</div>
+      </a>
+      <!-- Add to Calendar -->
+      <a href="#" class="action-card" id="calendarCard" onclick="addToCalendar(); return false;">
+        <div class="action-icon icon-cal">📆</div>
+        <div class="action-title">Add to Calendar</div>
+        <div class="action-desc">Save 29th April, 11 AM IST to your calendar so you never miss it.</div>
+        <div class="action-cta-text">Save Event →</div>
+      </a>
+      <!-- Share -->
+      <a href="#share-section" class="action-card">
+        <div class="action-icon icon-share">🔗</div>
+        <div class="action-title">Share With a Friend</div>
+        <div class="action-desc">Know someone who'd benefit from a ₹8–16 LPA career change? Bring them along.</div>
+        <div class="action-cta-text">Share Now →</div>
+      </a>
+    </div>
+
+    <!-- Primary WhatsApp CTA -->
+    <div class="main-cta-wrap">
+      <a href="https://wa.me/919999999999?text=Hi%2C%20I%20just%20registered%20for%20the%20Salesforce%20Masterclass!" class="btn-wa" target="_blank" rel="noopener">
+        <span class="btn-wa-icon">💬</span>
+        Join the WhatsApp Community
+      </a>
+      <span class="cta-note">🔒 800+ students already inside · Zero spam</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT'S NEXT TIMELINE ── -->
+<section class="timeline-section">
+  <div class="container-sm">
+    <p class="section-eyebrow">Your Journey</p>
+    <h2 class="section-title">What Happens Next</h2>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot dot-done">✅</div>
+        <div class="tl-content">
+          <span class="tl-label label-done">✓ Done</span>
+          <div class="tl-title">Registration Confirmed</div>
+          <div class="tl-desc">You're officially on the list. Your spot is saved and cannot be given to anyone else.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot dot-now">📧</div>
+        <div class="tl-content">
+          <span class="tl-label label-now">Action Required</span>
+          <div class="tl-title">Check Your Email & WhatsApp</div>
+          <div class="tl-desc">A confirmation with all session details has been sent to you. If you don't see it within 5 minutes, check your spam folder and save our number.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot dot-later">📅</div>
+        <div class="tl-content">
+          <span class="tl-label label-later">April 27th</span>
+          <div class="tl-title">Pre-Session Resources Sent</div>
+          <div class="tl-desc">Two days before the masterclass, you'll receive a free Salesforce cheat sheet and 3 short prep videos to get you warmed up.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot dot-later">🔔</div>
+        <div class="tl-content">
+          <span class="tl-label label-later">April 29th, 10:45 AM</span>
+          <div class="tl-title">Reminder + Live Link Sent</div>
+          <div class="tl-desc">15 minutes before the session starts, you'll receive the live Zoom/Meet link via WhatsApp and email. Keep notifications on!</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot dot-later">🚀</div>
+        <div class="tl-content">
+          <span class="tl-label label-later">April 29th, 11 AM IST</span>
+          <div class="tl-title">Masterclass Goes Live</div>
+          <div class="tl-desc">Join 2 hours of live, interactive teaching with Mahabahu sir. Bring your questions — the Q&A section is where most people get their biggest breakthroughs.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW TO PREPARE ── -->
+<section class="prep-section reveal">
+  <div class="container-sm">
+    <p class="section-eyebrow">Preparation</p>
+    <h2 class="section-title">4 Ways to Get Maximum Value on 29th April</h2>
+    <div class="prep-grid">
+      <div class="prep-card">
+        <div class="prep-num">01</div>
+        <div>
+          <h4>Attend Live, Not the Replay</h4>
+          <p>The Q&A session is where real transformation happens. Students who attend live get their specific doubts resolved — and that changes everything for their career path.</p>
+        </div>
+      </div>
+      <div class="prep-card">
+        <div class="prep-num">02</div>
+        <div>
+          <h4>Use a Laptop or Desktop</h4>
+          <p>The session includes live demos of Salesforce. A bigger screen means you'll follow along clearly. Phones work, but you'll miss the nuances of the platform walkthrough.</p>
+        </div>
+      </div>
+      <div class="prep-card">
+        <div class="prep-num">03</div>
+        <div>
+          <h4>Write Down Your #1 Question</h4>
+          <p>Right now, before you close this tab — note the one thing that's stopping you from starting your Salesforce journey. Bring it to the Q&A. You'll get a direct answer.</p>
+        </div>
+      </div>
+      <div class="prep-card">
+        <div class="prep-num">04</div>
+        <div>
+          <h4>Tell One Friend About This</h4>
+          <p>Learning is better together. If you know someone who wants to break into IT or transition careers, forward them this page. Use the share buttons below.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INSTRUCTOR BANNER ── -->
+<section class="reveal">
+  <div class="container-sm">
+    <div class="instructor-banner">
+      <div class="instructor-avatar">
+        <img src="Mahabahu.png" alt="Mahabahu" onerror="this.style.display='none'; this.parentElement.innerHTML='👨💼'">
+      </div>
+      <div class="instructor-text">
+        <h3>You'll Be Learning Directly From Mahabahu</h3>
+        <p>Principal Salesforce Architect · 14+ years of enterprise IT experience · Trained 10,000+ professionals across India. Mahabahu will be live with you for the full 2 hours — teaching, answering questions, and sharing the exact roadmap that's transformed hundreds of careers.</p>
+        <div class="instructor-certs">
+          <span class="cert-chip">☁️ SF Admin</span>
+          <span class="cert-chip">⚡ Platform Developer</span>
+          <span class="cert-chip">🤖 Agentforce</span>
+          <span class="cert-chip">🏆 14+ Yrs Exp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SHARE SECTION ── -->
+<section class="share-section reveal" id="share-section">
+  <div class="container-sm">
+    <p class="section-eyebrow" style="margin-bottom:10px;">Spread the Word</p>
+    <h2 class="section-title" style="margin-bottom:8px;">Know Someone Who'd Benefit?</h2>
+    <p>Freshers, career-switchers, BPO professionals — share this free masterclass with one person who needs it.</p>
+    <div class="share-buttons">
+      <a class="share-btn share-wa" href="https://wa.me/?text=I%20just%20registered%20for%20a%20free%20Salesforce%20Masterclass%20on%2029th%20April!%20You%20should%20join%20too%20-%20it%27s%20completely%20free%20and%20can%20help%20land%20an%20%E2%82%B98-16%20LPA%20IT%20job.%20Register%20here%3A%20https%3A%2F%2Frevapex.ai%2Ftraining%2Fsalesforce-training" target="_blank" rel="noopener">
+        💬 Share on WhatsApp
+      </a>
+      <a class="share-btn share-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frevapex.ai%2Ftraining%2Fsalesforce-training" target="_blank" rel="noopener">
+        in Share on LinkedIn
+      </a>
+      <a class="share-btn share-tw" href="https://twitter.com/intent/tweet?text=Just%20registered%20for%20a%20free%20Salesforce%20Masterclass%20on%2029th%20April!%20If%20you%27re%20looking%20to%20break%20into%20IT%2C%20this%20is%20for%20you%20%F0%9F%9A%80&url=https%3A%2F%2Frevapex.ai%2Ftraining%2Fsalesforce-training" target="_blank" rel="noopener">
+        𝕏 Share on X
+      </a>
+      <button class="share-btn share-copy" id="copyBtn" onclick="copyLink()">
+        🔗 Copy Link
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ MINI ── -->
+<section class="faq-mini reveal">
+  <div class="container-sm">
+    <p class="section-eyebrow" style="margin-bottom:10px;">Quick Answers</p>
+    <h2 class="section-title" style="margin-bottom:24px;">Last-Minute Questions?</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Where will I find the session link? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>The live session link will be sent to your email and WhatsApp number on the morning of 29th April (by 10:00 AM IST). If you join our WhatsApp group now, you'll also receive it there along with last-minute updates.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What if I can't attend at 11 AM? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>A limited-time replay will be available for registered participants who stay for at least 75% of the session. Attending live is strongly recommended — the Q&A alone is worth it. If you join the WhatsApp group, we'll keep you updated on replay access.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is there anything I need to install or download? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>No installation needed. The masterclass runs on a browser-based video platform. Just make sure your browser is up to date (Chrome or Firefox recommended) and your internet connection is stable. You can also join from your phone.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Will there be a paid offer at the end? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes — at the end of the session, Mahabahu will briefly share details about the full Salesforce Mastery program for those who want structured training with placement support. Attendance at the masterclass is 100% free and there is no obligation to join any paid program.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <a href="https://revapex.ai" class="footer-brand">
+          <img src="logo.png" alt="REVAPEX.AI" style="height: 60px; width: auto; display: block;">
+        </a>
+        <div class="footer-copy" style="margin-top:6px; margin-left:42px;">© 2026 REVAPEX AI LLC. All Rights Reserved.</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://revapex.ai/privacy">Privacy Policy</a>
+        <a href="https://revapex.ai/terms">Terms of Service</a>
+        <a href="https://revapex.ai/contact">Contact Us</a>
+        <a href="https://revapex.ai/training/salesforce-training">Training Home</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</div><!-- end page-wrap -->
+
+<script>
+/* ── CONFETTI ── */
+(function() {
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const colors = ['#00A1E0','#00C8FF','#00D67F','#FFB547','#A78BFA','#FF6B35'];
+  const pieces = Array.from({ length: 120 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * -canvas.height,
+    w: Math.random() * 10 + 6,
+    h: Math.random() * 5 + 3,
+    color: colors[Math.floor(Math.random() * colors.length)],
+    angle: Math.random() * Math.PI * 2,
+    spin: (Math.random() - 0.5) * 0.15,
+    vx: (Math.random() - 0.5) * 2,
+    vy: Math.random() * 3 + 1.5,
+    opacity: 1
+  }));
+
+  let frame = 0;
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pieces.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.angle += p.spin;
+      if (frame > 90) p.opacity -= 0.008;
+      ctx.save();
+      ctx.translate(p.x + p.w / 2, p.y + p.h / 2);
+      ctx.rotate(p.angle);
+      ctx.globalAlpha = Math.max(0, p.opacity);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      ctx.restore();
+    });
+    frame++;
+    if (frame < 220) requestAnimationFrame(draw);
+    else canvas.style.display = 'none';
+  }
+  setTimeout(draw, 300);
+})();
+
+/* ── CALENDAR ADD ── */
+function addToCalendar() {
+  const start = '20260429T053000Z';
+  const end   = '20260429T073000Z';
+  const title = encodeURIComponent('Free Salesforce Masterclass — REVAPEX AI');
+  const desc  = encodeURIComponent('Live 2-hour masterclass on Salesforce careers. Join at the link sent to your email and WhatsApp.');
+  const gcal  = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&details=${desc}`;
+  window.open(gcal, '_blank');
+}
+
+/* ── COPY LINK ── */
+function copyLink() {
+  const url = 'https://revapex.ai/training/salesforce-training';
+  navigator.clipboard.writeText(url).then(() => {
+    const btn = document.getElementById('copyBtn');
+    btn.textContent = '✅ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = '🔗 Copy Link';
+      btn.classList.remove('copied');
+    }, 2500);
+  });
+}
+
+/* ── FAQ ACCORDION ── */
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+/* ── SCROLL REVEAL ── */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal, .tl-item, .prep-card').forEach(el => io.observe(el));
+
+/* ── STAGGERED TIMELINE ── */
+document.querySelectorAll('.tl-item').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.12}s`;
+});
+document.querySelectorAll('.prep-card').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.08}s`;
+});
+</script>
+</body>
+</html>

@@ -97,8 +97,7 @@ function handleFormSubmit(event) {
         .then(response => {
             // Even if the response isn't strictly OK, we should prevent crashing
             // Sometimes n8n webhooks return 200 without ok flag correctly depending on config
-            form.style.display = 'none';
-            document.getElementById('successMessage').style.display = 'block';
+            window.location.href = 'thank-you.html';
         })
         .catch(error => {
             console.error('Error submitting form:', error);
