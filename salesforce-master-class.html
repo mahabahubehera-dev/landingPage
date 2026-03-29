@@ -530,5 +530,33 @@
 
     <!-- Custom JS -->
     <script src="sfdc-script.js"></script>
+
+    <!-- Meta Pixel Custom Events -->
+    <script>
+    // Meta Pixel — ViewContent on 40% scroll depth
+    (function() {
+      var fired = false;
+      window.addEventListener('scroll', function() {
+        var pct = window.scrollY / document.body.scrollHeight;
+        if (!fired && pct > 0.40) {
+          fbq('track', 'ViewContent');
+          fired = true;
+        }
+      });
+    })();
+
+    // Meta Pixel — InitiateCheckout on first form interaction
+    (function() {
+      var section = document.querySelector('#register-section');
+      if (!section) return;
+      var inputs = section.querySelectorAll('input, select, textarea');
+      inputs.forEach(function(input) {
+        input.addEventListener('focus', function handler() {
+          fbq('track', 'InitiateCheckout');
+          inputs.forEach(function(el) { el.removeEventListener('focus', handler); });
+        });
+      });
+    })();
+    </script>
 </body>
 </html>
