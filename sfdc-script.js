@@ -120,8 +120,8 @@ document.querySelectorAll('input, select').forEach(input => {
 
 // --- Countdown Timer Logic ---
 document.addEventListener('DOMContentLoaded', () => {
-    // Set timer to March 29, 2026 11:00:00
-    const targetDate = new Date("March 29, 2026 11:00:00").getTime();
+    // Set timer to April 4, 2026 11:00:00
+    const targetDate = new Date("April 4, 2026 11:00:00").getTime();
     
     const daysEl = document.getElementById('days');
     const hoursEl = document.getElementById('hours');
