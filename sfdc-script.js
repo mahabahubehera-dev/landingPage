@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Reveal animations on scroll
     const reveals = document.querySelectorAll('.reveal');
-    
+
     const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
         const elementVisible = 150;
-        
+
         reveals.forEach(reveal => {
             const elementTop = reveal.getBoundingClientRect().top;
             if (elementTop < windowHeight - elementVisible) {
@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.hero .fade-in').forEach(el => {
             el.style.opacity = '1';
         });
-        
+
         // Example logic for delayed fading if defined in CSS, 
         // Here we just make sure everything is visible if CSS fails
     };
-    
+
     setTimeout(animateHero, 100);
 
     // Navbar scroll effect
@@ -46,22 +46,22 @@ document.addEventListener('DOMContentLoaded', () => {
 // Form Handling
 function handleFormSubmit(event) {
     event.preventDefault();
-    
+
     let isValid = true;
     const form = document.getElementById('leadForm');
     const inputs = form.querySelectorAll('input, select');
-    
+
     // Simple validation loop
     inputs.forEach(input => {
         const value = input.value.trim();
         const formGroup = input.closest('.form-group');
-        
+
         if (input.hasAttribute('required') && !value) {
             formGroup.classList.add('has-error');
             isValid = false;
         } else {
             formGroup.classList.remove('has-error');
-            
+
             // Email specific regex
             if (input.type === 'email') {
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -72,17 +72,17 @@ function handleFormSubmit(event) {
             }
         }
     });
-    
+
     if (isValid) {
         // Show loading state
         const submitBtn = form.querySelector('.btn-premium-submit');
         const btnText = submitBtn.querySelector('.btn-text');
         const spinner = submitBtn.querySelector('.spinner');
-        
+
         btnText.style.display = 'none';
         spinner.style.display = 'inline-block';
         submitBtn.disabled = true;
-        
+
         // Send data to Webhook
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
@@ -94,20 +94,20 @@ function handleFormSubmit(event) {
             },
             body: JSON.stringify(data)
         })
-        .then(response => {
-            // Even if the response isn't strictly OK, we should prevent crashing
-            // Sometimes n8n webhooks return 200 without ok flag correctly depending on config
-            window.location.href = 'https://revapex.ai/workshop/thank-you.html';
-        })
-        .catch(error => {
-            console.error('Error submitting form:', error);
-            alert('There was an issue submitting your registration. Please try again.');
-            btnText.style.display = 'inline-block';
-            spinner.style.display = 'none';
-            submitBtn.disabled = false;
-        });
+            .then(response => {
+                // Even if the response isn't strictly OK, we should prevent crashing
+                // Sometimes n8n webhooks return 200 without ok flag correctly depending on config
+                window.location.href = 'https://revapex.ai/workshop/thank-you.html';
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                alert('There was an issue submitting your registration. Please try again.');
+                btnText.style.display = 'inline-block';
+                spinner.style.display = 'none';
+                submitBtn.disabled = false;
+            });
     }
-    
+
     return false;
 }
 
@@ -120,14 +120,14 @@ document.querySelectorAll('input, select').forEach(input => {
 
 // --- Countdown Timer Logic ---
 document.addEventListener('DOMContentLoaded', () => {
-    // Set timer to April 4, 2026 11:00:00
-    const targetDate = new Date("April 4, 2026 11:00:00").getTime();
-    
+    // Set timer to April 11, 2026 11:00:00
+    const targetDate = new Date("April 11, 2026 11:00:00").getTime();
+
     const daysEl = document.getElementById('days');
     const hoursEl = document.getElementById('hours');
     const minsEl = document.getElementById('minutes');
     const secsEl = document.getElementById('seconds');
-    
+
     if (!daysEl) return; // Exit if timer not on page
 
     function updateTimer() {
