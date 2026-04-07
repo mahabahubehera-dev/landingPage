@@ -1834,3 +1834,62 @@ strong {
         font-size: 1.2rem;
     }
 }
+
+/* ========== CLIENT LOGOS MARQUEE ========== */
+.client-logos-section {
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: transparent;
+    overflow: hidden;
+}
+
+.client-logos-heading {
+    text-align: center;
+    color: var(--text-muted-dark);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2.5rem;
+}
+
+.logo-marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-marquee 30s linear infinite;
+}
+
+.logo-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding-right: 4rem;
+}
+
+.marquee-content img {
+    height: 48px;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.marquee-content img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes scroll-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
