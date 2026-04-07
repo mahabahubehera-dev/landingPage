@@ -1582,12 +1582,12 @@ strong {
     }
 
     .hero-ui-img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        transform: none;
-        margin: 0 auto;
-        display: block;
+        width: 112% !important;
+        max-width: none !important;
+        height: auto !important;
+        transform: translateX(4%) !important;
+        margin: 0 !important;
+        display: block !important;
     }
 
     .hero-ui-img:hover {
