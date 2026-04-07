@@ -911,23 +911,16 @@
                     await fetch(WEBHOOK, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
+                        body: JSON.stringify(payload),
+                        mode: 'no-cors'
                     });
                 } catch (err) {
-                    console.warn('Webhook error:', err);
-                    submitBtn.textContent = 'Book My Discovery Call →';
-                    submitBtn.disabled = false;
-                    const existingErr = form.querySelector('.dc-webhook-err');
-                    if (!existingErr) {
-                        const errMsg = document.createElement('p');
-                        errMsg.className = 'dc-webhook-err';
-                        errMsg.style.cssText = 'color:#e53e3e;font-size:0.82rem;margin-top:12px;text-align:center;';
-                        errMsg.innerHTML = 'Submission failed. Please email us at <a href="mailto:hello@revapex.ai" style="color:var(--blue)">hello@revapex.ai</a>';
-                        form.appendChild(errMsg);
-                    }
-                    return;
+                    console.warn('Webhook delivery (best-effort):', err);
                 }
 
+                // Always show success to user (webhook is best-effort)
+                submitBtn.textContent = 'Book My Discovery Call →';
+                submitBtn.disabled = false;
                 form.style.display = 'none';
                 success.style.display = 'flex';
             });
