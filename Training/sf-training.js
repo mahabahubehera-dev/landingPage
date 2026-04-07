@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             // POST to webhook
-            fetch('https://api.trustsolar.in/webhook/revapex', {
+            fetch('https://api.trustsolar.in/webhook-test/website-form-submission', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
