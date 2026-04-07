@@ -828,7 +828,7 @@
             const form = document.getElementById('dcForm');
             const success = document.getElementById('dcSuccess');
             const submitBtn = document.getElementById('dcSubmit');
-            const WEBHOOK = 'https://api.trustsolar.in/webhook-test/website-form-submission';
+            const WEBHOOK = 'https://api.trustsolar.in/webhook/website-form-submission';
 
             function openDC() {
                 backdrop.classList.add('active');
@@ -911,8 +911,7 @@
                     await fetch(WEBHOOK, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload),
-                        mode: 'no-cors'
+                        body: JSON.stringify(payload)
                     });
                 } catch (err) {
                     console.warn('Webhook delivery (best-effort):', err);
