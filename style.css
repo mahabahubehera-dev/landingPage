@@ -937,24 +937,8 @@ strong {
     opacity: 1;
 }
 
-@media (max-width: 968px) {
-    .method-interactive-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
 
-    .method-feature-item.active .feature-body-wrapper,
-    .method-feature-item .feature-body-wrapper {
-        max-height: none;
-        opacity: 1;
-    }
 
-    .method-feature-item {
-        opacity: 1;
-        background: var(--bg-card);
-        border-left-color: var(--blue);
-    }
-}
 
 /* ─── PILLARS GRID ─── */
 .pillars-grid {
@@ -1388,7 +1372,13 @@ strong {
 }
 
 /* ─── RESPONSIVE ─── */
+/* ─── RESPONSIVE: TABLET (≤1024px) ─── */
 @media (max-width: 1024px) {
+
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
 
     .pillars-grid,
     .differentiator-row,
@@ -1410,6 +1400,10 @@ strong {
         gap: 48px;
     }
 
+    .authority-trust-icons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
@@ -1418,12 +1412,53 @@ strong {
     .footer-col.footer-brand {
         grid-column: 1 / -1;
     }
+
+    .method-interactive-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .method-feature-item.active .feature-body-wrapper,
+    .method-feature-item .feature-body-wrapper {
+        max-height: none;
+        opacity: 1;
+    }
+
+    .method-feature-item {
+        opacity: 1;
+        background: var(--bg-card);
+        border-left-color: var(--blue);
+    }
 }
 
+/* ─── RESPONSIVE: MOBILE (≤768px) ─── */
 @media (max-width: 768px) {
+
+    /* Trust bar */
     .top-trust-bar {
-        gap: 8px;
-        font-size: 0.72rem;
+        gap: 6px;
+        font-size: 0.7rem;
+        padding: 8px 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .top-trust-bar .bar-divider {
+        display: none;
+    }
+
+    /* Navbar */
+    .navbar {
+        top: 0;
+    }
+
+    .nav-container {
+        height: 60px;
+        gap: 16px;
+    }
+
+    .nav-logo-img {
+        height: 44px;
     }
 
     .nav-menu {
@@ -1464,6 +1499,8 @@ strong {
         font-size: 1.1rem;
         padding: 12px 0;
         color: rgba(255, 255, 255, 0.85);
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
     .nav-dropdown-menu {
@@ -1480,37 +1517,60 @@ strong {
         display: none;
     }
 
+    /* Sections */
     .section {
-        padding: 72px 0;
+        padding: 64px 0;
+    }
+
+    .section-header-block {
+        margin-bottom: 40px;
+    }
+
+    .section-inner {
+        max-width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
     }
 
     .hero-content {
         grid-template-columns: 1fr;
-        padding-top: 60px;
+        padding-top: 80px;
         padding-bottom: 60px;
+        gap: 40px;
     }
 
     .hero-text {
         text-align: center;
     }
 
+    .hero-image-wrapper {
+        animation: none;
+        order: 2;
+    }
+
     .hero-ui-img {
+        width: 100%;
         transform: none;
-        margin-top: 20px;
+        max-width: 100%;
     }
 
     .hero-ui-img:hover {
         transform: scale(1.02);
     }
 
-    .hero-ctas,
-    .hero-stats {
-        justify-content: center;
-    }
-
     .hero-ctas {
+        justify-content: center;
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     .btn-lg {
@@ -1518,31 +1578,214 @@ strong {
         justify-content: center;
     }
 
+    .section-tag {
+        margin-bottom: 20px;
+    }
+
+    .hero-scroll-hint {
+        display: none;
+    }
+
+    /* Client logos */
+    .client-logos-section {
+        padding: 2rem 0;
+    }
+
+    .marquee-content {
+        gap: 2rem;
+        padding-right: 2rem;
+    }
+
+    .marquee-content img {
+        height: 36px;
+        padding: 6px 12px;
+    }
+
+    /* Trust badges */
+    .trust-badges {
+        gap: 8px 12px;
+    }
+
+    .trust-badge {
+        font-size: 0.78rem;
+        padding: 6px 12px;
+    }
+
+    /* Method interactive */
+    .method-interactive-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-top: 40px;
+    }
+
+    .method-interactive-right {
+        order: -1;
+    }
+
+    .method-feature-item {
+        opacity: 1;
+        background: var(--bg-card);
+        border-left-color: var(--blue);
+        padding: 16px;
+    }
+
+    .method-feature-item.active .feature-body-wrapper,
+    .method-feature-item .feature-body-wrapper {
+        max-height: none;
+        opacity: 1;
+    }
+
+    .feature-title {
+        font-size: 1rem;
+    }
+
+    .feature-desc {
+        font-size: 0.88rem;
+    }
+
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    .method-interactive-img-card {
+        padding: 16px;
+    }
+
+    .method-interactive-img-card img {
+        max-height: 260px;
+    }
+
+    /* Pillars */
     .pillars-grid,
     .differentiator-row,
     .stat-row,
-    .steps-grid,
-    .authority-trust-icons {
+    .steps-grid {
         grid-template-columns: 1fr;
     }
 
+    .pillar-card {
+        padding: 24px 20px;
+    }
+
+    /* Authority */
+    .authority-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .authority-trust-icons {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    /* Steps */
+    .step-connector {
+        display: none;
+    }
+
+    .steps-grid {
+        gap: 24px;
+    }
+
+    .step-card {
+        padding: 0;
+    }
+
+    /* CTA band */
+    .cta-band {
+        padding: 64px 0;
+    }
+
+    .btn-cta-white {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 14px 24px;
+    }
+
+    /* Footer */
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 32px;
     }
 }
 
+/* ─── RESPONSIVE: SMALL MOBILE (≤480px) ─── */
 @media (max-width: 480px) {
+
+    .container {
+        padding: 0 16px;
+    }
+
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.9rem;
+        letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
     }
 
     .section-heading {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 
     .cta-heading {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
+    }
+
+    .top-trust-bar {
+        font-size: 0.65rem;
+        gap: 4px;
+    }
+
+    .client-logos-heading {
+        font-size: 0.75rem;
+    }
+
+    .marquee-content img {
+        height: 28px;
+        padding: 4px 8px;
+    }
+
+    .trust-badge {
+        font-size: 0.72rem;
+        padding: 5px 10px;
+    }
+
+    .authority-trust-icons {
+        grid-template-columns: 1fr;
+    }
+
+    .pillar-card {
+        padding: 20px 16px;
+    }
+
+    .method-feature-item {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .feature-title {
+        font-size: 0.95rem;
+    }
+
+    .section-body {
+        font-size: 0.95rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .cta-body {
+        font-size: 0.95rem;
+    }
+
+    .dc-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 }
 
