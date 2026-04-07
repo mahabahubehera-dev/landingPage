@@ -110,11 +110,15 @@ strong {
 /* ─── NAVBAR ─── */
 .navbar {
     position: sticky;
-    top: 37px;
+    top: 0;
     z-index: 1000;
     background: var(--navy);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     transition: box-shadow var(--transition), background var(--transition);
+}
+
+.top-trust-bar + .navbar {
+    top: 37px;
 }
 
 .navbar.scrolled {
