@@ -1552,6 +1552,7 @@ strong {
 
     .hero-image-wrapper {
         animation: none;
+        opacity: 1;
         order: 2;
     }
 
