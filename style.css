@@ -1568,7 +1568,10 @@ strong {
         opacity: 1;
         order: 3;
         width: 100%;
-        margin-bottom: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 32px auto;
     }
 
     .hero-subtitle {
@@ -1580,8 +1583,11 @@ strong {
 
     .hero-ui-img {
         width: 100%;
-        transform: none;
         max-width: 100%;
+        height: auto;
+        transform: none;
+        margin: 0 auto;
+        display: block;
     }
 
     .hero-ui-img:hover {
