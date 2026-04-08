@@ -1143,7 +1143,7 @@ select {
 }
 
 .btn-premium-submit {
-    background: linear-gradient(90deg, #ff6b35, #ff8e53);
+    background: #2C66F5;
     color: white;
     width: 100%;
     border: none;
@@ -1153,7 +1153,7 @@ select {
     font-weight: 800;
     margin-top: 30px;
     cursor: pointer;
-    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 10px 25px rgba(44, 102, 245, 0.4);
     transition: all 0.3s ease;
     display: flex;
     justify-content: center;
@@ -1163,7 +1163,7 @@ select {
 
 .btn-premium-submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(255, 107, 53, 0.5);
+    box-shadow: 0 15px 30px rgba(44, 102, 245, 0.5);
 }
 
 .privacy-note {
