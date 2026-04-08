@@ -1,13 +1,13 @@
 /* Base Styles & Variables */
 :root {
-    --bg-dark: #03112B;
+    --bg-dark: #0F1E3A;
     --bg-card: rgba(255, 255, 255, 0.04);
-    --border-light: rgba(0, 161, 224, 0.18);
-    --primary: #00a1e0; /* Salesforce Blue */
-    --primary-glow: rgba(0, 161, 224, 0.4);
-    --secondary: #FF6B35; /* Orange accent */
+    --border-light: rgba(44, 102, 245, 0.18);
+    --primary: #2C66F5; /* Muted AI Blue */
+    --primary-glow: rgba(44, 102, 245, 0.4);
+    --secondary: #6B7280; /* Revapex Gray Accent */
     --text-main: #F0F8FF;
-    --text-muted: #5B7E9E;
+    --text-muted: #6B7280;
     --error: #ff4757;
     --success: #2ECC71;
     
@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, #00C8FF, #0080FF);
+    background: linear-gradient(135deg, #4da4ff, #2C66F5);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -94,14 +94,14 @@ section {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #FF6B35, #FF9548);
+    background: #2C66F5;
     color: white;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.35);
+    box-shadow: 0 4px 15px rgba(44, 102, 245, 0.35);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6);
+    box-shadow: 0 8px 25px rgba(44, 102, 245, 0.6);
 }
 
 .btn-lg {
