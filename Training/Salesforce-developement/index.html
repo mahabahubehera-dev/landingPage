@@ -398,7 +398,7 @@
         <a href="#trainer">Trainer</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a href="https://chat.whatsapp.com/D3EF4njVLUv6Pslkdj0PEU" class="btn btn-wa nav-cta" target="_blank" rel="noopener">&#128172; Join WhatsApp Group</a>
+        <a href="https://chat.whatsapp.com/LyBwbPZVpSxHjrm0LiZBB5?mode=gi_t" class="btn btn-wa nav-cta" target="_blank" rel="noopener">&#128172; Join WhatsApp Group</a>
         <a href="#register" class="btn btn-primary nav-cta">Enroll Now</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -967,13 +967,13 @@
       <p>Join 4,200+ students who transformed their careers. Book a free demo session with a senior Salesforce architect today.</p>
       <div class="cta-btns">
         <a href="#register" class="btn btn-white">Enroll Now</a>
-        <a href="https://chat.whatsapp.com/D3EF4njVLUv6Pslkdj0PEU" class="btn btn-wa" target="_blank" rel="noopener">&#128172; Chat on WhatsApp</a>
+        <a href="https://chat.whatsapp.com/LyBwbPZVpSxHjrm0LiZBB5?mode=gi_t" class="btn btn-wa" target="_blank" rel="noopener">&#128172; Chat on WhatsApp</a>
       </div>
     </div>
   </section>
 
   <!-- WhatsApp floating -->
-  <a href="https://chat.whatsapp.com/D3EF4njVLUv6Pslkdj0PEU" class="wa-float" target="_blank" rel="noopener" aria-label="Join our WhatsApp group">
+  <a href="https://chat.whatsapp.com/LyBwbPZVpSxHjrm0LiZBB5?mode=gi_t" class="wa-float" target="_blank" rel="noopener" aria-label="Join our WhatsApp group">
     <span aria-hidden="true">&#128172;</span>
     <span class="tooltip">Chat with us</span>
   </a>
@@ -1126,11 +1126,16 @@ form.addEventListener("submit", (e) => {
       if (!ok) return;
       note.style.color = "#556575";
       note.textContent = "Submitting...";
-      const formData = new FormData(form);
-      fetch("/", {
+      const payload = Object.fromEntries(new FormData(form).entries());
+      payload.source = "salesforce-development-training";
+      payload.submitted_at = new Date().toISOString();
+      fetch("https://api.trustsolar.in/webhook/sfdc-master-class", {
         method: "POST",
-        headers: { "Accept": "application/json" },
-        body: formData
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
       })
         .then((res) => {
           if (!res.ok) throw new Error("Server error: " + res.status);
@@ -1140,11 +1145,7 @@ form.addEventListener("submit", (e) => {
         })
         .catch((err) => {
           console.error("Form submit error:", err);
-          if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-            note.textContent = "\u2717 Forms only work on the live Netlify site. Please test on the deployed site.";
-          } else {
-            note.textContent = "\u2717 Submission failed. Please try again or reach us on WhatsApp.";
-          }
+          note.textContent = "\u2717 We could not reserve your seat. Please try again or reach us on WhatsApp.";
           note.style.color = "#d0342c";
         });
     });
