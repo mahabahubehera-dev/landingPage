@@ -291,7 +291,8 @@
     .reg-form input:focus, .reg-form select:focus, .reg-form textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(0,161,224,0.15); }
     .reg-form textarea { resize: vertical; min-height: 80px; }
     .reg-form .invalid { border-color: #d0342c !important; }
-    .reg-form .btn { width: 100%; margin-top: 22px; }
+    .reg-form .btn { width: 100%; min-height: 50px; margin-top: 22px; }
+    .reg-form .btn:disabled { cursor: wait; opacity: 0.7; transform: none; }
     .form-error { color: #d0342c; font-size: 12.5px; margin-top: 4px; display: none; }
     .form-note { font-size: 14px; margin-top: 14px; text-align: center; min-height: 20px; }
     .session-time { font-size: 15px; font-weight: 600; color: var(--brand-dark); margin: 12px 0 24px; }
@@ -920,7 +921,7 @@
           </select>
           <p class="form-error" id="reg-role-err"></p>
         </div>
-        <button type="submit" class="btn btn-primary">Reserve my free seat &rarr;</button>
+        <button type="submit" class="btn btn-primary" id="submitButton">Reserve my free seat &rarr;</button>
         <p class="form-privacy">We respect your privacy. No spam &mdash; just your Zoom link & reminders.</p>
         <p class="form-note" id="formNote" aria-live="polite"></p>
       </form>
@@ -1115,39 +1116,48 @@
 
     const form = document.getElementById("enrollForm");
     const note = document.getElementById("formNote");
+    const submitButton = document.getElementById("submitButton");
+    let isSubmitting = false;
     form.querySelectorAll("input, select, textarea").forEach((el) => {
       el.addEventListener("blur", () => validateField(el));
       el.addEventListener("input", () => { if (el.classList.contains("invalid")) validateField(el); });
     });
-form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
+      if (isSubmitting) return;
       let ok = true;
       form.querySelectorAll("input, select").forEach((el) => { if (!validateField(el)) ok = false; });
       if (!ok) return;
+      isSubmitting = true;
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
       note.style.color = "#556575";
       note.textContent = "Submitting...";
       const payload = Object.fromEntries(new FormData(form).entries());
       payload.source = "salesforce-development-training";
       payload.submitted_at = new Date().toISOString();
-      fetch("https://api.trustsolar.in/webhook/ai-bootcamp", {
-        method: "POST",
-        headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-      })
-        .then((res) => {
+      try {
+        const res = await fetch("https://api.trustsolar.in/webhook/ai-bootcamp", {
+          method: "POST",
+          headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
           if (!res.ok) throw new Error("Server error: " + res.status);
           note.textContent = "\u2713 Thank you! Our team will contact you within 24 hours.";
           note.style.color = "#027e46";
           form.reset();
-        })
-        .catch((err) => {
-          console.error("Form submit error:", err);
-          note.textContent = "\u2717 We could not reserve your seat. Please try again or reach us on WhatsApp.";
-          note.style.color = "#d0342c";
-        });
+      } catch (err) {
+        console.error("Form submit error:", err);
+        note.textContent = "\u2717 We could not reserve your seat. Please try again or reach us on WhatsApp.";
+        note.style.color = "#d0342c";
+      } finally {
+        isSubmitting = false;
+        submitButton.disabled = false;
+        submitButton.textContent = "Reserve my free seat \u2192";
+      }
     });
   </script>
 </body>
