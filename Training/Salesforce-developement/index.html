@@ -1138,7 +1138,7 @@
       payload.submitted_at = new Date().toISOString();
       try {
         const controller = new AbortController();
-        const timeout = setTimeout(() => controller.abort(), 15000);
+        const timeout = setTimeout(() => controller.abort(), 60000);
         const res = await fetch("https://api.trustsolar.in/webhook/ai-bootcamp", {
           method: "POST",
           body: new URLSearchParams(payload),
@@ -1151,7 +1151,9 @@
           form.reset();
       } catch (err) {
         console.error("Form submit error:", err);
-        note.textContent = "\u2717 We could not reserve your seat. Please try again or reach us on WhatsApp.";
+        note.textContent = err.name === "AbortError"
+          ? "\u2717 The request is taking longer than expected. Please check your email before submitting again."
+          : "\u2717 We could not reserve your seat. Please check your connection and try again.";
         note.style.color = "#d0342c";
       } finally {
         isSubmitting = false;
