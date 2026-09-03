@@ -1129,7 +1129,7 @@ form.addEventListener("submit", (e) => {
       const payload = Object.fromEntries(new FormData(form).entries());
       payload.source = "salesforce-development-training";
       payload.submitted_at = new Date().toISOString();
-      fetch("https://api.trustsolar.in/webhook/sfdc-master-class", {
+      fetch("https://api.trustsolar.in/webhook/ai-bootcamp", {
         method: "POST",
         headers: {
           "Accept": "application/json",
