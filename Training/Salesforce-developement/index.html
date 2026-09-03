@@ -1137,14 +1137,14 @@
       payload.source = "salesforce-development-training";
       payload.submitted_at = new Date().toISOString();
       try {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 15000);
         const res = await fetch("https://api.trustsolar.in/webhook/ai-bootcamp", {
           method: "POST",
-          headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(payload)
+          body: new URLSearchParams(payload),
+          signal: controller.signal
         });
+        clearTimeout(timeout);
           if (!res.ok) throw new Error("Server error: " + res.status);
           note.textContent = "\u2713 Thank you! Our team will contact you within 24 hours.";
           note.style.color = "#027e46";
