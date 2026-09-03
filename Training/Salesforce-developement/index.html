@@ -1141,11 +1141,12 @@
         const timeout = setTimeout(() => controller.abort(), 60000);
         const res = await fetch("https://api.trustsolar.in/webhook/ai-bootcamp", {
           method: "POST",
+          mode: "no-cors",
           body: new URLSearchParams(payload),
           signal: controller.signal
         });
         clearTimeout(timeout);
-          if (!res.ok) throw new Error("Server error: " + res.status);
+          if (res.type !== "opaque" && !res.ok) throw new Error("Server error: " + res.status);
           note.textContent = "\u2713 Thank you! Our team will contact you within 24 hours.";
           note.style.color = "#027e46";
           form.reset();
