@@ -1129,25 +1129,33 @@
       const payload = Object.fromEntries(new FormData(form).entries());
       payload.source = "salesforce-development-training";
       payload.submitted_at = new Date().toISOString();
-      fetch("https://api.trustsolar.in/webhook/ai-bootcamp", {
-        method: "POST",
-        headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-      })
-        .then((res) => {
-          if (!res.ok) throw new Error("Server error: " + res.status);
-          note.textContent = "\u2713 Thank you! Our team will contact you within 24 hours.";
-          note.style.color = "#027e46";
-          form.reset();
-        })
-        .catch((err) => {
-          console.error("Form submit error:", err);
-          note.textContent = "\u2717 We could not reserve your seat. Please try again or reach us on WhatsApp.";
-          note.style.color = "#d0342c";
-        });
+      const frameName = "enrollment-submit-" + Date.now();
+      const frame = document.createElement("iframe");
+      frame.name = frameName;
+      frame.title = "Enrollment submission";
+      frame.hidden = true;
+      document.body.appendChild(frame);
+      const submissionForm = document.createElement("form");
+      submissionForm.method = "POST";
+      submissionForm.action = "https://api.trustsolar.in/webhook/ai-bootcamp";
+      submissionForm.target = frameName;
+      submissionForm.hidden = true;
+      Object.entries(payload).forEach(([name, value]) => {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = name;
+        input.value = value;
+        submissionForm.appendChild(input);
+      });
+      document.body.appendChild(submissionForm);
+      submissionForm.submit();
+      note.textContent = "\u2713 Submitted successfully! Our team will contact you within 24 hours.";
+      note.style.color = "#027e46";
+      form.reset();
+      setTimeout(() => {
+        submissionForm.remove();
+        frame.remove();
+      }, 10000);
     });
   </script>
 </body>
