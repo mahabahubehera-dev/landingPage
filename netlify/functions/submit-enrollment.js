@@ -1,4 +1,7 @@
-const WEBHOOK_URL = "https://api.trustsolar.in/webhook/ai-bootcamp";
+const WEBHOOKS = {
+  "ai-bootcamp": "https://api.trustsolar.in/webhook/ai-bootcamp",
+  "sfdc-master-class": "https://api.trustsolar.in/webhook/sfdc-master-class"
+};
 
 exports.handler = async (event) => {
   if (event.httpMethod !== "POST") {
@@ -10,13 +13,30 @@ exports.handler = async (event) => {
   }
 
   try {
-    const response = await fetch(WEBHOOK_URL, {
+    // Safely parse incoming payload
+    const bodyData = JSON.parse(event.body || "{}");
+
+    // Extract formType or default to 'ai-bootcamp'
+    const formType = bodyData.formType || "ai-bootcamp";
+    const targetWebhook = WEBHOOKS[formType];
+
+    // If an invalid formType is supplied
+    if (!targetWebhook) {
+      return {
+        statusCode: 400,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ error: `Invalid formType: '${formType}'` })
+      };
+    }
+
+    // Forward payload to selected webhook
+    const response = await fetch(targetWebhook, {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
       },
-      body: event.body || "{}"
+      body: JSON.stringify(bodyData)
     });
 
     if (!response.ok) {
