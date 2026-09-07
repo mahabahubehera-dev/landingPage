@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             // POST to webhook
-            fetch('https://api.trustsolar.in/webhook/website-form-submission', {
+            fetch('https://api.trustsolar.in/webhook/sfdc-master-class', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
