@@ -867,7 +867,7 @@
       <p class="section-sub">Simple, transparent plans. No hidden fees. Cancel anytime.</p>
       <div class="batch-banner">
         <span class="chip">Next Batch</span>
-        <span>Upcoming batch starts <strong>September 03, 2026</strong> &middot; <strong>7:30 PM IST</strong> &middot; Online &amp; Classroom</span>
+        <span>Upcoming batch starts <strong>September 10, 2026</strong> &middot; <strong>7:30 PM IST</strong> &middot; Online &amp; Classroom</span>
       </div>
       <div class="pricing-grid"><div class="plan featured"><h3>Mentored Live</h3><p class="sub">Best value for job seekers</p><div class="price">&#8377;29K <span>/$299</span></div><p class="price-note">Weekly mentor sessions included</p><p class="duration-note">Duration: 5 Months</p><ul><li>5 months of classes</li><li>Weekly 1:1 mentor sessions</li><li>Hands-on lab environment</li><li>Resume & LinkedIn review</li><li>2 mock technical interviews</li></ul><div class="plan-btns"><a href="#register" class="btn btn-primary">Enroll Now</a><a href="https://rzp.io/rzp/8vfQZ5UW" class="btn btn-primary" style="background: linear-gradient(135deg, #027e46 0%, #039d5a 100%);" target="_blank" rel="noopener">Pay Now &rarr;</a></div></div></div></section>
 
@@ -877,7 +877,8 @@
       <h2 class="section-title" id="register-title">Reserve your free seat</h2>
     </div>
     <div class="container">
-      <form class="reg-form" id="enrollForm" name="registration" novalidate>
+      <form class="reg-form" id="enrollForm" name="registration" data-netlify="true" accept-charset="UTF-8" novalidate>
+        <input type="hidden" name="form-name" value="registration" />
         <div class="form-row">
           <div class="form-group">
             <label for="reg-fname">First name *</label>
@@ -1007,14 +1008,14 @@
         <div>
           <h4>Contact</h4>
           <ul>
-            <li><a href="mailto:hello@clouddevacademy.com">hello@clouddevacademy.com</a></li>
-            <li><a href="tel:+18005550199">+1 (800) 555-0199</a></li>
-            <li>Mon&ndash;Fri, 9 AM &ndash; 6 PM EST</li>
+            <li><a href="mailto:training@revapex.ai">training@revapex.ai</a></li>
+            <li><a href="tel:+918763148112">+91 8763148112</a></li>
+            <li>Mon&ndash;Sat, 9 AM &ndash; 6 PM EST</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 CloudDev Academy. All rights reserved.</span>
+        <span>&copy; 2026 Revapex Academy. All rights reserved.</span>
         <span>Salesforce is a trademark of Salesforce, Inc. This course is not affiliated with Salesforce.</span>
       </div>
     </div>
@@ -1128,20 +1129,20 @@ form.addEventListener("submit", (e) => {
       const payload = Object.fromEntries(new FormData(form).entries());
       payload.source = "salesforce-development-training";
       payload.submitted_at = new Date().toISOString();
-      fetch("https://api.trustsolar.in/webhook/sfdc-master-class", {
+      fetch("/.netlify/functions/submit-enrollment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       })
         .then((res) => {
-          if (!res.ok) throw new Error("Webhook error: " + res.status);
-          note.textContent = "\u2713 Thank you! Our team will contact you within 24 hours.";
+          if (!res.ok) throw new Error("Enrollment proxy error: " + res.status);
+          note.textContent = "\u2713 Submitted successfully! Our team will contact you within 24 hours.";
           note.style.color = "#027e46";
           form.reset();
         })
         .catch((err) => {
           console.error("Form submit error:", err);
-          note.textContent = "\u2717 Submission failed. Please try again or reach us on WhatsApp.";
+          note.textContent = "\u2717 We could not save your enrollment. Please try again.";
           note.style.color = "#d0342c";
         });
     });
