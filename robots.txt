@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://revapex.ai/sitemap.xml
