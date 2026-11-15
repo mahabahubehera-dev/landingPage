@@ -488,17 +488,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             navMenu.classList.toggle('open');
         });
 
-        // Dropdown
-        const dropdown = document.getElementById('trainingDropdown');
-        if (dropdown) {
-            const toggle = dropdown.querySelector('.nav-dropdown-toggle');
-            toggle.addEventListener('click', (e) => {
+        // Dropdowns
+        const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+        dropdownItems.forEach(item => {
+            const toggle = item.querySelector('.nav-dropdown-toggle');
+            toggle?.addEventListener('click', (e) => {
                 e.stopPropagation();
-                dropdown.classList.toggle('open');
-                toggle.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+                const isOpen = item.classList.contains('open');
+                dropdownItems.forEach(dropdownItem => {
+                    dropdownItem.classList.remove('open');
+                    dropdownItem.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+                });
+                if (!isOpen) {
+                    item.classList.add('open');
+                    toggle.setAttribute('aria-expanded', 'true');
+                }
             });
-            document.addEventListener('click', () => dropdown.classList.remove('open'));
-        }
+        });
+        document.addEventListener('click', () => {
+            dropdownItems.forEach(item => {
+                item.classList.remove('open');
+                item.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+            });
+        });
 
         // Notify form
         function handleNotify(e) {
