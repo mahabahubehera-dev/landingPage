@@ -171,14 +171,22 @@
             e.stopPropagation();
             const isOpen = item.classList.contains('open');
             // Close all others
-            dropdownItems.forEach(d => d.classList.remove('open'));
-            if (!isOpen) item.classList.add('open');
-            toggle.setAttribute('aria-expanded', !isOpen);
+            dropdownItems.forEach(d => {
+                d.classList.remove('open');
+                d.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+            });
+            if (!isOpen) {
+                item.classList.add('open');
+                toggle.setAttribute('aria-expanded', 'true');
+            }
         });
     });
 
     document.addEventListener('click', () => {
-        dropdownItems.forEach(d => d.classList.remove('open'));
+        dropdownItems.forEach(d => {
+            d.classList.remove('open');
+            d.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+        });
     });
 })();
 
