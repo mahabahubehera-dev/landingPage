@@ -324,7 +324,7 @@ strong {
 .nav-cta {
     background: var(--blue);
     color: #fff;
-    font-size: 0.86rem;
+    font-size: 0.9rem;
     font-weight: 600;
     padding: 10px 20px;
     border-radius: var(--radius-sm);
